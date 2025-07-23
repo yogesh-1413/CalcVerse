@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRightLeft, TrendingUp, Shield, Zap, Globe, Star, Users, Award } from 'lucide-react';
+import Navbar from './Components/Navbar';
+
 
 function App() {
   const [fromAmount, setFromAmount] = useState('1000');
@@ -16,32 +18,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-blue-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
-                <ArrowRightLeft className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                CurrencyFlow
-              </span>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Features</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Rates</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">API</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Support</a>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Sign In</button>
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2.5 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                Get Started
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16 pb-24">
