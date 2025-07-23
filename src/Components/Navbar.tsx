@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 const navLinks = [
-  { name: "Currency Conversions", href: "#currency" },
-  { name: "Unit Conversions", href: "#unit" },
-  { name: "Financial Calculators", href: "#financial" },
-  { name: "Health Calculator", href: "#health" },
-  { name: "Scientific Calculator", href: "#scientific" },
+  { name: "Currency", href: "#currency" },
+  { name: "Unit", href: "#unit" },
+  { name: "Financial", href: "#financial" },
+  { name: "Health", href: "#health" },
+  { name: "Scientific", href: "#scientific" },
 ];
 
 const Navbar: React.FC = () => {
