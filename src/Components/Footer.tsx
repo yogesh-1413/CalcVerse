@@ -115,7 +115,7 @@ function Footer() {
             {/* Newsletter Signup */}
             <div className="mt-6">
               <h5 className="font-medium text-white mb-3 break-words">Stay Updated</h5>
-              <div className="flex flex-col sm:flex-row gap-2">
+              <div className="flex flex-col sm:flex-row gap-0">
                 <input
                   type="email"
                   placeholder="Enter your email"
