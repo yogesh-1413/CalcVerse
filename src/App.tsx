@@ -1,42 +1,29 @@
 import React, { useState } from 'react';
-// import { ArrowRightLeft, TrendingUp, Shield, Zap, Globe, Star, Users, Award } from 'lucide-react';
-import Navbar from './Components/Navbar';
-import Hero from './Components/Hero';
-import Features from './Components/Features';
-import Testimonial from './Components/Testimonal';
-import Footer from './Components/Footer';
+import Home from './Home';
+import Currency from './Conversions/Currencies';
+import Scientific from './Conversions/Scientific';
+import UnitConversions from './Conversions/Unit_conversions';
+import Financial from './Conversions/Financial';
+import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom';
+ 
+
 
 
 function App() {
-  const [fromAmount, setFromAmount] = useState('1000');
-  const [fromCurrency, setFromCurrency] = useState('USD');
-  const [toCurrency, setToCurrency] = useState('EUR');
 
-  const popularCurrencies = ['USD', 'EUR', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY'];
 
-  const swapCurrencies = () => {
-    setFromCurrency(toCurrency);
-    setToCurrency(fromCurrency);
-  };
-
-  return (
-    <div className="min-h-screen min-w-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      {/* Header */}
-      <Navbar />
-
-      {/* Hero Section */}
-      <Hero />
-
-      {/* Features Section */}
-      <Features />
-      {/* Testimonials */}
-      <Testimonial/>
-
-      
-
-      {/* Footer */}
-    <Footer/>
-    </div>
+  return (<>
+  
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Currency" element={<Currency />} />
+        <Route path = '/Scientific' element = {<Scientific />} />
+        <Route path = '/UnitConvert' element = {<UnitConversions/>} />
+        <Route path = '/Financial' element = {<Financial/>} />
+      </Routes>
+    </Router>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ function Testimonial(){
         <>
         <section className="py-24 bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 transition-all duration-300 ease-in-out">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          {/* <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-all duration-300 ease-in-out">
               Trusted by millions worldwide
             </h2>
@@ -18,7 +18,7 @@ function Testimonial(){
                 4.9/5 from 50,000+ reviews
               </span>
             </div>
-          </div>
+          </div> */}
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300 ease-in-out">
