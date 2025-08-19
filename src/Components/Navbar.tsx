@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
-  { name: "Currency", href: "#currency" },
-  { name: "Unit", href: "#unit" },
-  { name: "Financial", href: "#financial" },
-  { name: "Health", href: "#health" },
-  { name: "Scientific", href: "#scientific" },
+  { name: "Currency", href: "/Currency" },
+  { name: "Unit", href: "/Unitconvert" },
+  { name: "Financial", href: "/Financial" },
+  // { name: "Health", href: "#health" },
+  { name: "Scientific", href: "/Scientific" },
 ];
 
 const Navbar: React.FC = () => {
@@ -51,26 +52,26 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-3">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="block">
+            <Link to="/" className="block">
               <img
                 src="../src/assets/logo.png"
                 alt="CalcVerse Logo"
                 className="h-[48px] sm:h-[56px] md:h-[64px] w-auto object-contain dark:brightness-0 dark:invert transition-all duration-300"
                 style={{ maxWidth: 96 }}
               />
-            </a>
+            </Link>
           </div>
           
           {/* Desktop Nav Links */}
           <nav className="hidden md:flex space-x-6 lg:space-x-12">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-slate-700 hover:text-teal-600 dark:text-slate-100 dark:hover:text-teal-400 font-medium transition-colors duration-200 px-2 py-1 rounded-md hover:bg-teal-50 dark:hover:bg-teal-900/20"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
           
@@ -121,14 +122,14 @@ const Navbar: React.FC = () => {
           <nav className="py-4 border-t border-slate-200 dark:border-gray-700">
             <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   onClick={handleLinkClick}
                   className="text-slate-700 hover:text-teal-600 dark:text-slate-100 dark:hover:text-teal-400 font-medium transition-colors duration-200 px-4 py-3 rounded-lg hover:bg-teal-50 dark:hover:bg-teal-900/20 active:bg-teal-100 dark:active:bg-teal-900/40"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </nav>

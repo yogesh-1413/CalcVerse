@@ -8,7 +8,7 @@ const UnitConversions: React.FC = () => {
     return (
         <>
         <Navbar />
-            <div>
+            <div className="min-h-screen">
                 <p>Unit Conversions</p>
             </div>
             <Footer />
