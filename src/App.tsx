@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AutoScroll from "./Components/AutoScroll"
 import Home from './Home';
 import Currency from './Conversions/Currencies';
 import Scientific from './Conversions/Scientific';
@@ -15,7 +16,9 @@ function App() {
 
   return (<>
   
+    
     <Router>
+      <AutoScroll />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Currency" element={<Currency />} />

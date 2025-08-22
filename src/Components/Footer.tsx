@@ -50,19 +50,19 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="UnitConversions" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="/UnitConvert" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
                   Unit Converter
                 </Link>
               </li>
               <li>
-                <Link to="Financial" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="/Financial" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
                   Financial Calculator
                 </Link>
               </li>
               <li>
-                <Link to="Scientific" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="/Scientific" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></span>
                   Scientific Calculator
                 </Link>
@@ -98,18 +98,16 @@ function Footer() {
                   support@calcverse.com
                 </a>
               </div>
-              <div className="flex items-center break-words">
+              {/* <div className="flex items-center break-words">
                 <Phone className="w-5 h-5 mr-3 text-blue-500 flex-shrink-0" />
                 <a href="tel:+1234567890" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200">
                   +1 (234) 567-890
                 </a>
-              </div>
+              </div> */}
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 mt-1 text-green-500 flex-shrink-0" />
                 <span className="break-words">
-                  123 Calculator Street<br />
-                  Tech Valley, CA 94000<br />
-                  United States
+                Visakhapatanam, INDIA
                 </span>
               </div>
             </div>
@@ -130,7 +128,7 @@ function Footer() {
           </div>
         </div>
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 dark:border-gray-900 pt-8 transition-colors duration-300">
+        <div className="border-t border-gray-300 dark:border-gray-400 pt-8 transition-colors duration-300">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 dark:text-gray-500 mb-4 md:mb-0 text-center md:text-left break-words">
               © 2025 CalcVerse. Built with ❤️ by{" "}
