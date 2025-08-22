@@ -19,9 +19,11 @@ function Hero() {
                 From currency conversions to scientific calculations, health metrics to financial planning - CalcVerse is your comprehensive calculation companion for every need.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link to = '/All_Conversions'>
                 <button className="bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-500 dark:to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-teal-700 hover:to-blue-700 dark:hover:from-teal-600 dark:hover:to-blue-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                   Explore Calculators <ArrowRight className="inline ml-1  text-white" />
                 </button>
+                </Link>
                 {/* <button className="border-2 border-slate-300 dark:border-gray-600 text-slate-700 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold text-lg hover:border-teal-400 dark:hover:border-teal-400 hover:text-teal-600 dark:hover:text-teal-400 transition-all duration-200">
             View Features
           </button> */}

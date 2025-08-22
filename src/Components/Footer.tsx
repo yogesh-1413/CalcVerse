@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Instagram } from "lucide-react";
 
 function Footer() {
@@ -40,38 +41,38 @@ function Footer() {
 
           {/* Product Section */}
           <div className="min-w-0">
-            <h4 className="font-semibold text-white mb-6 text-lg break-words">Calculators</h4>
+           <Link to = '/All_calculators'> <h4 className="font-semibold text-white mb-6 text-lg break-words hover:text-teal-300">Calculators</h4></Link>
             <ul className="space-y-3 text-gray-300 dark:text-gray-400">
               <li>
-                <a href="#" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="/Currency" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-teal-500 rounded-full mr-3 flex-shrink-0"></span>
                   Currency Converter
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="UnitConversions" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
                   Unit Converter
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="Financial" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
                   Financial Calculator
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="Scientific" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></span>
                   Scientific Calculator
-                </a>
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
                   Health Calculator
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

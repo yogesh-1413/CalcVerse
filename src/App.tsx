@@ -4,6 +4,7 @@ import Currency from './Conversions/Currencies';
 import Scientific from './Conversions/Scientific';
 import UnitConversions from './Conversions/Unit_conversions';
 import Financial from './Conversions/Financial';
+import All_Conversions from './Conversions/All_Conversions';
 import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom';
  
 
@@ -21,6 +22,7 @@ function App() {
         <Route path = '/Scientific' element = {<Scientific />} />
         <Route path = '/UnitConvert' element = {<UnitConversions/>} />
         <Route path = '/Financial' element = {<Financial/>} />
+        <Route path = '/All_Conversions' element = {<All_Conversions />} />
       </Routes>
     </Router>
     </>

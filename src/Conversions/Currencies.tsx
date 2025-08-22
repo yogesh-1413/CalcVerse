@@ -6,8 +6,8 @@ import Footer from "../Components/Footer";
 const Currency = () => {
     return (<>
     <Navbar />
-        <div>
-            <p>Currency Calculators</p>
+        <div className="min-h-screen min-w-screen bg-gray-200 dark:bg-[#1f1f1f]">
+            <p className="text-gray-700 dark:text-[#d6d6d6]">Currency Calculators</p>
         </div>
         <Footer />
     </>
