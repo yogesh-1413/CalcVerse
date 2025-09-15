@@ -130,13 +130,7 @@ function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-gray-300 dark:border-gray-400 pt-8 transition-colors duration-300">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 dark:text-gray-500 mb-4 md:mb-0 text-center md:text-left break-words">
-              © 2025 CalcVerse. Built with ❤️ by{" "}
-              <a href="https://github.com/Akshith080" className="text-teal-400 hover:text-teal-300 transition-colors duration-200 break-words">
-                Akshith080
-              </a>
-              . All rights reserved.
-            </p>
+            
             {/* Legal Links */}
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:space-x-6 text-gray-400 dark:text-gray-500">
               <a href="#" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap">Privacy Policy</a>

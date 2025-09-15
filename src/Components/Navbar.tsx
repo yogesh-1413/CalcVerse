@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Sun, Moon} from "lucide-react";
 
 const navLinks = [
   { name: "Currency", href: "/Currency" },
@@ -48,8 +49,8 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="bg-slate-50/80 dark:bg-gray-900/80 border-b border-slate-200 dark:border-gray-700 backdrop-blur-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-8">
+        <div className="flex justify-between items-center py-1">
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="block">
@@ -84,17 +85,9 @@ const Navbar: React.FC = () => {
               className="rounded-full border border-slate-300 dark:border-gray-600 p-2 sm:p-2.5 bg-white/80 dark:bg-gray-800/80 hover:bg-teal-50 dark:hover:bg-teal-900/30 transition-all duration-200 shadow-sm"
             >
               {darkMode ? (
-                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-yellow-500 sm:w-5 sm:h-5">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                    d="M12 4V2m0 20v-2m8-8h2M2 12H4m15.364-7.364l1.414 1.414M4.222 19.778l1.414-1.414M18.364 19.778l-1.414-1.414M4.222 4.222l1.414 1.414M12 6a6 6 0 100 12 6 6 0 000-12z"
-                  />
-                </svg>
+                <Sun className="text-black dark:text-white"></Sun>
               ) : (
-                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-slate-600 sm:w-5 sm:h-5">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                    d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"
-                  />
-                </svg>
+                <Moon />
               )}
             </button>
 

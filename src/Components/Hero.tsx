@@ -4,8 +4,8 @@ import { ArrowRight, ListMinus } from "lucide-react";
 function Hero() {
   return (
     <>
-      <section className="relative overflow-hidden pt-16 pb-24">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-50/80 via-blue-50/60 to-teal-50/80 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transition-all duration-300 ease-in-out"></div>
+      <section className="relative overflow-hidden pt-16 pb-24 min-h-screen ">
+        <div className=" absolute inset-0 bg-gradient-to-r from-slate-50/80 via-blue-50/60 to-teal-50/80 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transition-all duration-300 ease-in-out"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="text-center lg:text-left">
