@@ -41,7 +41,7 @@ function Footer() {
 
           {/* Product Section */}
           <div className="min-w-0">
-           <Link to = '/All_calculators'> <h4 className="font-semibold text-white mb-6 text-lg break-words hover:text-teal-300">Calculators</h4></Link>
+           <Link to = '/All_Conversions'> <h4 className="font-semibold text-white mb-6 text-lg break-words hover:text-teal-300">All Calculators</h4></Link>
             <ul className="space-y-3 text-gray-300 dark:text-gray-400">
               <li>
                 <Link to="/Currency" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">

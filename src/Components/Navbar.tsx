@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { href, Link } from "react-router-dom";
 import { Sun, Moon} from "lucide-react";
 
 const navLinks = [
-  { name: "Currency", href: "/Currency" },
-  { name: "Unit", href: "/Unitconvert" },
-  { name: "Financial", href: "/Financial" },
-  // { name: "Health", href: "#health" },
-  { name: "Scientific", href: "/Scientific" },
+  {name:"Home",href:"/" ,title:"Home"},
+  { name: "Currency", href: "/Currency" ,title:"Currency Conversions"},
+  { name: "Unit", href: "/Unitconvert" ,title:"Unit Calculators"},
+  { name: "Financial", href: "/Financial" ,title:"Financial Calculators"},
+  // { name: "Health", href: "#health" ,title:"Health Calculators"},
+  { name: "Scientific", href: "/Scientific" ,title:"Scientific Calculators"},
+
 ];
 
 const Navbar: React.FC = () => {
@@ -53,7 +55,8 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-1">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="block">
+            <Link to="/" className="block"
+            title="Home">
               <img
                 src="../src/assets/logo.png"
                 alt="CalcVerse Logo"
@@ -70,6 +73,7 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.href}
                 className="text-slate-700 hover:text-teal-600 dark:text-slate-100 dark:hover:text-teal-400 font-medium transition-colors duration-200 px-2 py-1 rounded-md hover:bg-teal-50 dark:hover:bg-teal-900/20"
+                title={link.title}
               >
                 {link.name}
               </Link>
