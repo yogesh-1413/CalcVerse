@@ -8,7 +8,8 @@ import Financial from './Conversions/Financial';
 import All_Conversions from './Conversions/All_Conversions';
 import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom';
 import NotFound from './Components/NotFound';
- 
+import Regular_Calculator from './Conversions/Regular_Calculator';
+
 
 
 
@@ -27,7 +28,9 @@ function App() {
         <Route path = '/UnitConvert' element = {<UnitConversions/>} />
         <Route path = '/Financial' element = {<Financial/>} />
         <Route path = '/All_Conversions' element = {<All_Conversions />} />
+        <Route path = '/Regular_Calculator' element = {<Regular_Calculator />} />
         <Route path='*' element={<NotFound/>} />
+
       </Routes>
     </Router>
     </>

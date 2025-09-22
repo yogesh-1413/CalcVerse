@@ -14,7 +14,7 @@ const NotFound: React.FC = () => {
                 <p className="m-2 sm:text-sm md:text-md lg:text-lg">Navigate to Home </p>
                 <Link to="/" title="Home">
                     <div className="rounded-md p-1 bg-blue-400 dark:bg-teal-300 hover:scale-110 transition-all duration-300 ease-in-out">
-                        <Home className="h-10 w-10 m-2 transition-all duration-300 ease-in-out" />
+                        <Home className="h-10 w-10 m-2 hover:scale-90 transition-all duration-300 ease-in-out" />
                     </div>
                 </Link>
             </div>
