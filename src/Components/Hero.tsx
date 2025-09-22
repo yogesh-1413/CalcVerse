@@ -24,29 +24,11 @@ function Hero() {
                   Explore Calculators <ArrowRight className="inline ml-1  text-white" />
                 </button>
                 </Link>
-                {/* <button className="border-2 border-slate-300 dark:border-gray-600 text-slate-700 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold text-lg hover:border-teal-400 dark:hover:border-teal-400 hover:text-teal-600 dark:hover:text-teal-400 transition-all duration-200">
-            View Features
-          </button> */}
               </div>
 
-              {/* Trust Indicators */}
-              {/* <div className="flex items-center justify-center lg:justify-start space-x-8 mt-12 pt-8 border-t border-slate-200 dark:border-gray-700 transition-colors duration-300">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900 dark:text-white">50M+</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Calculations</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900 dark:text-white">25+</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Calculator Types</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900 dark:text-white">99.9%</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Accuracy</div>
-          </div>
-        </div> */}
+              
             </div>
 
-            {/* Calculator Categories Showcase */}
             <div className="relative">
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200 dark:border-gray-700 p-8 relative overflow-hidden transition-all duration-300">
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-teal-600 to-blue-600"></div>
@@ -57,7 +39,7 @@ function Hero() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  {/* Currency */}
+
                   <Link to="/Currency" >
                     <div className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-900/30 dark:to-blue-900/30 p-6 rounded-2xl border border-teal-100 dark:border-teal-800 hover:shadow-lg transition-all duration-200 cursor-pointer group">
                       <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
