@@ -229,8 +229,8 @@ const Regular_Calculator = () => {
 
   return (<div className='flex flex-col min-h-screen'>
     <Navbar />
-    <div className='flex-1 bg-gradient-to-r from-slate-50/60 via-blue-50/60 to-teal-50/60 dark:from-gray-900/60 dark:via-gray-500/60 dark:to-gray-900/60'>
-    <div className="flex flex-col-1  items-center justify-center p-5 mt-10 ">
+    <div className='flex-1 bg-gradient-to-r from-slate-50/60 via-blue-50/60 to-teal-50/60 dark:from-gray-900/60 dark:via-gray-500/60 dark:to-gray-900/40 transition-all duration-300 ease-in-out'>
+    <div className="flex flex-col-1  items-center justify-center p-5 mt-10 backdrop-blur-md ">
       <div className="w-full max-w-sm mx-auto">
         <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 shadow-2xl">
           <div className="calc-display mb-6">

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import {  ExternalLink, } from "lucide-react";
+import { ExternalLink, } from "lucide-react";
 
 
 const All_Conversions: React.FC = () => {
@@ -30,24 +30,23 @@ const All_Conversions: React.FC = () => {
                                 </h1>
                             </div>
                         </div>
-
                         <div className="flex justify-center">
-                            <button
-                                onClick={() => (window.open("/Regular_Calculator", "_blank"))}
-                            >
-                                <div className="flex items-center justify-center rounded-md ">
 
-                                    <div className="flex p-3">
-                                        <p className="text-xl">Regular Calculator</p>
-                                        <ExternalLink className="mt-1" />
+                            <div className="flex items-center justify-center rounded-3xl max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl">
+                                <button
+                                    onClick={() => (window.open("/Regular_Calculator", "_blank"))}
+                                >
+                                    <div className="flex p-3 rounded-3xl border border-black backdrop-blur-md hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out  ">
+                                        <p className="text-md sm:text-sm md:text-md lg:text-lg">Regular Calculator</p>
+                                        <ExternalLink className="mt-1 sm:h-4 sm:w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
                                     </div>
+                                </button>
+                            </div>
 
-                                </div>
-                            </button>
                         </div>
                     </div>
-                    <div className="">
-                        <p className="text-[#000000] dark:text-gray-300 text-center px-4 text-sm sm:text-sm md:text-md xl:text-lg  ">
+                    <div>
+                        <p className="text-[#000000] dark:text-gray-300 text-center px-4 text-sm sm:text-sm md:text-md lg:text-lg  ">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus repudiandae perspiciatis et perferendis non asperiores delectus debitis! Cum culpa a vel, ad nesciunt amet expedita quos laboriosam est, repudiandae, esse sint laudantium!
                         </p>
                     </div>

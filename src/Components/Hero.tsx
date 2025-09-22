@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+
 import { Link } from "react-router-dom";
-import { ArrowRight, ListMinus } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import Navbar from "./Navbar";
 
 
@@ -24,12 +24,20 @@ function Hero() {
                 <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed transition-colors duration-300">
                   From currency conversions to scientific calculations, health metrics to financial planning - CalcVerse is your comprehensive calculation companion for every need.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <div className="flex flex-col md:flex-col-2 sm:flex-row gap-4 justify-center lg:justify-start">
                   <Link to='/All_Conversions'>
-                    <button className="bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-500 dark:to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-teal-700 hover:to-blue-700 dark:hover:from-teal-600 dark:hover:to-blue-600 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                    <div className="bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-500 dark:to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-teal-700 hover:to-blue-700 dark:hover:from-teal-600 dark:hover:to-blue-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 "
+                    >
                       Explore Calculators <ArrowRight className="inline ml-1  text-white" />
-                    </button>
+                    </div>
                   </Link>
+                  <button className="backdrop-blur-md p-4 border border-black rounded-xl hover:text-blue-700 hover:border-blue-700 dark:hover:text-teal-400 dark:hover:border-teal-400 shadow-xl hover-shadow-2xl transition-all duration-300 ease-in-out hover:scale-105"
+                    onClick={() => (window.open("/Regular_Calculator"))}
+                  >
+                    <div className="flex justify-center ">
+                      Regular Calculator <ExternalLink className="ml-3" />
+                    </div>
+                  </button>
                 </div>
 
 
