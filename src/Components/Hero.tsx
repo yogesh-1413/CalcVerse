@@ -86,7 +86,7 @@ function Hero() {
                           </svg>
                         </div>
                         <h4 className="font-bold text-gray-900 dark:text-white mb-2">Financial</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-300">Loans, investments, EMI.... etc</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">Loans, SIP, EMI.... etc</p>
                       </div>
                     </Link>
 
@@ -102,9 +102,7 @@ function Hero() {
                       </div>
                     </Link>
                   </div>
-                </div>
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full opacity-20 blur-xl"></div>
-                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full opacity-20 blur-xl"></div>
+                </div>-
               </div>
             </div>
           </div>

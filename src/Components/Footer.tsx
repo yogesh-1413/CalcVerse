@@ -1,43 +1,12 @@
 
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Github, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 function Footer() {
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-16 transition-all duration-300 ease-in-out overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="col-span-1 min-w-0">
-            <div className="flex items-center space-x-3 mb-6 flex-wrap">
-              <img
-                src="../src/assets/logo.png"
-                alt="CalcVerse Logo"
-                className="h-10 w-auto object-contain brightness-0 invert flex-shrink-0"
-              />
-              <span className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent break-words">
-                CalcVerse
-              </span>
-            </div>
-            <p className="text-gray-300 dark:text-gray-400 leading-relaxed mb-6 break-words">
-              The world's most comprehensive calculation platform, trusted by millions of users worldwide for accurate and reliable results.
-            </p>
-            <div className="flex space-x-4 flex-wrap">
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-full flex items-center justify-center hover:bg-teal-600 dark:hover:bg-teal-600 transition-colors duration-200 flex-shrink-0">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-full flex items-center justify-center hover:bg-blue-600 dark:hover:bg-blue-600 transition-colors duration-200 flex-shrink-0">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-full flex items-center justify-center hover:bg-blue-700 dark:hover:bg-blue-700 transition-colors duration-200 flex-shrink-0">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 dark:bg-gray-900 rounded-full flex items-center justify-center hover:bg-pink-600 dark:hover:bg-pink-600 transition-colors duration-200 flex-shrink-0">
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Product Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="min-w-0">
            <Link to = '/All_Conversions' className="hover:underline"> <h4 className="font-semibold text-white mb-6 text-lg break-words hover:text-teal-300">All Calculators</h4></Link>
             <ul className="space-y-3 text-gray-300 dark:text-gray-400">
