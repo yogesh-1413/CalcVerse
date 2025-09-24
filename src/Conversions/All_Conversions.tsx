@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { ExternalLink, } from "lucide-react";
+import { Link } from "react-router-dom"
 
 
 const All_Conversions: React.FC = () => {
@@ -24,7 +25,7 @@ const All_Conversions: React.FC = () => {
                             </div>
                         </div>
                         <div className="flex justify-center rounded-lg p-2">
-                            <div className="bg-[#D9D9D9] dark:bg-transparent border border-black backdrop-blur-sm shadow-md rounded-lg p-3 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-xl transition-all duration-300 ease-in-out">
+                            <div className="bg-transparent dark:bg-transparent border border-black backdrop-blur-sm shadow-md rounded-lg p-3 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-xl transition-all duration-300 ease-in-out">
                                 <h1 className="dark:text-teal-400 text-blue-700 text-md sm:text-xl md:text-3xl lg:text-4xl text-center font-semibold transition-all duration-300 ease-in-out">
                                     Free Calculators
                                 </h1>
@@ -37,7 +38,7 @@ const All_Conversions: React.FC = () => {
                                     className=""
                                     onClick={() => (window.open("/Regular_Calculator", "_blank"))}
                                 >
-                                    <div className="flex px-9  py-2 rounded-3xl border border-black backdrop-blur-md hover:scale-105 hover:shadow-md hover:text-blue-600 dark:hover:text-teal-400 hover:border-blue-600 dark:hover:border-teal-400 transition-all duration-300 ease-in-out  ">
+                                    <div className="flex px-3 py-2 rounded-3xl border border-black backdrop-blur-md hover:scale-105 hover:shadow-md hover:text-blue-600 dark:hover:text-teal-400 hover:border-blue-600 dark:hover:border-teal-400 overflow-hidden transition-all duration-300 ease-in-out  ">
                                         <p className="text-md  sm:text-sm md:text-md lg:text-xl">Regular Calculator</p>
                                         <ExternalLink className="mt-1 mb-1 sm:h-4 sm:w-4 md:h-4 md:w-4 lg:h-6 lg:w-6 ml-3 " />
                                     </div>
@@ -51,62 +52,90 @@ const All_Conversions: React.FC = () => {
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus repudiandae perspiciatis et perferendis non asperiores delectus debitis! Cum culpa a vel, ad nesciunt amet expedita quos laboriosam est, repudiandae, esse sint laudantium!
                         </p>
                     </div>
-                    <div>
+                    <div className="flex flex-col justify-center min-h-screen">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 mr-4 ml-4 bg-white/80 dark:bg-gray-700 backdrop-blur-md rounded-3xl shadow-2xl border-slate-200 dark:border-gray-700 p-8 relative overflow-hidden transition-all duration-300 ease-in-out ">
-                            <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-teal-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-teal-100 to-blue-100 dark:from-teal-900/30 dark:to-blue-900/30">
-                                <h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Currency </h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
-                                    <div>
-                                        <p className="dark:text-white/90 ml-5">USD to INR</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
-                                        <p className="dark:text-white/90 ml-5">Hello</p>
+                            <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-teal-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-teal-100 to-blue-100 dark:from-teal-900/30 dark:to-blue-900/30 transition-all duration-300 ease-in-out">
+                                <Link to="/" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Currency Converters</h2></Link>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full ">
+                                    <div className="flex flex-col gap-2 mt-4 ">
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Indian Rupee <span className="font-bold">(INR)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Euro <span className="font-bold">(EUR)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to British Pound <span className="font-bold">(GBP)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Japanese Yen <span className="font-bold">(JPY)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Swiss Franc <span className="font-bold">(CHF)</span></p></Link>
                                     </div>
-                                    <div>
-                                        <p className="dark:text-white/90">Hello2</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-blue-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30">
-                                <h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Unit Conversions</h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
-                                    <div>
-                                        <p className="dark:text-white/90">Hello</p>
-                                    </div>
-                                    <div>
-                                        <p className="dark:text-white/90">Hello2</p>
+                                    <div className="flex flex-col gap-2 md:mt-4">
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Canadian Dollar <span className="font-bold">(CAD)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to New Zealand Dollar <span className="font-bold">(NZD)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">Euro <span className="font-bold ">(EUR)</span> to British Pound <span className="font-bold">(GBP)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">Euro <span className="font-bold ">(EUR)</span> to Japanese Yen <span className="font-bold">(JPY)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">Australian Dollar <span className="font-bold ">(AUD)</span> to Swiss Franc <span className="font-bold">(CHF)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">More.....</p></Link>
+
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-green-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30">
-                                <h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Financial </h2>
+                            <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-purple-600 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 transition-all duration-300 ease-in-out">
+                                <Link to="/" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Financial Calculators</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
-                                    <div>
-                                        <p className="dark:text-white/90">Hello</p>
+                                    <div className="flex flex-col mt-4 gap-2">
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SIP Calculator</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SWP Calculator</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">CAGR Calculator</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">EMI calculator</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">XIRR Calculator</p></Link>
                                     </div>
-                                    <div>
-                                        <p className="dark:text-white/90">Hello2</p>
+                                    <div className="flex flex-col gap-2  md:mt-4 ">
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">How Long to Save</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">How Long Will My Money Last</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Simple Interest Calculator</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Compound Interest Calculator</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Loan Payoff Calculator</p></Link>
+                                        {/* <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More.....</p></Link> */}
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-purple-600 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
-                                <h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Scientific Calculators</h2>
+                            <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-blue-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 transition-all duration-300 ease-in-out">
+                                <Link to="/" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Unit Conversions</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
-                                    <div>
-                                        <p className="dark:text-white/90">Hello</p>
+                                    <div className="flex flex-col gap-2 mt-4">
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Time</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Area</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Speed</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Temperature</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Pressure</p></Link>
                                     </div>
-                                    <div>
-                                        <p className="dark:text-white/90">Hello2</p>
+                                    <div className="flex flex-col gap-2 md:mt-4">
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Length & Distance</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Mass & Weight</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Fuel Consumption</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Acceleration</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Data Storage</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More........</p></Link>
                                     </div>
                                 </div>
                             </div>
+                            <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-green-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30 transition-all duration-300 ease-in-out">
+                                <Link to="/" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Health Calculators </h2></Link>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
+                                    <div className="flex flex-col gap-2 mt-4">
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
+                                    </div>
+                                    <div className="flex flex-col gap-2 md:mt-4">
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More........</p></Link>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

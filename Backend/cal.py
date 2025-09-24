@@ -2,7 +2,6 @@ import requests
 import json
 
 API_URL = os.getenv(CURRENCY_API)
-
 response = requests.get(API_URL)
 if response.status_code == 200:
     data = response.json()
