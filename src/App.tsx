@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom';
 import NotFound from './Components/NotFound';
 import Regular_Calculator from './Conversions/Regular_Calculator';
 import TimeConverter from './ConveterComponents/TimeConverter';
-
+import Length_And_Distance_Converter from './ConveterComponents/Length&Distance';
 
 
 
@@ -32,6 +32,7 @@ function App() {
         <Route path = '/Regular_Calculator' element = {<Regular_Calculator />} />
         <Route path='*' element={<NotFound/>} />
         <Route path='/All_Conversions/TimeConverter' element={<TimeConverter/>} />
+        <Route path = '/All_Conversions/Length_and_Distance_Converter' element={<Length_And_Distance_Converter/>} />
 
       </Routes>
     </Router>

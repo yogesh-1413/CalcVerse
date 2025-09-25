@@ -106,7 +106,7 @@ const All_Conversions: React.FC = () => {
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Pressure</p></Link>
                                     </div>
                                     <div className="flex flex-col gap-2 md:mt-4">
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Length & Distance</p></Link>
+                                        <Link to="Length_and_Distance_Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Length & Distance</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Mass & Weight</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Fuel Consumption</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Acceleration</p></Link>
