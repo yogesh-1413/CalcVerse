@@ -99,7 +99,7 @@ const All_Conversions: React.FC = () => {
                                 <Link to="/" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Unit Conversions</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Time</p></Link>
+                                        <Link to="TimeConverter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Time</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Area</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Speed</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Temperature</p></Link>
