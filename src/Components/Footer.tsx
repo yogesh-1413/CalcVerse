@@ -63,7 +63,7 @@ function Footer() {
                 <MapPin className="w-5 h-5 mr-3 mt-1 text-green-500 flex-shrink-0" />
                 <a href="https://www.google.com/maps/place/Visakhapatnam,+Andhra+Pradesh/" target="_blank" className="">
                 <span className="break-words dark:hover:text-teal-400 hover:underline">
-                Visakhapatanam, INDIA
+                Visakhapatnam, INDIA
                 </span>
                 </a>
               </div>

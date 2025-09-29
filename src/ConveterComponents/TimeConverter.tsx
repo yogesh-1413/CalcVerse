@@ -29,23 +29,26 @@ const TimeConverter: React.FC = () => {
     setResult(converted);
   };
 
-  return (<>
-  <Navbar/>
-    <div className="p-6 max-w-md mx-auto bg-white rounded-2xl shadow-lg">
-      <h1 className="text-xl font-bold mb-4">⏱ Time Converter</h1>
+  return (<div className="flex flex-col min-h-screen">
+  <Navbar />
+
+
+  <div className=" flex min-h-screen items-center justify-center bg-gradient-to-r from-slate-50/80 via-blue-50/60 to-blue-50/80 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transition-all duration-300 ease-in-out">
+      <div className="p-6 max-w-md w-full bg-white rounded-2xl shadow-lg bg-[#cfcfcf] dark:bg-gray-800/80 transition-all duration-300 ease-in-out">
+      <h1 className="text-xl font-bold mb-4 dark:text-gray-200">⏱ Time Converter</h1>
 
       <div className="mb-3">
-        <label className="block font-medium">Value</label>
+        <label className="block font-medium dark:text-gray-200">Value</label>
         <input
           type="number"
           value={inputValue}
           onChange={(e) => setInputValue(Number(e.target.value))}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded "
         />
       </div>
 
       <div className="mb-3">
-        <label className="block font-medium">From</label>
+        <label className="block font-medium dark:text-gray-200">From</label>
         <select
           value={fromUnit}
           onChange={(e) => setFromUnit(e.target.value as TimeUnit)}
@@ -60,7 +63,7 @@ const TimeConverter: React.FC = () => {
       </div>
 
       <div className="mb-3">
-        <label className="block font-medium">To</label>
+        <label className="block font-medium dark:text-gray-200">To</label>
         <select
           value={toUnit}
           onChange={(e) => setToUnit(e.target.value as TimeUnit)}
@@ -76,18 +79,21 @@ const TimeConverter: React.FC = () => {
 
       <button
         onClick={handleConvert}
-        className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+        className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 "
       >
         Convert
       </button>
 
       {result !== 0 && (
-        <div className="mt-4 text-lg font-semibold">
+        <div className="mt-4 text-lg font-semibold dark:text-gray-200">
           Result: {result} {toUnit}
         </div>
       )}
     </div>
-    </>
+  </div>
+  <Footer />
+</div>
+
   );
 };
 

@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, HeartPulse} from "lucide-react";
 import Navbar from "./Navbar";
 
 
@@ -90,15 +90,13 @@ function Hero() {
                       </div>
                     </Link>
 
-                    <Link to="/Scientific">
+                    <Link to="/Health_Calculators">
                       <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-6 rounded-2xl border border-purple-100 dark:border-purple-800 hover:shadow-lg transition-all duration-200 cursor-pointer group">
                         <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
-                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                          </svg>
+                        <HeartPulse className="text-white"/>
                         </div>
-                        <h4 className="font-bold text-gray-900 dark:text-white mb-2">Scientific</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-300">Advanced math functions</p>
+                        <h4 className="font-bold text-gray-900 dark:text-white mb-2">Health Calculators</h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">BMI, BMR...etc</p>
                       </div>
                     </Link>
                   </div>
