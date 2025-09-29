@@ -8,8 +8,8 @@ const navLinks = [
   { name: "Currency", href: "/Currency" ,title:"Currency Conversions"},
   { name: "Unit", href: "/Unitconvert" ,title:"Unit Calculators"},
   { name: "Financial", href: "/Financial" ,title:"Financial Calculators"},
-  // { name: "Health", href: "#health" ,title:"Health Calculators"},
-  { name: "Scientific", href: "/Scientific" ,title:"Scientific Calculators"},
+  { name: "Health", href: "/Health_Calculators" ,title:"Health Calculators"},
+  // { name: "Scientific", href: "/Scientific" ,title:"Scientific Calculators"},
 
 ];
 

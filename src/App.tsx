@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AutoScroll from "./Components/AutoScroll"
 import Home from './Home';
 import Currency from './Conversions/Currencies';
-import Scientific from './Conversions/Scientific';
+import Health_Calculators from './Conversions/Health_Calculators';
 import UnitConversions from './Conversions/Unit_conversions';
 import Financial from './Conversions/Financial';
 import All_Conversions from './Conversions/All_Conversions';
@@ -25,7 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Currency" element={<Currency />} />
-        <Route path = '/Scientific' element = {<Scientific />} />
+        <Route path = '/Health_Calculators' element = {<Health_Calculators />} />
         <Route path = '/UnitConvert' element = {<UnitConversions/>} />
         <Route path = '/Financial' element = {<Financial/>} />
         <Route path = '/All_Conversions' element = {<All_Conversions />} />

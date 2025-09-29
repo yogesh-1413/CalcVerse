@@ -29,9 +29,9 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/Scientific" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="/Health_Calculators" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></span>
-                  Scientific Calculator
+                  Health Calculators
                 </Link>
               </li>
       

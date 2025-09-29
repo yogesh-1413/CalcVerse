@@ -55,28 +55,28 @@ const All_Conversions: React.FC = () => {
                     <div className="flex flex-col justify-center min-h-screen">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 mr-4 ml-4 bg-white/80 dark:bg-gray-700 backdrop-blur-md rounded-3xl shadow-2xl border-slate-200 dark:border-gray-700 p-8 relative overflow-hidden transition-all duration-300 ease-in-out ">
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-teal-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-teal-100 to-blue-100 dark:from-teal-900/30 dark:to-blue-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Currency Converters</h2></Link>
+                                <Link to="/Currency" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-200 ease-in-out ">Currency Converters</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full ">
                                     <div className="flex flex-col gap-2 mt-4 ">
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Indian Rupee <span className="font-bold">(INR)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Euro <span className="font-bold">(EUR)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to British Pound <span className="font-bold">(GBP)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Japanese Yen <span className="font-bold">(JPY)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Swiss Franc <span className="font-bold">(CHF)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">US Dollar <span className="font-bold ">(USD)</span> to Indian Rupee <span className="font-bold">(INR)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">US Dollar <span className="font-bold ">(USD)</span> to Euro <span className="font-bold">(EUR)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">US Dollar <span className="font-bold ">(USD)</span> to British Pound <span className="font-bold">(GBP)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">US Dollar <span className="font-bold ">(USD)</span> to Japanese Yen <span className="font-bold">(JPY)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">US Dollar <span className="font-bold ">(USD)</span> to Swiss Franc <span className="font-bold">(CHF)</span></p></Link>
                                     </div>
                                     <div className="flex flex-col gap-2 md:mt-4">
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to Canadian Dollar <span className="font-bold">(CAD)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">US Dollar <span className="font-bold ">(USD)</span> to New Zealand Dollar <span className="font-bold">(NZD)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">Euro <span className="font-bold ">(EUR)</span> to British Pound <span className="font-bold">(GBP)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">Euro <span className="font-bold ">(EUR)</span> to Japanese Yen <span className="font-bold">(JPY)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">Australian Dollar <span className="font-bold ">(AUD)</span> to Swiss Franc <span className="font-bold">(CHF)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline">More.....</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">US Dollar <span className="font-bold ">(USD)</span> to Canadian Dollar <span className="font-bold">(CAD)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">US Dollar <span className="font-bold ">(USD)</span> to New Zealand Dollar <span className="font-bold">(NZD)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">Euro <span className="font-bold ">(EUR)</span> to British Pound <span className="font-bold">(GBP)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">Euro <span className="font-bold ">(EUR)</span> to Japanese Yen <span className="font-bold">(JPY)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">Australian Dollar <span className="font-bold ">(AUD)</span> to Swiss Franc <span className="font-bold">(CHF)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">More.....</p></Link>
 
                                     </div>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-purple-600 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Financial Calculators</h2></Link>
+                                <Link to="/Financial" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Financial Calculators</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col mt-4 gap-2">
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SIP Calculator</p></Link>
@@ -96,7 +96,7 @@ const All_Conversions: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-blue-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Unit Conversions</h2></Link>
+                                <Link to="/Unitconvert" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Unit Conversions</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
                                         <Link to="TimeConverter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Time</p></Link>
@@ -116,7 +116,7 @@ const All_Conversions: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-green-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start">Health Calculators </h2></Link>
+                                <Link to="/Health" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Health Calculators </h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
