@@ -41,11 +41,10 @@ function Footer() {
           <div className="min-w-0">
             <h4 className="font-semibold text-white mb-6 text-lg break-words">Company</h4>
             <ul className="space-y-3 text-gray-300 dark:text-gray-400">
-              <li><a href="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">About Us</a></li>
-              <li><a href="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Our Mission</a></li>
-              <li><a href="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Careers</a></li>
-              <li><a href="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Press Kit</a></li>
-              <li><a href="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Blog</a></li>
+              <li><Link to="/About Us" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">About Us</Link></li>
+              <li><Link to="/Our Mission" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Our Mission</Link></li>
+              <li><Link to="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Press Kit</Link></li>
+              <li><Link to="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Blog</Link></li>
             </ul>
           </div>
 
@@ -90,9 +89,8 @@ function Footer() {
             
 
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:space-x-6 text-gray-400 dark:text-gray-500">
-              <a href="#" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap hover:underline">Privacy Policy</a>
-              <a href="#" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap hover:underline">Terms of Service</a>
-              <a href="#" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap hover:underline">Cookie Policy</a>
+              <Link to="/Privacy Policy" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap hover:underline">Privacy Policy</Link>
+              <Link to="/Terms Of Service" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap hover:underline">Terms of Service</Link>
             </div>
           </div>
         </div>

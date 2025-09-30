@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { href, Link } from "react-router-dom";
-import { Sun, Moon} from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 
 const navLinks = [
-  {name:"Home",href:"/" ,title:"Home"},
-  { name: "Currency", href: "/Currency" ,title:"Currency Conversions"},
-  { name: "Unit", href: "/Unitconvert" ,title:"Unit Calculators"},
-  { name: "Financial", href: "/Financial" ,title:"Financial Calculators"},
-  { name: "Health", href: "/Health_Calculators" ,title:"Health Calculators"},
+  { name: "Home", href: "/", title: "Home" },
+  { name: "Currency", href: "/Currency", title: "Currency Conversions" },
+  { name: "Unit", href: "/Unitconvert", title: "Unit Calculators" },
+  { name: "Financial", href: "/Financial", title: "Financial Calculators" },
+  { name: "Health", href: "/Health_Calculators", title: "Health Calculators" },
   // { name: "Scientific", href: "/Scientific" ,title:"Scientific Calculators"},
 
 ];
@@ -32,12 +32,10 @@ const Navbar: React.FC = () => {
     }
   }, [darkMode]);
 
-  // Close mobile menu when clicking on a link
   const handleLinkClick = () => {
     setMobileMenuOpen(false);
   };
 
-  // Close mobile menu when window is resized to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -56,7 +54,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="block"
-            title="Home">
+              title="Home">
               <img
                 src="../src/assets/logo.png"
                 alt="CalcVerse Logo"
@@ -65,8 +63,8 @@ const Navbar: React.FC = () => {
               />
             </Link>
           </div>
-          
-          {/* Desktop Nav Links */}
+
+
           <nav className="hidden md:flex space-x-6 lg:space-x-12">
             {navLinks.map((link) => (
               <Link
@@ -79,10 +77,9 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
           </nav>
-          
-          {/* Right side - Dark mode toggle and Mobile menu button */}
+
           <div className="flex items-center space-x-3">
-            {/* Dark mode toggle */}
+
             <button
               aria-label="Toggle Dark Mode"
               onClick={() => setDarkMode((d) => !d)}
@@ -95,7 +92,6 @@ const Navbar: React.FC = () => {
               )}
             </button>
 
-            {/* Mobile menu button */}
             <button
               aria-label="Toggle Mobile Menu"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -110,12 +106,10 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
-          mobileMenuOpen 
-            ? 'max-h-96 opacity-100 visible' 
+        <div className={`md:hidden transition-all duration-300 ease-in-out ${mobileMenuOpen
+            ? 'max-h-96 opacity-100 visible'
             : 'max-h-0 opacity-0 invisible overflow-hidden'
-        }`}>
+          }`}>
           <nav className="py-4 border-t border-slate-200 dark:border-gray-700">
             <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (

@@ -48,11 +48,12 @@ const All_Conversions: React.FC = () => {
                         </div>
                     </div>
                     <div>
-                        <p className="text-[#000000] dark:text-white/90 mt-5 text-center px-4 text-sm sm:text-sm md:text-md lg:text-lg  ">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus repudiandae perspiciatis et perferendis non asperiores delectus debitis! Cum culpa a vel, ad nesciunt amet expedita quos laboriosam est, repudiandae, esse sint laudantium!
+                        <p className="text-[#000000] mt-5 text-center px-4 text-sm sm:text-sm md:text-md lg:text-lg dark:bg-gradient-to-r dark:from-blue-700 dark:to-indigo-700 dark:bg-clip-text dark:text-transparent">
+                            Here is the Collection of the all Extensive Calculators and Converters, Trusted over Millions.......
                         </p>
+
                     </div>
-                    <div className="flex flex-col justify-center min-h-screen">
+                    <div className="flex-1 flex-col justify-center mt-5 mb-10">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 mr-4 ml-4 bg-white/80 dark:bg-gray-700 backdrop-blur-md rounded-3xl shadow-2xl border-slate-200 dark:border-gray-700 p-8 relative overflow-hidden transition-all duration-300 ease-in-out ">
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-teal-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-teal-100 to-blue-100 dark:from-teal-900/30 dark:to-blue-900/30 transition-all duration-300 ease-in-out">
                                 <Link to="/Currency" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-200 ease-in-out ">Currency Converters</h2></Link>
@@ -119,19 +120,18 @@ const All_Conversions: React.FC = () => {
                                 <Link to="/Health" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Health Calculators </h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Body Mass Index <span className="font-bold">(BMI)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Basal Metabolic Rate <span className="font-bold">(BMR)</span></p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Kilojoules to Calories</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Miles to Steps</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Steps to Kilometers</p></Link>
                                     </div>
                                     <div className="flex flex-col gap-2 md:mt-4">
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Steps to Calories</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Pregnancy Calculator</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Sobriety Calculator</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Age Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More........</p></Link>
                                     </div>
                                 </div>
                             </div>

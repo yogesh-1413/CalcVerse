@@ -11,6 +11,8 @@ import NotFound from './Components/NotFound';
 import Regular_Calculator from './Conversions/Regular_Calculator';
 import TimeConverter from './ConveterComponents/TimeConverter';
 import Length_And_Distance_Converter from './ConveterComponents/Length&Distance';
+import About_Us from "./Footer_Pages/About_Us";
+import Our_Mission from './Footer_Pages/Our_Mission';
 
 
 
@@ -33,6 +35,8 @@ function App() {
         <Route path='*' element={<NotFound/>} />
         <Route path='/All_Conversions/TimeConverter' element={<TimeConverter/>} />
         <Route path = '/All_Conversions/Length_and_Distance_Converter' element={<Length_And_Distance_Converter/>} />
+        <Route path  = '/About Us' element={<About_Us />} />
+        <Route path = '/Our Mission' element={<Our_Mission />} />
 
       </Routes>
     </Router>
