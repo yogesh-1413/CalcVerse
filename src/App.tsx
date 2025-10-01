@@ -13,6 +13,9 @@ import TimeConverter from './ConveterComponents/TimeConverter';
 import Length_And_Distance_Converter from './ConveterComponents/Length&Distance';
 import About_Us from "./Footer_Pages/About_Us";
 import Our_Mission from './Footer_Pages/Our_Mission';
+import SIP_SWP_Calcualtor_App from './ConveterComponents/SIP_SWP_Home';
+import SIPCalculator from "./ConveterComponents/SIP_Calculator";
+import SWPCalulator from './ConveterComponents/SWP_Calculator';
 
 
 
@@ -37,6 +40,9 @@ function App() {
         <Route path = '/All_Conversions/Length_and_Distance_Converter' element={<Length_And_Distance_Converter/>} />
         <Route path  = '/About Us' element={<About_Us />} />
         <Route path = '/Our Mission' element={<Our_Mission />} />
+        <Route path='/SIP & SWP Calculators' element = {<SIP_SWP_Calcualtor_App/>} />
+        <Route path='/SIP' element = {<SIPCalculator/>} />
+        <Route path='/SWP' element= {<SWPCalulator />} />
 
       </Routes>
     </Router>
