@@ -164,6 +164,7 @@ export const  SIPCalculator: React.FC = () => {
       </div>
     </div>
     <Footer />
+    <></>
     </div>
   );
 };
