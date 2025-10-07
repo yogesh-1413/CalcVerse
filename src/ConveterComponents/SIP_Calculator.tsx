@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TrendingUp } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
-import { calculateSIP, formatCurrency } from '../Utils/SIP_SWP_Calculator';
+import { calculateSIP, formatCurrency } from '../Utils/SIP_SWP_CAGR_Calculator';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 

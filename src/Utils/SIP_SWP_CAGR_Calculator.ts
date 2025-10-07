@@ -1,4 +1,4 @@
-import { SIPResult, SWPResult } from './SIP_SWP_Calculation_Frame';
+import { SIPResult, SWPResult, CAGRResult } from './SIP_SWP_CAGR_Calculation_Frame';
 
 export const calculateSIP = (
   monthlyInvestment: number,
@@ -84,6 +84,35 @@ export const calculateSWP = (
     expectedReturn: annualReturn,
     totalWithdrawn: Math.round(totalWithdrawn),
     remainingValue: Math.round(Math.max(0, remaining)),
+    chartData,
+  };
+};
+
+export const calculateCAGR = (
+  initialValue: number,
+  finalValue: number,
+  period: number
+): CAGRResult => {
+  const cagr = (Math.pow(finalValue / initialValue, 1 / period) - 1) * 100;
+  const totalGain = finalValue - initialValue;
+  const totalGainPercentage = (totalGain / initialValue) * 100;
+
+  const chartData = [];
+  for (let year = 0; year <= period; year++) {
+    const value = initialValue * Math.pow(1 + cagr / 100, year);
+    chartData.push({
+      year,
+      value: Math.round(value),
+    });
+  }
+
+  return {
+    initialValue,
+    finalValue,
+    investmentPeriod: period,
+    cagr: Math.round(cagr * 100) / 100,
+    totalGain: Math.round(totalGain),
+    totalGainPercentage: Math.round(totalGainPercentage * 100) / 100,
     chartData,
   };
 };

@@ -13,9 +13,9 @@ import TimeConverter from './ConveterComponents/TimeConverter';
 import Length_And_Distance_Converter from './ConveterComponents/Length&Distance';
 import About_Us from "./Footer_Pages/About_Us";
 import Our_Mission from './Footer_Pages/Our_Mission';
-import SIP_SWP_Calcualtor_App from './ConveterComponents/SIP_SWP_Home';
 import SIPCalculator from "./ConveterComponents/SIP_Calculator";
 import SWPCalulator from './ConveterComponents/SWP_Calculator';
+import CAGR_Calculator from './ConveterComponents/CAGR_Calculator';
 
 
 
@@ -42,6 +42,7 @@ function App() {
         <Route path = '/Our Mission' element={<Our_Mission />} />
         <Route path='/SIP Calculator' element = {<SIPCalculator/>} />
         <Route path='/SWP Calculator' element= {<SWPCalulator />} />
+        <Route path='/CAGR Calculator' element={<CAGR_Calculator />} />
 
       </Routes>
     </Router>
