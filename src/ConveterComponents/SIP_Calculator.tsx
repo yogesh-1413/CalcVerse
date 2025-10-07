@@ -163,6 +163,80 @@ export const  SIPCalculator: React.FC = () => {
         </div>
       </div>
     </div>
+     <div className="bg-transparent flex flex-col items-center px-6 py-12">
+      <div className="max-w-6xl w-full">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-indigo-600 dark:text-white">
+          What is SIP (Systematic Investment Plan)?
+        </h1>
+
+    
+        <p className="text-lg leading-relaxed mb-8 text-justify">
+          A <strong>Systematic Investment Plan (SIP)</strong> is a disciplined way
+          to invest a fixed amount regularly in mutual funds. Instead of
+          investing a lump sum, you contribute small amounts at regular
+          intervals (monthly or quarterly). Over time, this allows you to benefit
+          from <strong>rupee cost averaging</strong> and the <strong>power of compounding</strong>.
+        </p>
+
+    
+        <div className="bg-indigo-100 dark:bg-gray-700 rounded-2xl p-6 mb-10 shadow-md">
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 dark:text-white">
+             How SIP Works
+          </h2>
+          <ul className="list-disc list-inside space-y-3 text-base sm:text-lg dark:text-gray-200">
+            <li>You decide an amount (e.g., ₹1000/month) to invest regularly.</li>
+            <li>The money is automatically invested in your chosen mutual fund.</li>
+            <li>You receive units based on the fund’s NAV (Net Asset Value) each time.</li>
+            <li>Over time, your investment grows with returns and compounding.</li>
+          </ul>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 mb-10">
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-600 dark:text-white">
+            SIP Formula
+          </h2>
+          <p className="text-base sm:text-lg mb-3 dark:text-gray-200">
+            The future value of your SIP investment is calculated using this formula:
+          </p>
+
+          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center text-lg sm:text-xl font-mono mb-4 dark:text-white">
+            FV = P × ((1 + r)ⁿ - 1) × (1 + r) / r
+          </div>
+
+          <p className="text-sm sm:text-base leading-relaxed dark:text-gray-200">
+            Where: <br />
+            <strong>P</strong> = SIP amount per installment <br />
+            <strong>r</strong> = Rate of return per month (annual rate / 12) <br />
+            <strong>n</strong> = Total number of months <br />
+            <strong>FV</strong> = Future Value of the investment
+          </p>
+        </div>
+
+        <div className="bg-indigo-50 dark:bg-gray-700 p-6 rounded-2xl shadow-md">
+          <h2 className="text-2xl font-semibold mb-4 text-indigo-700 dark:text-white">
+             Example
+          </h2>
+          <p className="text-base sm:text-lg leading-relaxed dark:text-gray-200">
+            Suppose you invest ₹5,000 every month for 10 years at an annual return
+            rate of 12%:
+          </p>
+
+          <div className="mt-4 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg font-mono dark:text-gray-200">
+            P = 5000, r = 12% / 12 = 0.01, n = 10 × 12 = 120 <br />
+            FV = 5000 × ((1 + 0.01)¹²⁰ - 1) × (1 + 0.01) / 0.01 ≈ ₹11,61,695
+          </div>
+
+          <p className="mt-3 text-base sm:text-lg dark:text-gray-200  ">
+            So, your total invested amount = ₹6,00,000 (5000 × 120)  
+            and the estimated future value ≈ ₹11.6 lakhs.
+          </p>
+        </div>
+
+        <p className="text-center text-sm sm:text-base text-gray-500 dark:text-gray-200 mt-10 ">
+          SIPs are ideal for long-term wealth creation. Start small, stay consistent, and let time grow your investment 🌱
+        </p>
+      </div>
+    </div>
     <Footer />
     <></>
     </div>

@@ -40,9 +40,9 @@ function App() {
         <Route path = '/All_Conversions/Length_and_Distance_Converter' element={<Length_And_Distance_Converter/>} />
         <Route path  = '/About Us' element={<About_Us />} />
         <Route path = '/Our Mission' element={<Our_Mission />} />
-        <Route path='/SIP Calculator' element = {<SIPCalculator/>} />
-        <Route path='/SWP Calculator' element= {<SWPCalulator />} />
-        <Route path='/CAGR Calculator' element={<CAGR_Calculator />} />
+        <Route path='/SIP-Calculator' element = {<SIPCalculator/>} />
+        <Route path='/SWP-Calculator' element= {<SWPCalulator />} />
+        <Route path='/CAGR-Calculator' element={<CAGR_Calculator />} />
 
       </Routes>
     </Router>

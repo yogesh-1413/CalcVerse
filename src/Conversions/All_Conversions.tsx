@@ -80,9 +80,9 @@ const All_Conversions: React.FC = () => {
                                 <Link to="/Financial" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Financial Calculators</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col mt-4 gap-2">
-                                        <Link to="/SIP Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SIP Calculator</p></Link>
-                                        <Link to="/SWP Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SWP Calculator</p></Link>
-                                        <Link to="/CAGR Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">CAGR Calculator</p></Link>
+                                        <Link to="/SIP-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SIP Calculator</p></Link>
+                                        <Link to="/SWP-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SWP Calculator</p></Link>
+                                        <Link to="/CAGR-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">CAGR Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">EMI calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">XIRR Calculator</p></Link>
                                     </div>

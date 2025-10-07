@@ -188,7 +188,9 @@ export const SWPCalculator: React.FC = () => {
           </ResponsiveContainer>
         </div>
       </div>
-      <></>
+      <div className=''>
+        
+        </div>
     </div>
     <Footer />
     </div>
