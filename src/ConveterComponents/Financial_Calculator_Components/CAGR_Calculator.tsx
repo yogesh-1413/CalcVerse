@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { TrendingUp } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
-import { calculateCAGR, formatCurrency } from '../Utils/SIP_SWP_CAGR_Calculator';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+import { calculateCAGR, formatCurrency } from '../../Utils/SIP_SWP_CAGR_Calculator';
+import Navbar from '../../Components/Navbar';
+import Footer from '../../Components/Footer';
 
 export const CAGR_Calculator: React.FC = () => {
   const [initialValue, setInitialValue] = useState(100000);
@@ -15,7 +15,7 @@ export const CAGR_Calculator: React.FC = () => {
   return (
     <div className='flex flex-col bg-gradient-to-r from-slate-50/60 via-blue-50/90 to-teal-50/60 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transition-all duration-300 ease-in-out'>
         <Navbar />
-    <div className="rounded-2xl shadow-xl p-8 ">
+    <div className="rounded-2xl shadow-xl p-8 mt-10 mb-10 ml-2 mr-2  ">
       <div className="flex items-center gap-3 mb-8">
         <div className="bg-gradient-to-br from-orange-500 to-amber-600 p-3 rounded-xl">
           <TrendingUp className="w-6 h-6 text-white" />
@@ -168,6 +168,56 @@ export const CAGR_Calculator: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
+    <div className='flex flex-col items-center mt-5 mb-10'>
+      <section className='max-w-7xl w-full'>
+          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6 text-pink-600 dark:text-white">
+            📈 CAGR (Compound Annual Growth Rate)
+          </h1>
+
+          <p className="text-lg leading-relaxed mb-8 text-justify">
+            <strong>Compound Annual Growth Rate (CAGR)</strong> measures how much an
+            investment grows annually, assuming it grows at a steady rate.
+            It’s useful for comparing the performance of different investments
+            over time.
+          </p>
+
+          <div className="bg-pink-100 dark:bg-gray-700 rounded-2xl p-6 mb-8 shadow-md">
+            <h2 className="text-2xl font-semibold mb-3 text-pink-700 dark:text-white">
+              How CAGR Works
+            </h2>
+            <ul className="list-disc list-inside space-y-3 text-base sm:text-lg dark:text-gray-300">
+              <li>It calculates the smoothed annual return over multiple years.</li>
+              <li>Helps evaluate consistent growth ignoring market fluctuations.</li>
+            </ul>
+          </div>
+
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 mb-8">
+            <h2 className="text-2xl font-semibold mb-4 text-pink-600 dark:text-white">
+             CAGR Formula
+            </h2>
+            <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center text-lg sm:text-xl font-mono mb-4 dark:text-gray-200">
+              CAGR = (FV / PV)^(1 / t) - 1
+            </div>
+            <p className="text-sm sm:text-base leading-relaxed dark:text-gray-300">
+              FV = Final Value <br />
+              PV = Initial Value <br />
+              t = Time in years <br />
+              CAGR = Annual growth rate
+            </p>
+          </div>
+
+          <div className="bg-pink-50 dark:bg-gray-700 p-6 rounded-2xl shadow-md">
+            <h3 className="text-2xl font-semibold mb-3 text-pink-700 dark:text-white">
+              Example
+            </h3>
+            <p className='dark:text-gray-300'>
+              If ₹1,00,000 grows to ₹1,60,000 in 3 years,  
+              CAGR = ((160000 / 100000)^(1/3)) - 1 ≈ 16.99% per year.
+            </p>
+          </div>
+        </section>
+
     </div>
     <Footer />
     </div>
