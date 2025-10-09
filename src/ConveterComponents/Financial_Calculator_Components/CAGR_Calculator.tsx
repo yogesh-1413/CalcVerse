@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp } from 'lucide-react';
+import { EarthLock, TrendingUp } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
 import { calculateCAGR, formatCurrency } from '../../Utils/SIP_SWP_CAGR_Calculator';
 import Navbar from '../../Components/Navbar';
@@ -57,7 +57,7 @@ export const CAGR_Calculator: React.FC = () => {
               <input
                 type="range"
                 min="10000"
-                max="10000000"
+                max="100000000"
                 step="10000"
                 value={finalValue}
                 onChange={(e) => setFinalValue(Number(e.target.value))}
@@ -81,7 +81,8 @@ export const CAGR_Calculator: React.FC = () => {
               <input
                 type="range"
                 min="1"
-                max="30"
+                max="100"
+                step={1}
                 value={period}
                 onChange={(e) => setPeriod(Number(e.target.value))}
                 className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-orange-600"
@@ -89,7 +90,17 @@ export const CAGR_Calculator: React.FC = () => {
               <input
                 type="number"
                 value={period}
-                onChange={(e) => setPeriod(Number(e.target.value))}
+                onChange={(e) => {
+                const periodValue = Number(e.target.value)
+                if(periodValue>100){
+                  setPeriod(100)
+                }
+                else if(periodValue < 1){
+                  setPeriod(1)
+                } else{
+                  setPeriod(periodValue)
+                }
+                }}
                 className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               />
             </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp } from 'lucide-react';
+import { EarthLock, Target, TrendingUp } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
 import { calculateSIP, formatCurrency } from '../../Utils/SIP_SWP_CAGR_Calculator';
 import Navbar from '../../Components/Navbar';
@@ -31,17 +31,30 @@ export const SIPCalculator: React.FC = () => {
             <div className="flex items-center gap-4">
               <input
                 type="range"
-                min="500"
-                max="100000"
-                step="500"
+                min="100"
+                max="1000000"
+                step="1000"
                 value={monthlyInvestment}
                 onChange={(e) => setMonthlyInvestment(Number(e.target.value))}
                 className="flex-1 h-2 bg-gray-200 dark:bg-gray-100 rounded-lg appearance-none cursor-pointer accent-green-600 dark:accent-orange-500"
               />
               <input
                 type="number"
+                min={100}
+                max={1000000}
+                step={1000}
                 value={monthlyInvestment}
-                onChange={(e) => setMonthlyInvestment(Number(e.target.value))}
+                onChange={(e) => {
+                  const investmentValue = Number(e.target.value);
+                  if (investmentValue < 100) {
+                    setMonthlyInvestment(100);
+                  } else if (investmentValue > 1000000) {
+                    setMonthlyInvestment(1000000);
+                  } else {
+                    setMonthlyInvestment(investmentValue);
+                  }
+                }}
+
                 className="w-28 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:focus:ring-orange-500"
               />
             </div>
@@ -56,7 +69,7 @@ export const SIPCalculator: React.FC = () => {
               <input
                 type="range"
                 min="1"
-                max="30"
+                max="60"
                 value={period}
                 onChange={(e) => setPeriod(Number(e.target.value))}
                 className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-green-600 dark:accent-orange-500"
@@ -64,7 +77,18 @@ export const SIPCalculator: React.FC = () => {
               <input
                 type="number"
                 value={period}
-                onChange={(e) => setPeriod(Number(e.target.value))}
+                min={1}
+                max={60}
+                onChange={(e) => {
+                  const tenureValue = Number(e.target.value);
+                  if (tenureValue > 60) {
+                    setPeriod(60);
+                  } else if (tenureValue < 1) {
+                    setPeriod(1);
+                  } else {
+                    setPeriod(tenureValue);
+                  }
+                }}
                 className="w-28 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:focus:ring-orange-500"
               />
             </div>
@@ -79,7 +103,7 @@ export const SIPCalculator: React.FC = () => {
               <input
                 type="range"
                 min="1"
-                max="30"
+                max="100"
                 step="0.5"
                 value={expectedReturn}
                 onChange={(e) => setExpectedReturn(Number(e.target.value))}
@@ -87,8 +111,22 @@ export const SIPCalculator: React.FC = () => {
               />
               <input
                 type="number"
+                min="1"
+                max="100"
+                step="0.5"
                 value={expectedReturn}
-                onChange={(e) => setExpectedReturn(Number(e.target.value))}
+                onChange={(e) => {
+                  const returnValue = Number(e.target.value);
+                  if (returnValue > 100) {
+                    setExpectedReturn(100)
+                  }
+                  else if (returnValue < 1) {
+                    setExpectedReturn(1)
+                  }
+                  else {
+                    setExpectedReturn(returnValue)
+                  }
+                }}
                 className="w-28 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:focus:ring-orange-500"
               />
             </div>
@@ -198,7 +236,7 @@ export const SIPCalculator: React.FC = () => {
             Formula
           </h2>
           <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center text-lg sm:text-xl font-mono mb-4">
-           <p className='dark:text-gray-200'> FV = P × ((1 + r)ⁿ - 1) × (1 + r) / r </p>
+            <p className='dark:text-gray-200'> FV = P × ((1 + r)ⁿ - 1) × (1 + r) / r </p>
           </div>
           <p className="text-sm sm:text-base leading-relaxed dark:text-gray-200">
             P = SIP amount per month <br />

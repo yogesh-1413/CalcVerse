@@ -34,7 +34,7 @@ export const SWPCalculator: React.FC = () => {
                 <input
                   type="range"
                   min="100000"
-                  max="10000000"
+                  max="100000000"
                   step="50000"
                   value={initialInvestment}
                   onChange={(e) => setInitialInvestment(Number(e.target.value))}
@@ -42,8 +42,20 @@ export const SWPCalculator: React.FC = () => {
                 />
                 <input
                   type="number"
+                  min={100000}
+                  max={100000000}
+                  step={50000}
                   value={initialInvestment}
-                  onChange={(e) => setInitialInvestment(Number(e.target.value))}
+                  onChange={(e) => {
+                    const initialValue = Number(e.target.value)
+                    if (initialValue < 100000) {
+                      setInitialInvestment(100000)
+                    } else if (initialValue > 100000000) {
+                      setInitialInvestment(100000000)
+                    } else {
+                      setInitialInvestment(initialValue)
+                    }
+                  }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-orange-500 "
                 />
               </div>
@@ -82,7 +94,8 @@ export const SWPCalculator: React.FC = () => {
                 <input
                   type="range"
                   min="1"
-                  max="30"
+                  max="60"
+                  step={1}
                   value={period}
                   onChange={(e) => setPeriod(Number(e.target.value))}
                   className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:accent-orange-500"
@@ -90,7 +103,19 @@ export const SWPCalculator: React.FC = () => {
                 <input
                   type="number"
                   value={period}
-                  onChange={(e) => setPeriod(Number(e.target.value))}
+                  min={1}
+                  max={60}
+                  step={1}
+                  onChange={(e) => {
+                    const tenureValue = Number(e.target.value);
+                    if (tenureValue > 60) {
+                      setPeriod(60);
+                    } else if (tenureValue < 1) {
+                      setPeriod(1);
+                    } else {
+                      setPeriod(tenureValue);
+                    }
+                  }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-orange-500"
                 />
               </div>
@@ -105,16 +130,30 @@ export const SWPCalculator: React.FC = () => {
                 <input
                   type="range"
                   min="1"
-                  max="30"
-                  step="0.5"
+                  max="100"
+                  step="0.1"
                   value={expectedReturn}
                   onChange={(e) => setExpectedReturn(Number(e.target.value))}
                   className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:accent-orange-500"
                 />
                 <input
                   type="number"
+                  min={1}
+                  max={100}
+                  step={0.1}
                   value={expectedReturn}
-                  onChange={(e) => setExpectedReturn(Number(e.target.value))}
+                  onChange={(e) => {
+                    const returnValue = Number(e.target.value);
+                    if (returnValue > 100) {
+                      setExpectedReturn(100)
+                    }
+                    else if (returnValue < 1) {
+                      setExpectedReturn(1)
+                    }
+                    else {
+                      setExpectedReturn(returnValue)
+                    }
+                  }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-orange-500"
                 />
               </div>
@@ -136,7 +175,7 @@ export const SWPCalculator: React.FC = () => {
                 <span className="text-2xl font-bold text-blue-700 dark:text-orange-700">{formatCurrency(result.remainingValue)}</span>
               </div>
             </div>
-          </div>
+          </div>  
 
           <div>
             <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-4">Withdrawal Analysis</h3>
