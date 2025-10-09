@@ -10,6 +10,7 @@ export const SWPCalculator: React.FC = () => {
   const [monthlyWithdrawal, setMonthlyWithdrawal] = useState(10000);
   const [period, setPeriod] = useState(10);
   const [expectedReturn, setExpectedReturn] = useState(10);
+  const [withdrawalWarning, setWithdrawalWarning] = useState(false);
 
   const result = calculateSWP(initialInvestment, monthlyWithdrawal, period, expectedReturn);
 
@@ -76,15 +77,36 @@ export const SWPCalculator: React.FC = () => {
                   onChange={(e) => setMonthlyWithdrawal(Number(e.target.value))}
                   className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:accent-orange-500"
                 />
+
                 <input
                   type="number"
                   value={monthlyWithdrawal}
-                  onChange={(e) => setMonthlyWithdrawal(Number(e.target.value))}
+                  min={1000}
+                  max={Math.min(100000, initialInvestment)} 
+                  onChange={(e) => {
+                    const value = Number(e.target.value);
+                    if (value > initialInvestment) {
+                      setMonthlyWithdrawal(initialInvestment);
+                      setWithdrawalWarning(true);
+                      setTimeout(() => setWithdrawalWarning(false), 3000);
+                    } else if (value < 1000) {
+                      setMonthlyWithdrawal(1000);
+                      setWithdrawalWarning(false);
+                    } else {
+                      setMonthlyWithdrawal(value);
+                      setWithdrawalWarning(false);
+                    }
+                  }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-orange-500"
                 />
               </div>
               <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(monthlyWithdrawal)}</p>
             </div>
+            {withdrawalWarning && (
+                  <p className="text-xs text-red-500 mt-1">
+                    Monthly withdrawal cannot exceed initial investment. Automatically reset to max allowed.
+                  </p>
+                )}
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
@@ -175,7 +197,7 @@ export const SWPCalculator: React.FC = () => {
                 <span className="text-2xl font-bold text-blue-700 dark:text-orange-700">{formatCurrency(result.remainingValue)}</span>
               </div>
             </div>
-          </div>  
+          </div>
 
           <div>
             <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-100 mb-4">Withdrawal Analysis</h3>
