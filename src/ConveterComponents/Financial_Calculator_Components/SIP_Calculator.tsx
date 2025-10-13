@@ -133,21 +133,37 @@ export const SIPCalculator: React.FC = () => {
             <p className="text-sm text-gray-500 dark:text-gray-300 mt-1">{expectedReturn}% per annum</p>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-orange-50 dark:to-red-50 rounded-xl p-6 space-y-4 border border-green-100 dark:border-orange-500">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 font-medium">Total Investment</span>
-              <span className="text-xl font-bold text-gray-800">{formatCurrency(result.totalInvestment)}</span>
+          <div className="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto bg-gradient-to-br from-green-50 to-emerald-50 dark:from-orange-50 dark:to-red-50 rounded-xl p-4 sm:p-6 space-y-4 border border-green-100 dark:border-orange-500 shadow-sm">
+            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-gray-600 font-medium text-sm sm:text-base">
+                Total Investment
+              </span>
+              <span className="text-lg sm:text-xl font-bold text-gray-800 break-words">
+                {formatCurrency(result.totalInvestment)}
+              </span>
             </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 font-medium">Estimated Returns</span>
-              <span className="text-xl font-bold text-green-600 dark:text-orange-600">{formatCurrency(result.estimatedReturns)}</span>
+
+            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-gray-600 font-medium text-sm sm:text-base">
+                Estimated Returns
+              </span>
+              <span className="text-lg sm:text-xl font-bold text-green-600 dark:text-orange-600 break-words">
+                {formatCurrency(result.estimatedReturns)}
+              </span>
             </div>
+
             <div className="h-px bg-green-200 dark:bg-orange-200"></div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-700 font-semibold">Total Value</span>
-              <span className="text-2xl font-bold text-green-700 dark:text-orange-700">{formatCurrency(result.totalValue)}</span>
+
+            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-gray-700 font-semibold text-base sm:text-lg">
+                Total Value
+              </span>
+              <span className="text-xl sm:text-2xl font-bold text-green-700 dark:text-orange-700 break-words">
+                {formatCurrency(result.totalValue)}
+              </span>
             </div>
           </div>
+
         </div>
 
         <div>

@@ -8,8 +8,8 @@ import Footer from '../../Components/Footer';
 export const SWPCalculator: React.FC = () => {
   const [initialInvestment, setInitialInvestment] = useState(1000000);
   const [monthlyWithdrawal, setMonthlyWithdrawal] = useState(10000);
-  const [period, setPeriod] = useState(10);
-  const [expectedReturn, setExpectedReturn] = useState(10);
+  const [period, setPeriod] = useState(8);
+  const [expectedReturn, setExpectedReturn] = useState(12);
   const [withdrawalWarning, setWithdrawalWarning] = useState(false);
 
   const result = calculateSWP(initialInvestment, monthlyWithdrawal, period, expectedReturn);

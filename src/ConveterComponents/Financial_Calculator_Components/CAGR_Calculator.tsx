@@ -107,25 +107,25 @@ export const CAGR_Calculator: React.FC = () => {
             <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{period} years</p>
           </div>
 
-          <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 space-y-4 border border-orange-100">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 font-medium">Initial Value</span>
+          <div className="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 space-y-4 border border-orange-100">
+            <div className="flex justify-between flex-col sm:flex-row justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-gray-600 text-sm sm:text-base">Initial Value</span>
               <span className="text-xl font-bold text-gray-800">{formatCurrency(result.initialValue)}</span>
             </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 font-medium">Final Value</span>
+            <div className="flex justify-between flex-col sm:flex-row justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-gray-600 text-sm sm:text-base">Final Value</span>
               <span className="text-xl font-bold text-gray-800">{formatCurrency(result.finalValue)}</span>
             </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 font-medium">Total Gain</span>
+            <div className="flex justify-between flex-col sm:flex-row justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-gray-600 text-sm sm:text-base">Total Gain</span>
               <span className="text-xl font-bold text-orange-600">{formatCurrency(result.totalGain)}</span>
             </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 font-medium">Absolute Return</span>
+            <div className="flex justify-between flex-col sm:flex-row justify-between sm:items-center gap-1 sm:gap-2">
+              <span className="text-gray-600 text-sm sm:text-base">Absolute Return</span>
               <span className="text-xl font-bold text-orange-600">{result.totalGainPercentage.toFixed(2)}%</span>
             </div>
             <div className="h-px bg-orange-200"></div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between flex-col sm:flex-row justify-between sm:items-center gap-1 sm:gap-2">
               <span className="text-gray-700 font-semibold">CAGR</span>
               <span className="text-3xl font-bold text-orange-700">{result.cagr.toFixed(2)}%</span>
             </div>
