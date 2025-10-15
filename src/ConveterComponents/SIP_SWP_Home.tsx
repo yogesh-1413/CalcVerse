@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Calculator } from 'lucide-react';
-import { SIPCalculator } from './SIP_Calculator';
-import { SWPCalculator } from './SWP_Calculator';
+import { SIPCalculator } from './Financial_Calculator_Components/SIP_Calculator';
+import { SWPCalculator } from './Financial_Calculator_Components/SWP_Calculator';
 
 function SIP_SWP_Calculator_App() {
   const [activeTab, setActiveTab] = useState<'sip' | 'swp'>('sip');

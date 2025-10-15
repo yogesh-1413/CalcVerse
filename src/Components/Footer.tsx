@@ -8,28 +8,28 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="min-w-0">
-           <Link to = '/All_Conversions' className="hover:underline"> <h4 className="font-semibold text-white mb-6 text-lg break-words hover:text-teal-300">All Calculators</h4></Link>
+           <Link to = '/All-Calculators' className="hover:underline"> <h4 className="font-semibold text-white mb-6 text-lg break-words hover:text-teal-300">All Calculators</h4></Link>
             <ul className="space-y-3 text-gray-300 dark:text-gray-400">
               <li>
-                <Link to="/Currency" className="hover:text-teal-400 dark:hover:text-teal-300 hover:underline transition-colors duration-200 flex items-center break-words">
+                <Link to="/Currency-Calculators" className="hover:text-teal-400 dark:hover:text-teal-300 hover:underline transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-teal-500 rounded-full mr-3 flex-shrink-0"></span>
                   Currency Converter
                 </Link>
               </li>
               <li>
-                <Link to="/UnitConvert" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="/Unit-Conversions" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
                   Unit Converter
                 </Link>
               </li>
               <li>
-                <Link to="/Financial" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="/Financial-Calculators" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
                   Financial Calculator
                 </Link>
               </li>
               <li>
-                <Link to="/Health_Calculators" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
+                <Link to="/Health-Calculators" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></span>
                   Health Calculators
                 </Link>

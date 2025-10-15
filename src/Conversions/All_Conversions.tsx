@@ -7,12 +7,23 @@ import { Link } from "react-router-dom"
 
 const All_Conversions: React.FC = () => {
     return (
-        <div >
+        <div className="bg-gradient-to-r from-slate-50/80 via-blue-50/60 to-teal-50/80 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transform-all duration-300 transition:ease-in-out">
             <div className="flex flex-col min-h-screen min-h-screen ">
                 <div>
                     <Navbar /> </div>
-                <div className=" min-h-screen flex flex-col bg-gradient-to-r from-slate-50/80 via-blue-50/60 to-teal-50/80 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transform-all duration-300 transition:ease-in-out">
-                    <div className="mt-3 grid grid-cols-3 ">
+                <div className="ml-10  mb-3 mt-3">
+                    <p className="text-xs dark:text-white ">
+                        <span className='hover:underline'>
+                            <Link to='/'>Home </Link>
+                        </span>
+                        &gt;
+                        <span className='hover:underline'>
+                            <Link to="/All-Calculators"> All Calculators </Link>
+                        </span>
+                    </p>
+                </div>
+                <div className=" min-h-screen flex flex-col ">
+                    <div className=" grid grid-cols-3 ">
                         <div className="flex p-4">
                             <div className="rounded-3xl  w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl ">
                                 <div className="flex flex-col-2 dark:text-white">
@@ -48,15 +59,15 @@ const All_Conversions: React.FC = () => {
                         </div>
                     </div>
                     <div>
-                        <p className="text-[#000000] mt-5 text-center px-4 text-sm sm:text-sm md:text-md lg:text-lg dark:bg-gradient-to-r dark:from-blue-700 dark:to-indigo-700 dark:bg-clip-text dark:text-transparent">
+                        <p className="text-[#000000] mt-1 text-center px-4 text-sm sm:text-sm md:text-md lg:text-lg dark:bg-gradient-to-r dark:from-blue-700 dark:to-indigo-700 dark:bg-clip-text dark:text-white">
                             Here is the Collection of the all Extensive Calculators and Converters, Trusted over Millions.......
                         </p>
 
                     </div>
-                    <div className="flex-1 flex-col justify-center mt-5 mb-10">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 mr-4 ml-4 bg-white/80 dark:bg-gray-700 backdrop-blur-md rounded-3xl shadow-2xl border-slate-200 dark:border-gray-700 p-8 relative overflow-hidden transition-all duration-300 ease-in-out ">
+                    <div className="flex-1 flex-col justify-center mt-1 mb-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 mr-4 ml-4 bg-white/80 dark:bg-gray-700 backdrop-blur-md rounded-3xl shadow-2xl border-slate-200 dark:border-gray-700 p-8 relative overflow-hidden transition-all duration-300 ease-in-out ">
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-teal-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-teal-100 to-blue-100 dark:from-teal-900/30 dark:to-blue-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/Currency" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-200 ease-in-out ">Currency Converters</h2></Link>
+                                <Link to="/Currency-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-200 ease-in-out ">Currency Converters</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full ">
                                     <div className="flex flex-col gap-2 mt-4 ">
                                         <Link to="/" title="US Dollar to Indian Rupee"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out"> <span className="font-bold ">USD</span> to <span className="font-bold">INR</span></p></Link>
@@ -77,7 +88,7 @@ const All_Conversions: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-purple-600 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/Financial" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Financial Calculators</h2></Link>
+                                <Link to="/Financial-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Financial Calculators</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col mt-4 gap-2">
                                         <Link to="/SIP-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SIP Calculator</p></Link>
@@ -97,7 +108,7 @@ const All_Conversions: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-blue-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/Unitconvert" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Unit Conversions</h2></Link>
+                                <Link to="/Unit-Conversions" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Unit Conversions</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
                                         <Link to="TimeConverter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Time</p></Link>
@@ -117,7 +128,7 @@ const All_Conversions: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-green-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/Health" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Health Calculators </h2></Link>
+                                <Link to="/Health-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Health Calculators </h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Body Mass Index <span className="font-bold">(BMI)</span></p></Link>

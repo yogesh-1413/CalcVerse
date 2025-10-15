@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import Navbar from '../Components/Navbar';
+import { Link } from 'react-router-dom';
 
 type OperationType = '+' | '-' | '×' | '÷' | null;
 
@@ -171,7 +172,7 @@ const Regular_Calculator = () => {
 
   const formatDisplay = (value: string) => {
     if (value === 'Error') return value;
-    
+
     const num = parseFloat(value);
     if (isNaN(num)) return value;
 
@@ -191,25 +192,25 @@ const Regular_Calculator = () => {
     { text: 'C', type: 'function', action: clearEntry, span: 1 },
     { text: '÷', type: 'operator', action: () => performOperation('÷'), span: 1 },
     { text: '×', type: 'operator', action: () => performOperation('×'), span: 1 },
-    
+
     { text: '7', type: 'number', action: () => inputNumber('7'), span: 1 },
     { text: '8', type: 'number', action: () => inputNumber('8'), span: 1 },
     { text: '9', type: 'number', action: () => inputNumber('9'), span: 1 },
     { text: '-', type: 'operator', action: () => performOperation('-'), span: 1 },
-    
+
     { text: '4', type: 'number', action: () => inputNumber('4'), span: 1 },
     { text: '5', type: 'number', action: () => inputNumber('5'), span: 1 },
     { text: '6', type: 'number', action: () => inputNumber('6'), span: 1 },
     { text: '+', type: 'operator', action: () => performOperation('+'), span: 1 },
-    
+
     { text: '1', type: 'number', action: () => inputNumber('1'), span: 1 },
     { text: '2', type: 'number', action: () => inputNumber('2'), span: 1 },
     { text: '3', type: 'number', action: () => inputNumber('3'), span: 1 },
     { text: '.', type: 'number', action: inputDot, span: 1 },
-    
+
     { text: '0', type: 'number', action: () => inputNumber('0'), span: 2 },
     { text: '=', type: 'equals', action: calculate, span: 1 },
-    
+
   ];
 
   const getButtonClass = (type: string) => {
@@ -227,33 +228,48 @@ const Regular_Calculator = () => {
     }
   };
 
-  return (<div className='flex flex-col min-h-screen'>
+  return (<div className='flex flex-col min-h-screen bg-gradient-to-r from-slate-50/60 via-blue-50/60 to-teal-50/60 dark:from-gray-900/60 dark:via-gray-500/60 dark:to-gray-900/40 transition-all duration-300 ease-in-out'>
     <Navbar />
-    <div className='flex-1 bg-gradient-to-r from-slate-50/60 via-blue-50/60 to-teal-50/60 dark:from-gray-900/60 dark:via-gray-500/60 dark:to-gray-900/40 transition-all duration-300 ease-in-out'>
-    <div className="flex flex-col-1  items-center justify-center p-5 mt-10 backdrop-blur-md ">
-      <div className="w-full max-w-sm mx-auto">
-        <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 shadow-2xl">
-          <div className="calc-display mb-6">
-            <div className="text-3xl sm:text-4xl font-mono font-bold min-h-[3rem] flex items-center justify-end overflow-hidden">
-              {formatDisplay(state.display)}
+    <div className="ml-10  mb-3 mt-3">
+      <p className="text-xs dark:text-white ">
+        <span className='hover:underline'>
+          <Link to='/'>Home </Link>
+        </span>
+        &gt;
+        <span className='hover:underline'>
+          <Link to="/All-Calculators"> All Calculators </Link>
+        </span>
+        &gt;
+        <Link to='/Regular-Calculator'>
+        <span className='hover:underline'>  Regular Calculator</span>
+        </Link>
+      </p>
+    </div>
+    <div className='flex-1 '>
+      <div className="flex flex-col-1  items-center justify-center p-5 mt-10 backdrop-blur-md ">
+        <div className="w-full max-w-sm mx-auto">
+          <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 shadow-2xl">
+            <div className="calc-display mb-6">
+              <div className="text-3xl sm:text-4xl font-mono font-bold min-h-[3rem] flex items-center justify-end overflow-hidden">
+                {formatDisplay(state.display)}
+              </div>
+              <div className="text-sm text-muted-foreground mt-2 flex justify-between items-center">
+                <span>Calculator</span>
+                <span className="text-xs opacity-60">Use keyboard or touch</span>
+              </div>
             </div>
-            <div className="text-sm text-muted-foreground mt-2 flex justify-between items-center">
-              <span>Calculator</span>
-              <span className="text-xs opacity-60">Use keyboard or touch</span>
-            </div>
-          </div>
 
-          <div className="grid grid-cols-4 gap-3 x">
-            {buttons.map((button, index) => {
-              const isLastRow = index >= buttons.length - 3;
-              const colSpan = button.span === 2 ? 'col-span-3' : '';
-              const rowSpan = button.text === '=' && !isLastRow ? 'row-span-3' : '';
-              
-              return (
-                <button
-                  key={`${button.text}-${index}`}
-                  onClick={button.action}
-                  className={`
+            <div className="grid grid-cols-4 gap-3 x">
+              {buttons.map((button, index) => {
+                const isLastRow = index >= buttons.length - 3;
+                const colSpan = button.span === 2 ? 'col-span-3' : '';
+                const rowSpan = button.text === '=' && !isLastRow ? 'row-span-3' : '';
+
+                return (
+                  <button
+                    key={`${button.text}-${index}`}
+                    onClick={button.action}
+                    className={`
                     ${getButtonClass(button.type)}
                     ${colSpan}
                     ${rowSpan}
@@ -263,23 +279,23 @@ const Regular_Calculator = () => {
                     disabled:opacity-50 disabled:cursor-not-allowed
                     border border-black
                   `}
-                  disabled={state.display === 'Error' && button.type !== 'function'}
-                >
-                  {button.text}
-                </button>
-              );
-            })}
-          </div>
+                    disabled={state.display === 'Error' && button.type !== 'function'}
+                  >
+                    {button.text}
+                  </button>
+                );
+              })}
+            </div>
 
-          {/* Footer */}
-          <div className="mt-6 text-center text-xs text-muted-foreground">
-            <p>Press ESC to clear • Supports keyboard input</p>
+            {/* Footer */}
+            <div className="mt-6 text-center text-xs text-muted-foreground">
+              <p>Press ESC to clear • Supports keyboard input</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-    </div>
+  </div>
   );
 };
 

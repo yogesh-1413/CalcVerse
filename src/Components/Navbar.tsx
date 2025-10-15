@@ -5,10 +5,10 @@ import { Sun, Moon } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "/", title: "Home" },
-  { name: "Currency", href: "/Currency", title: "Currency Conversions" },
-  { name: "Unit", href: "/Unitconvert", title: "Unit Calculators" },
-  { name: "Financial", href: "/Financial", title: "Financial Calculators" },
-  { name: "Health", href: "/Health_Calculators", title: "Health Calculators" },
+  { name: "Currency", href: "/Currency-Calculators", title: "Currency Conversions" },
+  { name: "Unit", href: "/Unit-Conversions", title: "Unit Calculators" },
+  { name: "Financial", href: "/Financial-Calculators", title: "Financial Calculators" },
+  { name: "Health", href: "/Health-Calculators", title: "Health Calculators" },
   // { name: "Scientific", href: "/Scientific" ,title:"Scientific Calculators"},
 
 ];

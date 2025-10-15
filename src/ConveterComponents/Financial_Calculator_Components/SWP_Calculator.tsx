@@ -4,6 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { calculateSWP, formatCurrency } from '../../Utils/SIP_SWP_CAGR_Calculator';
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
+import { Link } from 'react-router-dom';
 
 export const SWPCalculator: React.FC = () => {
   const [initialInvestment, setInitialInvestment] = useState(1000000);
@@ -17,7 +18,26 @@ export const SWPCalculator: React.FC = () => {
   return (
     <div className='flex flex-col bg-gradient-to-r from-slate-50/60 via-blue-50/90 to-teal-50/60 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transition-all duration-300 ease-in-out'>
       <Navbar />
-      <div className="bg-white rounded-2xl shadow-xl p-8 mt-5 mb-10 ml-2 mr-2 bg-gradient-to-r from-slate-50/60 via-blue-50/80 to-teal-50/60 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transform-all duration-300 transition:ease-in-out">
+      <div className="ml-10  mt-3">
+      <p className="text-xs dark:text-white ">
+        <span className='hover:underline'>
+          <Link to='/'>Home </Link>
+        </span>
+        &gt;
+        <span className='hover:underline'>
+          <Link to="/All-Calculators"> All Calculators </Link>
+        </span>
+        &gt;
+        <Link to='/Financial-Calculators'>
+        <span className='hover:underline'> Financial Calculators </span>
+        </Link>
+        &gt;
+        <Link to='/SWP-Calculator'>
+        <span className='hover:underline'>  SWP Calculator </span>
+        </Link>
+      </p>
+    </div>
+      <div className="bg-white rounded-2xl shadow-xl p-8  mb-10 ml-2 mr-2 bg-gradient-to-r from-slate-50/60 via-blue-50/80 to-teal-50/60 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transform-all duration-300 transition:ease-in-out">
         <div className="flex items-center gap-3 mb-8">
           <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-3 rounded-xl dark:from-orange-500 dark:to-red-500">
             <TrendingDown className="w-6 h-6 text-white" />

@@ -29,15 +29,15 @@ function App() {
       <AutoScroll />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Currency" element={<Currency />} />
-        <Route path = '/Health_Calculators' element = {<Health_Calculators />} />
-        <Route path = '/UnitConvert' element = {<UnitConversions/>} />
-        <Route path = '/Financial' element = {<Financial/>} />
-        <Route path = '/All_Conversions' element = {<All_Conversions />} />
-        <Route path = '/Regular_Calculator' element = {<Regular_Calculator />} />
+        <Route path="/Currency-Calculators" element={<Currency />} />
+        <Route path = '/Health-Calculators' element = {<Health_Calculators />} />
+        <Route path = '/Unit-Conversions' element = {<UnitConversions/>} />
+        <Route path = '/Financial-Calculators' element = {<Financial/>} />
+        <Route path = '/All-Calculators' element = {<All_Conversions />} />
+        <Route path = '/Regular-Calculator' element = {<Regular_Calculator />} />
         <Route path='*' element={<NotFound/>} />
-        <Route path='/All_Conversions/TimeConverter' element={<TimeConverter/>} />
-        <Route path = '/All_Conversions/Length_and_Distance_Converter' element={<Length_And_Distance_Converter/>} />
+        <Route path='/All-Calculators/TimeConverter' element={<TimeConverter/>} />
+        <Route path = '/All-Calculators/Length_and_Distance_Converter' element={<Length_And_Distance_Converter/>} />
         <Route path  = '/About Us' element={<About_Us />} />
         <Route path = '/Our Mission' element={<Our_Mission />} />
         <Route path='/SIP-Calculator' element = {<SIPCalculator/>} />
