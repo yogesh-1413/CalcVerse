@@ -10,8 +10,8 @@ const All_Conversions: React.FC = () => {
     return (
         <div className="bg-gradient-to-r from-slate-50/80 via-blue-50/60 to-teal-50/80 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transform-all duration-300 transition:ease-in-out">
             <div className="flex flex-col min-h-screen min-h-screen ">
-                <div>
-                    <Navbar /> </div>
+                
+                    <Navbar /> 
                 <div className="ml-10  mb-3 mt-3">
                     <p className="text-xs dark:text-white ">
                         <span className='hover:underline'>
@@ -38,7 +38,7 @@ const All_Conversions: React.FC = () => {
                             <div className="flex items-center justify-center rounded-3xl max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl ">
                                 <button
                                     className=""
-                                    onClick={() => (window.open("/All-calculators/Regular_Calculator", "_blank"))}
+                                    onClick={() => (window.open("/All-calculators/Regular-Calculator", "_blank"))}
                                 >
                                     <div className="flex px-3 py-2 rounded-3xl border border-black backdrop-blur-md hover:scale-105 hover:shadow-md hover:text-blue-600 dark:hover:text-teal-400 hover:border-blue-600 dark:hover:border-teal-400 overflow-hidden transition-all duration-300 ease-in-out  ">
                                         <p className="text-md  sm:text-sm md:text-md lg:text-xl">Regular Calculator</p>

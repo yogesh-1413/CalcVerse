@@ -10,7 +10,6 @@ const navLinks = [
   { name: "Unit", href: "/All-Calculators/Unit-Conversions", title: "Unit Calculators" },
   { name: "Financial", href: "/All-Calculators/Financial-Calculators", title: "Financial Calculators" },
   { name: "Health", href: "/All-Calculators/Health-Calculators", title: "Health Calculators" },
-  // { name: "Scientific", href: "/Scientific" ,title:"Scientific Calculators"},
 
 ];
 
