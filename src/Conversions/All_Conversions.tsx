@@ -2,7 +2,8 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { ExternalLink, } from "lucide-react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import SearchBar from "../Components/Searchbar";
 
 
 const All_Conversions: React.FC = () => {
@@ -24,17 +25,7 @@ const All_Conversions: React.FC = () => {
                 </div>
                 <div className=" min-h-screen flex flex-col ">
                     <div className=" grid grid-cols-3 ">
-                        <div className="flex p-4">
-                            <div className="rounded-3xl  w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl ">
-                                <div className="flex flex-col-2 dark:text-white">
-                                    <input
-                                        className="w-full px-4 text-lg py-2 max-w-md border rounded-3xl border-[#000000] focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-purple-600 dark:bg-transparent dark:text-white transition-all duration-300 ease-in-out"
-                                        type="text"
-                                        placeholder={"Search Here..."}
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                        <SearchBar />
                         <div className="flex justify-center rounded-lg p-2">
                             <div className="bg-transparent dark:bg-transparent border border-black backdrop-blur-sm shadow-md rounded-lg p-3 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-xl transition-all duration-300 ease-in-out">
                                 <h1 className="dark:text-teal-400 text-blue-700 text-md sm:text-xl md:text-3xl lg:text-4xl text-center font-semibold transition-all duration-300 ease-in-out">

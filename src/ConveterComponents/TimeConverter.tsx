@@ -1,6 +1,6 @@
 // src/components/Converter.tsx
 import React, { useState } from "react";
-import { TimeUnit, convertTime, timeFactors } from "../Utils/time";
+import { TimeUnit, convertTime,  } from "../Utils/time";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
