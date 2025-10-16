@@ -32,7 +32,7 @@ function Hero() {
                     </div>
                   </Link>
                   <button className="backdrop-blur-md p-4 border border-black rounded-xl hover:text-blue-700 hover:border-blue-700 dark:hover:text-teal-400 dark:hover:border-teal-400 shadow-xl hover-shadow-2xl transition-all duration-300 ease-in-out hover:scale-105"
-                    onClick={() => (window.open("/Regular-Calculator"))}
+                    onClick={() => (window.open("/All-calculators/Regular-Calculator"))}
                   >
                     <div className="flex justify-center ">
                       Regular Calculator <ExternalLink className="ml-3" />
@@ -54,7 +54,7 @@ function Hero() {
 
                   <div className="grid grid-cols-2 gap-4">
 
-                    <Link to="/Currency-Calculators" >
+                    <Link to="/All-calculators/Currency-Calculators" >
                       <div className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-900/30 dark:to-blue-900/30 p-6 rounded-2xl border border-teal-100 dark:border-teal-800 hover:shadow-lg transition-all duration-200 cursor-pointer group">
                         <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                           <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@ function Hero() {
                       </div>
                     </Link>
 
-                    <Link to="/Unit-Conversions">
+                    <Link to="/All-calculators/Unit-Conversions">
                       <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-2xl border border-blue-100 dark:border-blue-800 hover:shadow-lg transition-all duration-200 cursor-pointer group">
                         <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                           <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +78,7 @@ function Hero() {
                       </div>
                     </Link>
 
-                    <Link to="/Financial-Calculators">
+                    <Link to="/All-calculators/Financial-Calculators">
                       <div className="bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900/30 dark:to-teal-900/30 p-6 rounded-2xl border border-green-100 dark:border-green-800 hover:shadow-lg transition-all duration-200 cursor-pointer group">
                         <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                           <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +90,7 @@ function Hero() {
                       </div>
                     </Link>
 
-                    <Link to="/Health-Calculators">
+                    <Link to="/All-calculators/Health-Calculators">
                       <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-6 rounded-2xl border border-purple-100 dark:border-purple-800 hover:shadow-lg transition-all duration-200 cursor-pointer group">
                         <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                         <HeartPulse className="text-white"/>

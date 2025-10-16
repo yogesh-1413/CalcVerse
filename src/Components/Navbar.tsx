@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { href, Link } from "react-router-dom";
 import { Sun, Moon } from "lucide-react";
+import logo from '../assets/logo.png';
 
 const navLinks = [
   { name: "Home", href: "/", title: "Home" },
-  { name: "Currency", href: "/Currency-Calculators", title: "Currency Conversions" },
-  { name: "Unit", href: "/Unit-Conversions", title: "Unit Calculators" },
-  { name: "Financial", href: "/Financial-Calculators", title: "Financial Calculators" },
-  { name: "Health", href: "/Health-Calculators", title: "Health Calculators" },
+  { name: "Currency", href: "/All-Calculators/Currency-Calculators", title: "Currency Conversions" },
+  { name: "Unit", href: "/All-Calculators/Unit-Conversions", title: "Unit Calculators" },
+  { name: "Financial", href: "/All-Calculators/Financial-Calculators", title: "Financial Calculators" },
+  { name: "Health", href: "/All-Calculators/Health-Calculators", title: "Health Calculators" },
   // { name: "Scientific", href: "/Scientific" ,title:"Scientific Calculators"},
 
 ];
@@ -51,12 +52,10 @@ const Navbar: React.FC = () => {
     <header className="bg-slate-50/80 dark:bg-gray-900/80 border-b border-slate-200 dark:border-gray-700 backdrop-blur-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-8">
         <div className="flex justify-between items-center py-1">
-          {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="block"
-              title="Home">
+            <Link to="/" title="Home">
               <img
-                src="../src/assets/logo.png"
+                src={logo}
                 alt="CalcVerse Logo"
                 className="h-[48px] sm:h-[56px] md:h-[64px] w-auto object-contain dark:brightness-0 dark:invert transition-all duration-300"
                 style={{ maxWidth: 96 }}
@@ -107,8 +106,8 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className={`md:hidden transition-all duration-300 ease-in-out ${mobileMenuOpen
-            ? 'max-h-96 opacity-100 visible'
-            : 'max-h-0 opacity-0 invisible overflow-hidden'
+          ? 'max-h-96 opacity-100 visible'
+          : 'max-h-0 opacity-0 invisible overflow-hidden'
           }`}>
           <nav className="py-4 border-t border-slate-200 dark:border-gray-700">
             <div className="flex flex-col space-y-2">

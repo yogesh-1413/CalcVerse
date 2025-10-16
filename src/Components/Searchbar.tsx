@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const calculators = [
-    { name: "SIP Calculator", path: "/calculators/sip" },
-    { name: "EMI Calculator", path: "/calculators/emi" },
-    { name: "SWP Calculator", path: "/calculators/swp" },
-    { name: "CAGR Calculator", path: "/calculators/cagr" },
-    { name: "FD Calculator", path: "/calculators/fd" },
-    { name: "RD Calculator", path: "/calculators/rd" },
+    { name: "SIP Calculator", path: "/SIP-Calculator" },
+    { name: "EMI Calculator", path: "/EMI-Calculators" },
+    { name: "SWP Calculator", path: "/SWP-Calculator" },
+    { name: "CAGR Calculator", path: "/CAGR-Calculator" },
+    { name: "FD Calculator", path: "/FD-Calculator" },
+    { name: "RD Calculator", path: "/RD-Calculator" },
 ];
 
 const SearchBar: React.FC = () => {
@@ -41,7 +41,7 @@ const SearchBar: React.FC = () => {
 
     return (
         <div className="relative w-full max-w-md mx-auto mt-6">
-            <div className="flex p-4">
+            <div className="flex ">
                 <div className="rounded-3xl  w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl ">
                     <div className="flex flex-col-2 dark:text-white">
                         <input

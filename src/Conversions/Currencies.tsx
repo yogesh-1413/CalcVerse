@@ -18,7 +18,7 @@ const Currency = () => {
                         <Link to="/All-Calculators"> All Calculators </Link>
                     </span>
                     &gt;
-                    <Link to='/Currency-Calculators'>
+                    <Link to='/All-calculators/Currency-Calculators'>
                         <span className='hover:underline'> Currency Calculators</span>
                     </Link>
                 </p>

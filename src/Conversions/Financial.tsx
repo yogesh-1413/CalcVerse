@@ -17,7 +17,7 @@ const Financial: React.FC = () => {
                         <Link to="/All-Calculators"> All Calculators </Link>
                     </span>
                     &gt;
-                    <Link to='/Financial-Calculators'>
+                    <Link to='/All-calculators/Financial-Calculators'>
                         <span className='hover:underline'> Financial Calculator</span>
                     </Link>
                 </p>

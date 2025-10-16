@@ -240,7 +240,7 @@ const Regular_Calculator = () => {
           <Link to="/All-Calculators"> All Calculators </Link>
         </span>
         &gt;
-        <Link to='/Regular-Calculator'>
+        <Link to='/All-calculators/Regular-Calculator'>
         <span className='hover:underline'>  Regular Calculator</span>
         </Link>
       </p>

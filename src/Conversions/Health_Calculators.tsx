@@ -18,7 +18,7 @@ const Health_Calculators: React.FC = () => {
                             <Link to="/All-Calculators"> All Calculators </Link>
                         </span>
                         &gt;
-                        <Link to='/Health-Calculators'>
+                        <Link to='/All-calculators/Health-Calculators'>
                             <span className='hover:underline'> Health Calculators</span>
                         </Link>
                     </p>

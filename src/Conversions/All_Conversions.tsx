@@ -38,7 +38,7 @@ const All_Conversions: React.FC = () => {
                             <div className="flex items-center justify-center rounded-3xl max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl ">
                                 <button
                                     className=""
-                                    onClick={() => (window.open("/Regular_Calculator", "_blank"))}
+                                    onClick={() => (window.open("/All-calculators/Regular_Calculator", "_blank"))}
                                 >
                                     <div className="flex px-3 py-2 rounded-3xl border border-black backdrop-blur-md hover:scale-105 hover:shadow-md hover:text-blue-600 dark:hover:text-teal-400 hover:border-blue-600 dark:hover:border-teal-400 overflow-hidden transition-all duration-300 ease-in-out  ">
                                         <p className="text-md  sm:text-sm md:text-md lg:text-xl">Regular Calculator</p>
@@ -58,7 +58,7 @@ const All_Conversions: React.FC = () => {
                     <div className="flex-1 flex-col justify-center mt-1 mb-10">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 mr-4 ml-4 bg-white/80 dark:bg-gray-700 backdrop-blur-md rounded-3xl shadow-2xl border-slate-200 dark:border-gray-700 p-8 relative overflow-hidden transition-all duration-300 ease-in-out ">
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-teal-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-teal-100 to-blue-100 dark:from-teal-900/30 dark:to-blue-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/Currency-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-200 ease-in-out ">Currency Converters</h2></Link>
+                                <Link to="/All-calculators/Currency-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-200 ease-in-out ">Currency Converters</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full ">
                                     <div className="flex flex-col gap-2 mt-4 ">
                                         <Link to="/" title="US Dollar to Indian Rupee"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out"> <span className="font-bold ">USD</span> to <span className="font-bold">INR</span></p></Link>
@@ -79,12 +79,12 @@ const All_Conversions: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-purple-600 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/Financial-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Financial Calculators</h2></Link>
+                                <Link to="/All-calculators/Financial-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Financial Calculators</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col mt-4 gap-2">
-                                        <Link to="/SIP-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SIP Calculator</p></Link>
-                                        <Link to="/SWP-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SWP Calculator</p></Link>
-                                        <Link to="/CAGR-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">CAGR Calculator</p></Link>
+                                        <Link to="/All-calculators/Financial-Calculators/SIP-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SIP Calculator</p></Link>
+                                        <Link to="/All-calculators/Financial-Calculators/SWP-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SWP Calculator</p></Link>
+                                        <Link to="/All-calculators/Financial-Calculators/CAGR-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">CAGR Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">EMI calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">XIRR Calculator</p></Link>
                                     </div>
@@ -94,22 +94,22 @@ const All_Conversions: React.FC = () => {
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Simple Interest Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Compound Interest Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Loan Payoff Calculator</p></Link>
-                                        {/* <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More.....</p></Link> */}
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More.....</p></Link>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-blue-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/Unit-Conversions" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Unit Conversions</h2></Link>
+                                <Link to="/All-calculators/Unit-Conversions" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Unit Conversions</h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
-                                        <Link to="TimeConverter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Time</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/TimeConverter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Time</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Area</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Speed</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Temperature</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Pressure</p></Link>
                                     </div>
                                     <div className="flex flex-col gap-2 md:mt-4">
-                                        <Link to="Length_and_Distance_Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Length & Distance</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/Length_and_Distance_Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Length & Distance</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Mass & Weight</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Fuel Consumption</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Acceleration</p></Link>
@@ -119,7 +119,7 @@ const All_Conversions: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center justify-center min-h-auto min-w-auto border border-green-700 shadow-lg rounded-md mt-4 ml-5 mr-5 p-5 bg-gradient-to-br from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30 transition-all duration-300 ease-in-out">
-                                <Link to="/Health-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Health Calculators </h2></Link>
+                                <Link to="/All-calculators/Health-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Health Calculators </h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Body Mass Index <span className="font-bold">(BMI)</span></p></Link>
@@ -134,6 +134,7 @@ const All_Conversions: React.FC = () => {
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Sobriety Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Age Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
+                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More.....</p></Link>
                                     </div>
                                 </div>
                             </div>
