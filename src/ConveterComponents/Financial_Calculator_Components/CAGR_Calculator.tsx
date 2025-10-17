@@ -7,11 +7,11 @@ import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 
 export const CAGR_Calculator: React.FC = () => {
-  const [initialValue, setInitialValue] = useState(100000);
-  const [finalValue, setFinalValue] = useState(250000);
-  const [period, setPeriod] = useState(5);
+  const [initialValue, setInitialValue] = useState<number | string>(100000);
+  const [finalValue, setFinalValue] = useState<number | string>(250000);
+  const [period, setPeriod] = useState<number | string>(5);
 
-  const result = calculateCAGR(initialValue, finalValue, period);
+  const result = calculateCAGR(Number(initialValue), Number(finalValue), Number(period));
 
   return (
     <div className='flex flex-col bg-gradient-to-r from-slate-50/60 via-blue-50/90 to-teal-50/60 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transition-all duration-300 ease-in-out'>
@@ -62,11 +62,32 @@ export const CAGR_Calculator: React.FC = () => {
                 <input
                   type="number"
                   value={initialValue}
-                  onChange={(e) => setInitialValue(Number(e.target.value))}
+                  onChange={(e) => {
+                    const value = e.target.value;
+
+                    if (value === '') {
+                      setInitialValue('');
+                      return;
+                    }
+
+                    const numericValue = Number(value);
+
+                    if (numericValue >= 0 && numericValue <= 10000000) {
+                      setInitialValue(numericValue);
+                    }
+                  }}
+                  onBlur={() => {
+
+                    if (initialValue === '' || Number(initialValue) < 10000) {
+                      setInitialValue(10000);
+                    } else if (Number(initialValue) > 10000000) {
+                      setInitialValue(10000000);
+                    }
+                  }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(initialValue)}</p>
+              <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(Number(initialValue))}</p>
             </div>
 
             <div>
@@ -86,11 +107,32 @@ export const CAGR_Calculator: React.FC = () => {
                 <input
                   type="number"
                   value={finalValue}
-                  onChange={(e) => setFinalValue(Number(e.target.value))}
+                  onChange={(e) => {
+                    const value = e.target.value;
+
+                    if (value === '') {
+                      setFinalValue('');
+                      return;
+                    }
+
+                    const numericFinalValue = Number(value);
+
+                    if (numericFinalValue >= 0 && numericFinalValue <= 100000000) {
+                      setFinalValue(numericFinalValue);
+                    }
+                  }}
+                  onBlur={() => {
+
+                    if (finalValue === '' || Number(finalValue) < 10000) {
+                      setFinalValue(10000);
+                    } else if (Number(finalValue) > 100000000) {
+                      setFinalValue(100000000);
+                    }
+                  }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(finalValue)}</p>
+              <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(Number(finalValue))}</p>
             </div>
 
             <div>
@@ -111,14 +153,25 @@ export const CAGR_Calculator: React.FC = () => {
                   type="number"
                   value={period}
                   onChange={(e) => {
-                    const periodValue = Number(e.target.value)
-                    if (periodValue > 100) {
-                      setPeriod(100)
+                    const periodValue = e.target.value;
+
+                    if (periodValue === '') {
+                      setPeriod('');
+                      return;
                     }
-                    else if (periodValue < 1) {
-                      setPeriod(1)
-                    } else {
-                      setPeriod(periodValue)
+
+                    const numericValuePeriod = Number(periodValue);
+
+                    if (numericValuePeriod >= 0 && numericValuePeriod <= 100000000) {
+                      setPeriod(numericValuePeriod);
+                    }
+                  }}
+                  onBlur={() => {
+
+                    if (period === '' || Number(period) < 10000) {
+                      setPeriod(10000);
+                    } else if (Number(period) > 100000000) {
+                      setPeriod(100000000);
                     }
                   }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"

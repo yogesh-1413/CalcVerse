@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { EarthLock, Target, TrendingUp } from 'lucide-react';
+import { EarthLock, Target, TrendingUp, Vault } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
 import { calculateSIP, formatCurrency } from '../../Utils/SIP_SWP_CAGR_Calculator';
 import Navbar from '../../Components/Navbar';
@@ -7,11 +7,11 @@ import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 
 export const SIPCalculator: React.FC = () => {
-  const [monthlyInvestment, setMonthlyInvestment] = useState(5000);
-  const [period, setPeriod] = useState(10);
-  const [expectedReturn, setExpectedReturn] = useState(12);
+  const [monthlyInvestment, setMonthlyInvestment] = useState<number | string>(5000);
+  const [period, setPeriod] = useState<number | string>(10);
+  const [expectedReturn, setExpectedReturn] = useState<number | string>(12);
 
-  const result = calculateSIP(monthlyInvestment, period, expectedReturn);
+  const result = calculateSIP(Number(monthlyInvestment), Number(period), Number(expectedReturn));
 
   return (<div className='flex flex-col bg-gradient-to-r from-slate-50/60 via-blue-50/80 to-teal-50/60 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transform-all duration-300 transition:ease-in-out'>
     <Navbar />
@@ -26,11 +26,11 @@ export const SIPCalculator: React.FC = () => {
         </span>
         &gt;
         <Link to='/All-calculators/Financial-Calculators'>
-        <span className='hover:underline'> Financial Calculators </span>
+          <span className='hover:underline'> Financial Calculators </span>
         </Link>
         &gt;
         <Link to='/SIP-Calculator'>
-        <span className='hover:underline'>  SIP Calculator </span>
+          <span className='hover:underline'>  SIP Calculator </span>
         </Link>
       </p>
     </div>
@@ -65,20 +65,25 @@ export const SIPCalculator: React.FC = () => {
                 step={1000}
                 value={monthlyInvestment}
                 onChange={(e) => {
-                  const investmentValue = Number(e.target.value);
-                  if (investmentValue < 100) {
-                    setMonthlyInvestment(100);
-                  } else if (investmentValue > 1000000) {
-                    setMonthlyInvestment(1000000);
-                  } else {
+                  const value = e.target.value;
+                  if (value === '') {
+                    setMonthlyInvestment('');
+                    return;
+                  }
+                  const investmentValue = Number(value);
+                  if (investmentValue >= 0 && investmentValue <= 1000000) {
                     setMonthlyInvestment(investmentValue);
                   }
                 }}
-
+                onBlur={() => {
+                  if (monthlyInvestment === '' || Number(monthlyInvestment) < 100) {
+                    setMonthlyInvestment(100);
+                  }
+                }}
                 className="w-28 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:focus:ring-orange-500"
               />
             </div>
-            <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(monthlyInvestment)}</p>
+            <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(Number(monthlyInvestment))}</p>
           </div>
 
           <div>
@@ -90,6 +95,7 @@ export const SIPCalculator: React.FC = () => {
                 type="range"
                 min="1"
                 max="60"
+                placeholder='0'
                 value={period}
                 onChange={(e) => setPeriod(Number(e.target.value))}
                 className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-green-600 dark:accent-orange-500"
@@ -100,13 +106,19 @@ export const SIPCalculator: React.FC = () => {
                 min={1}
                 max={60}
                 onChange={(e) => {
-                  const tenureValue = Number(e.target.value);
-                  if (tenureValue > 60) {
-                    setPeriod(60);
-                  } else if (tenureValue < 1) {
+                  const tenureValue = (e.target.value);
+                  if(tenureValue === '') {
+                    setPeriod('');
+                    return;
+                  }
+                  const tenureNumber = Number(tenureValue);
+                  if(tenureNumber >= 1 && tenureNumber <= 60){
+                    setPeriod(tenureNumber);
+                  }
+                }}
+                onBlur={()=>{
+                  if(period === '' || Number(period) < 1){
                     setPeriod(1);
-                  } else {
-                    setPeriod(tenureValue);
                   }
                 }}
                 className="w-28 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:focus:ring-orange-500"
@@ -136,15 +148,19 @@ export const SIPCalculator: React.FC = () => {
                 step="0.5"
                 value={expectedReturn}
                 onChange={(e) => {
-                  const returnValue = Number(e.target.value);
-                  if (returnValue > 100) {
-                    setExpectedReturn(100)
+                  const returnValue = (e.target.value);
+                 if(returnValue === ''){
+                  setExpectedReturn('');
+                  return;
+                 }
+                 const returnValueNuber = Number(returnValue);
+                  if(returnValueNuber >= 1 && returnValueNuber <= 100){
+                    setExpectedReturn(returnValueNuber);
                   }
-                  else if (returnValue < 1) {
-                    setExpectedReturn(1)
-                  }
-                  else {
-                    setExpectedReturn(returnValue)
+                }}
+                onBlur={()=>{
+                  if(expectedReturn === ''|| Number(expectedReturn)<1){
+                    setExpectedReturn(1);
                   }
                 }}
                 className="w-28 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:focus:ring-orange-500"

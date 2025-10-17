@@ -7,36 +7,36 @@ import Footer from '../../Components/Footer';
 import { Link } from 'react-router-dom';
 
 export const SWPCalculator: React.FC = () => {
-  const [initialInvestment, setInitialInvestment] = useState(1000000);
-  const [monthlyWithdrawal, setMonthlyWithdrawal] = useState(10000);
-  const [period, setPeriod] = useState(8);
-  const [expectedReturn, setExpectedReturn] = useState(12);
+  const [initialInvestment, setInitialInvestment] = useState<number | string>(1000000);
+  const [monthlyWithdrawal, setMonthlyWithdrawal] = useState<number | string>(10000);
+  const [period, setPeriod] = useState<number | string>(8);
+  const [expectedReturn, setExpectedReturn] = useState<number | string>(12);
   const [withdrawalWarning, setWithdrawalWarning] = useState(false);
 
-  const result = calculateSWP(initialInvestment, monthlyWithdrawal, period, expectedReturn);
+  const result = calculateSWP(Number(initialInvestment), Number(monthlyWithdrawal), Number(period), Number(expectedReturn));
 
   return (
     <div className='flex flex-col bg-gradient-to-r from-slate-50/60 via-blue-50/90 to-teal-50/60 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transition-all duration-300 ease-in-out'>
       <Navbar />
       <div className="ml-10  mt-3">
-      <p className="text-xs dark:text-white ">
-        <span className='hover:underline'>
-          <Link to='/'>Home </Link>
-        </span>
-        &gt;
-        <span className='hover:underline'>
-          <Link to="/All-Calculators"> All Calculators </Link>
-        </span>
-        &gt;
-        <Link to='/All-calculators/Financial-Calculators'>
-        <span className='hover:underline'> Financial Calculators </span>
-        </Link>
-        &gt;
-        <Link to='/SWP-Calculator'>
-        <span className='hover:underline'>  SWP Calculator </span>
-        </Link>
-      </p>
-    </div>
+        <p className="text-xs dark:text-white ">
+          <span className='hover:underline'>
+            <Link to='/'>Home </Link>
+          </span>
+          &gt;
+          <span className='hover:underline'>
+            <Link to="/All-Calculators"> All Calculators </Link>
+          </span>
+          &gt;
+          <Link to='/All-calculators/Financial-Calculators'>
+            <span className='hover:underline'> Financial Calculators </span>
+          </Link>
+          &gt;
+          <Link to='/SWP-Calculator'>
+            <span className='hover:underline'>  SWP Calculator </span>
+          </Link>
+        </p>
+      </div>
       <div className="bg-white rounded-2xl shadow-xl p-8  mb-10 ml-2 mr-2 bg-gradient-to-r from-slate-50/60 via-blue-50/80 to-teal-50/60 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transform-all duration-300 transition:ease-in-out">
         <div className="flex items-center gap-3 mb-8">
           <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-3 rounded-xl dark:from-orange-500 dark:to-red-500">
@@ -54,7 +54,7 @@ export const SWPCalculator: React.FC = () => {
               <div className="flex items-center gap-4">
                 <input
                   type="range"
-                  min="100000"
+                  min="10000"
                   max="100000000"
                   step="50000"
                   value={initialInvestment}
@@ -63,24 +63,37 @@ export const SWPCalculator: React.FC = () => {
                 />
                 <input
                   type="number"
-                  min={100000}
+                  min={10000}
                   max={100000000}
                   step={50000}
                   value={initialInvestment}
                   onChange={(e) => {
-                    const initialValue = Number(e.target.value)
-                    if (initialValue < 100000) {
-                      setInitialInvestment(100000)
-                    } else if (initialValue > 100000000) {
-                      setInitialInvestment(100000000)
-                    } else {
-                      setInitialInvestment(initialValue)
+                    const value = e.target.value;
+
+                    if (value === '') {
+                      setInitialInvestment('');
+                      return;
+                    }
+
+                    const numericValue = Number(value);
+
+                    if (numericValue >= 0 && numericValue <= 100000000) {
+                      setInitialInvestment(numericValue);
                     }
                   }}
-                  className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-orange-500 "
+                  onBlur={() => {
+
+                    if (initialInvestment === '' || Number(initialInvestment) < 10000) {
+                      setInitialInvestment(10000);
+                    } else if (Number(initialInvestment) > 100000000) {
+                      setInitialInvestment(100000000);
+                    }
+                  }}
+                  className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-orange-500"
                 />
+
               </div>
-              <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(initialInvestment)}</p>
+              <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(Number(initialInvestment))}</p>
             </div>
 
             <div>
@@ -99,34 +112,55 @@ export const SWPCalculator: React.FC = () => {
                 />
 
                 <input
-                  type="number"
+                  type="text" 
                   value={monthlyWithdrawal}
-                  min={1000}
-                  max={Math.min(100000, initialInvestment)} 
+                  inputMode="numeric" 
                   onChange={(e) => {
-                    const value = Number(e.target.value);
-                    if (value > initialInvestment) {
-                      setMonthlyWithdrawal(initialInvestment);
-                      setWithdrawalWarning(true);
-                      setTimeout(() => setWithdrawalWarning(false), 3000);
-                    } else if (value < 1000) {
+                    const value = e.target.value;
+
+                    if (/^\d*$/.test(value)) {
+                      if (value === '') {
+                        setMonthlyWithdrawal('');
+                        return;
+                      }
+
+                      const numericValue = Number(value);
+
+                      if (numericValue > Number(initialInvestment)) {
+                        setWithdrawalWarning(true);
+                        const cappedValue = Math.min(100000, Number(initialInvestment));
+                        setMonthlyWithdrawal(cappedValue);
+
+                        setTimeout(() => setWithdrawalWarning(false), 3000);
+                      } else {
+                        setWithdrawalWarning(false);
+                      }
+
+
+                      if (numericValue <= 100000000) {
+                        setMonthlyWithdrawal(numericValue);
+                      }
+                    }
+                  }}
+                  onBlur={() => {
+                    if (monthlyWithdrawal === '' || Number(monthlyWithdrawal) < 1000) {
                       setMonthlyWithdrawal(1000);
                       setWithdrawalWarning(false);
-                    } else {
-                      setMonthlyWithdrawal(value);
+                    } else if (Number(monthlyWithdrawal) > 100000) {
+                      setMonthlyWithdrawal(100000);
                       setWithdrawalWarning(false);
                     }
                   }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-orange-500"
                 />
               </div>
-              <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(monthlyWithdrawal)}</p>
+              <p className="text-sm text-gray-500 mt-1 dark:text-gray-300">{formatCurrency(Number(monthlyWithdrawal))}</p>
             </div>
             {withdrawalWarning && (
-                  <p className="text-xs text-red-500 mt-1">
-                    Monthly withdrawal cannot exceed initial investment. Automatically reset to max allowed.
-                  </p>
-                )}
+              <p className="text-xs text-red-500 mt-1">
+                Monthly withdrawal cannot exceed initial investment. Automatically reset to max allowed.
+              </p>
+            )}
 
             <div>
               <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
@@ -149,13 +183,24 @@ export const SWPCalculator: React.FC = () => {
                   max={60}
                   step={1}
                   onChange={(e) => {
-                    const tenureValue = Number(e.target.value);
-                    if (tenureValue > 60) {
-                      setPeriod(60);
-                    } else if (tenureValue < 1) {
+                    const tenureValue = (e.target.value);
+                    if (tenureValue === '') {
+                      setPeriod('');
+                      return;
+                    }
+                    const tenureNumericValue = Number(tenureValue);
+                    if(tenureNumericValue >= 1 && tenureNumericValue <= 60){
+                      setPeriod(tenureNumericValue);
+                    }
+
+                  }}
+
+                  onBlur={()=>{
+                    if(period === '' || Number(period) < 1){
                       setPeriod(1);
-                    } else {
-                      setPeriod(tenureValue);
+                    }
+                    else if(Number(period) > 60){
+                      setPeriod(60);
                     }
                   }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-orange-500"
@@ -185,15 +230,23 @@ export const SWPCalculator: React.FC = () => {
                   step={0.1}
                   value={expectedReturn}
                   onChange={(e) => {
-                    const returnValue = Number(e.target.value);
-                    if (returnValue > 100) {
-                      setExpectedReturn(100)
+                    const returnValue = (e.target.value);
+                    if (returnValue === '') {
+                      setExpectedReturn('');
+                      return;
                     }
-                    else if (returnValue < 1) {
+                    const returnValueNuber = Number(returnValue);
+                    if(returnValueNuber >= 1 && returnValueNuber <= 100){
+                      setExpectedReturn(returnValueNuber);
+                    }
+          
+                  }}
+                  onBlur={()=>{
+                    if(expectedReturn === '' || Number(expectedReturn)<= 1){
                       setExpectedReturn(1)
                     }
-                    else {
-                      setExpectedReturn(returnValue)
+                    else if(Number(expectedReturn) >=100){
+                      setExpectedReturn(100);
                     }
                   }}
                   className="w-32 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:focus:ring-orange-500"
