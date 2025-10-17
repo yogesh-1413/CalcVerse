@@ -20,7 +20,7 @@ interface CalculatorCard {
   color: string;
 }
 
-export default function Financial_Calculators() {
+ function Financial_Calculators() {
   const calculators: CalculatorCard[] = [
     {
       title: 'SIP Calculator',
@@ -146,7 +146,7 @@ export default function Financial_Calculators() {
               className={`group bg-gradient-to-br ${colors.divBg} ${colors.darkDivBg} p-6 border ${colors.border} ${colors.darkBorder}  rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 `}
             >
               <div
-                className={`w-16 h-16 ${colors.bg} rounded-lg flex items-center justify-center mb-4 transition-colors ${colors.hover}`}
+                className={`w-12 h-12 ${colors.bg} rounded-lg flex items-center justify-center mb-4 transition-colors ${colors.hover}`}
               >
                 <span className={`${colors.icon} group-hover:text-white transition-colors`}>
                   {calc.icon}
@@ -167,3 +167,4 @@ export default function Financial_Calculators() {
     </div>
   );
 }
+export default Financial_Calculators;

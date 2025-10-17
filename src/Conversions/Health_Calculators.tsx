@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
+import Health_Calculators_Home from "./Calculator-Home-Pages/Health-Calculators-Home";
 
 const Health_Calculators: React.FC = () => {
     return (
@@ -23,7 +24,7 @@ const Health_Calculators: React.FC = () => {
                         </Link>
                     </p>
                 </div>
-                <p className="text-gray-700 dark:text-[#d6d6d6]">Health Calculators</p>
+               <Health_Calculators_Home />
             </div>
             <Footer />
         </div>
