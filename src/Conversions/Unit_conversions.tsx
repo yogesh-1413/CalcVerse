@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
+import Unit_Conversions_Home from "./Calculator-Home-Pages/Unit-Conversions-Home";
 
 
 const UnitConversions: React.FC = () => {
@@ -24,7 +25,7 @@ const UnitConversions: React.FC = () => {
                         </Link>
                     </p>
                 </div>
-                <p className="text-gray-700 dark:text-[#d6d6d6]">Unit Conversions</p>
+               <Unit_Conversions_Home />
             </div>
             <Footer />
         </div>

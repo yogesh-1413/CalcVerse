@@ -97,7 +97,7 @@ function Health_Calculators_Home() {
 
     const getColorClasses = (color: string) => {
         const colors: Record<
-            string,
+        string,
             {
                 bg: string;
                 icon: string;
