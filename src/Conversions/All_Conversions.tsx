@@ -73,7 +73,7 @@ const All_Conversions: React.FC = () => {
                                         <Link to="/" title="Euro to Great Britain Pound"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out"><span className="font-bold ">EUR</span> to <span className="font-bold">GBP</span></p></Link>
                                         <Link to="/" title="Euro to Japanese yen"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out"><span className="font-bold ">EUR</span> to <span className="font-bold">JPY</span></p></Link>
                                         <Link to="/" title="Australian Dollar to Swiss franc"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out"><span className="font-bold ">AUD</span> to <span className="font-bold">CHF</span></p></Link>
-                                        <Link to="/" title="More Currency Converters"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">More.....</p></Link>
+                                        <Link to="/All-calculators/Currency-Calculators" title="More Currency Converters"><p className="dark:text-white ml-3 text-sm md:text-md lg:text-md hover:underline transition-all duration-300 ease-in-out">More.....</p></Link>
 
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@ const All_Conversions: React.FC = () => {
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Simple Interest Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Compound Interest Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Loan Payoff Calculator</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More.....</p></Link>
+                                        <Link to="/All-calculators/Financial-Calculators"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More.....</p></Link>
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ const All_Conversions: React.FC = () => {
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Fuel Consumption</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Acceleration</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Data Storage</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More........</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More........</p></Link>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@ const All_Conversions: React.FC = () => {
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Sobriety Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Age Calculator</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More.....</p></Link>
+                                        <Link to="/All-calculators/Health-Calculators"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More.....</p></Link>
                                     </div>
                                 </div>
                             </div>
