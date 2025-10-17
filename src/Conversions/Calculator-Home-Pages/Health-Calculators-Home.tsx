@@ -131,7 +131,7 @@ function Health_Calculators_Home() {
                 <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4 dark:text-back">
                     Health Calculators
                 </h1>
-                <p className="text-lg text-slate-600 max-w-3xl mx-auto dark:text-white">
+                <p className="text-lg text-slate-600 max-w-4xl mx-auto dark:text-white">
                     Choose from our comprehensive suite of health calculators to better understand your body, track your fitness progress, and achieve your wellness goals.
                 </p>
             </div>

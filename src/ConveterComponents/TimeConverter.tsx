@@ -46,7 +46,7 @@ const TimeConverter: React.FC = () => {
           <span className='hover:underline'> Unit Conversions </span>
         </Link>
         &gt;
-        <Link to='TimeConverter'>
+        <Link to='/All-calculators/Unit-Conversions/Time-Converter'>
           <span className='hover:underline'> Time Converter </span>
         </Link>
       </p>

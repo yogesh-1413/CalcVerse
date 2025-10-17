@@ -50,7 +50,7 @@ const Length_And_Distance_Converter: React.FC = () => {
             <span className='hover:underline'> Unit Conversions </span>
           </Link>
           &gt;
-          <Link to='Length_and_Distance_Converter'>
+          <Link to='/All-calculators/Unit-Conversions/Length-and-Distance-Converter'>
             <span className='hover:underline'> Length & Distance Converter </span>
           </Link>
         </p>

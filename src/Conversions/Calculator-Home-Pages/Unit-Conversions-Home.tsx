@@ -1,103 +1,103 @@
 import { Link } from 'react-router-dom';
 import {
-  Clock,
-  Square,
-  Gauge,
-  Thermometer,
-  ActivitySquare,
-  Ruler,
-  Weight,
-  Fuel,
-  Rocket,
-  Database,
+    Clock,
+    Square,
+    Gauge,
+    Thermometer,
+    ActivitySquare,
+    Ruler,
+    Weight,
+    Fuel,
+    Rocket,
+    Database,
 } from 'lucide-react';
 
 interface CalculatorCard {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  path: string;
-  color: string;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    path: string;
+    color: string;
 }
 
 function Unit_Conversions_Home() {
-  const calculators: CalculatorCard[] = [
-    {
-      title: 'Time Converter',
-      description: 'Convert between seconds, minutes, hours, days, and more with precision.',
-      icon: <Clock className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Time-Converter',
-      color: 'emerald',
-    },
-    {
-      title: 'Area Converter',
-      description: 'Easily convert between square meters, acres, hectares, and other area units.',
-      icon: <Square className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Area-Converter',
-      color: 'blue',
-    },
-    {
-      title: 'Speed Converter',
-      description: 'Convert between kilometers per hour, miles per hour, meters per second, and more.',
-      icon: <Gauge className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Speed-Converter',
-      color: 'violet',
-    },
-    {
-      title: 'Temperature Converter',
-      description: 'Quickly convert between Celsius, Fahrenheit, and Kelvin with instant accuracy.',
-      icon: <Thermometer className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Temperature-Converter',
-      color: 'orange',
-    },
-    {
-      title: 'Pressure Converter',
-      description: 'Convert between Pascals, bars, PSI, atmospheres, and other pressure units.',
-      icon: <ActivitySquare className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Pressure-Converter',
-      color: 'teal',
-    },
-    {
-      title: 'Length & Distance Converter',
-      description: 'Convert between meters, kilometers, miles, feet, inches, and other distance units.',
-      icon: <Ruler className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Length-Distance-Converter',
-      color: 'sky',
-    },
-    {
-      title: 'Mass & Weight Converter',
-      description: 'Easily convert between grams, kilograms, pounds, and ounces for any measurement.',
-      icon: <Weight className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Mass-Weight-Converter',
-      color: 'rose',
-    },
-    {
-      title: 'Fuel Consumption Converter',
-      description: 'Convert between MPG, L/100km, km/L, and other fuel efficiency units.',
-      icon: <Fuel className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Fuel-Consumption-Converter',
-      color: 'amber',
-    },
-    {
-      title: 'Acceleration Converter',
-      description: 'Convert between meters per second squared, g-force, and other acceleration units.',
-      icon: <Rocket className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Acceleration-Converter',
-      color: 'lime',
-    },
-    {
-      title: 'Data Storage Converter',
-      description: 'Convert between bits, bytes, kilobytes, megabytes, gigabytes, and terabytes easily.',
-      icon: <Database className="w-8 h-8" />,
-      path: '/All-calculators/Unit-Conversions/Data-Storage-Converter',
-      color: 'cyan',
-    },
-  ];
+    const calculators: CalculatorCard[] = [
+        {
+            title: 'Time Converter',
+            description: 'Convert between seconds, minutes, hours, days, and more with precision.',
+            icon: <Clock className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Time-Converter',
+            color: 'emerald',
+        },
+        {
+            title: 'Area Converter',
+            description: 'Easily convert between square meters, acres, hectares, and other area units.',
+            icon: <Square className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Area-Converter',
+            color: 'blue',
+        },
+        {
+            title: 'Speed Converter',
+            description: 'Convert between kilometers per hour, miles per hour, meters per second, and more.',
+            icon: <Gauge className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Speed-Converter',
+            color: 'violet',
+        },
+        {
+            title: 'Temperature Converter',
+            description: 'Quickly convert between Celsius, Fahrenheit, and Kelvin with instant accuracy.',
+            icon: <Thermometer className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Temperature-Converter',
+            color: 'orange',
+        },
+        {
+            title: 'Pressure Converter',
+            description: 'Convert between Pascals, bars, PSI, atmospheres, and other pressure units.',
+            icon: <ActivitySquare className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Pressure-Converter',
+            color: 'teal',
+        },
+        {
+            title: 'Length & Distance Converter',
+            description: 'Convert between meters, kilometers, miles, feet, inches, and other distance units.',
+            icon: <Ruler className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Length-Distance-Converter',
+            color: 'sky',
+        },
+        {
+            title: 'Mass & Weight Converter',
+            description: 'Easily convert between grams, kilograms, pounds, and ounces for any measurement.',
+            icon: <Weight className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Mass-Weight-Converter',
+            color: 'rose',
+        },
+        {
+            title: 'Fuel Consumption Converter',
+            description: 'Convert between MPG, L/100km, km/L, and other fuel efficiency units.',
+            icon: <Fuel className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Fuel-Consumption-Converter',
+            color: 'amber',
+        },
+        {
+            title: 'Acceleration Converter',
+            description: 'Convert between meters per second squared, g-force, and other acceleration units.',
+            icon: <Rocket className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Acceleration-Converter',
+            color: 'lime',
+        },
+        {
+            title: 'Data Storage Converter',
+            description: 'Convert between bits, bytes, kilobytes, megabytes, gigabytes, and terabytes easily.',
+            icon: <Database className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Data-Storage-Converter',
+            color: 'cyan',
+        },
+    ];
 
 
     const getColorClasses = (color: string) => {
         const colors: Record<
-        string,
+            string,
             {
                 bg: string;
                 icon: string;
@@ -128,10 +128,10 @@ function Unit_Conversions_Home() {
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="text-center mb-12">
                 <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4 dark:text-back">
-                    Health Calculators
+                    Unit Conversions
                 </h1>
-                <p className="text-lg text-slate-600 max-w-3xl mx-auto dark:text-white">
-                    Choose from our comprehensive suite of health calculators to better understand your body, track your fitness progress, and achieve your wellness goals.
+                <p className="text-lg text-slate-600 max-w-4xl mx-auto dark:text-white">
+                    Choose from our comprehensive range of unit converters to effortlessly switch between measurements and make accurate calculations in your daily life, studies, or work.
                 </p>
             </div>
 
@@ -159,7 +159,7 @@ function Unit_Conversions_Home() {
                                 {calc.description}
                             </p>
                         </Link>
-                        
+
                     );
                 })}
             </div>

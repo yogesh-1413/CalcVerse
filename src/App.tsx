@@ -36,8 +36,8 @@ function App() {
         <Route path='/All-Calculators' element={<All_Conversions />} />
         <Route path='/All-calculators/Regular-Calculator' element={<Regular_Calculator />} />
         <Route path='*' element={<NotFound />} />
-        <Route path='/All-calculators/Unit-Conversions/TimeConverter' element={<TimeConverter />} />
-        <Route path='/All-calculators/Unit-Conversions/Length_and_Distance_Converter' element={<Length_And_Distance_Converter />} />
+        <Route path='/All-calculators/Unit-Conversions/Time-Converter' element={<TimeConverter />} />
+        <Route path='/All-calculators/Unit-Conversions/Length-Distance-Converter' element={<Length_And_Distance_Converter />} />
         <Route path='/About Us' element={<About_Us />} />
         <Route path='/Our Mission' element={<Our_Mission />} />
         <Route path='/All-calculators/Financial-Calculators/SIP-Calculator' element={<SIPCalculator />} />

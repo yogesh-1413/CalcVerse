@@ -47,49 +47,49 @@ interface CalculatorCard {
       title: 'EMI Calculator',
       description: 'Calculate your Equated Monthly Installment for loans. Find out your monthly payment, total interest, and payment schedule.',
       icon: <Home className="w-8 h-8" />,
-      path: '/calculator/emi',
+      path: '/All-calculators/Financial-Calculators/EMI-Calculator',
       color: 'orange',
     },
     {
       title: 'XIRR Calculator',
       description: 'Calculate Extended Internal Rate of Return for irregular cash flows. Perfect for mutual fund investments with multiple transactions.',
       icon: <PiggyBank className="w-8 h-8" />,
-      path: '/calculator/xirr',
+      path: '/All-calculators/Financial-Calculators/XIRR-Calculator',
       color: 'teal',
     },
     {
       title: 'How Long to Save',
       description: 'Determine how long it will take to reach your savings goal based on your monthly contributions and expected returns.',
       icon: <Clock className="w-8 h-8" />,
-      path: '/calculator/how-long-to-save',
+      path: '/All-calculators/Financial-Calculators/How-Long-to-Save',
       color: 'sky',
     },
     {
       title: 'How Long Will Money Last',
       description: 'Calculate how long your savings will last with regular withdrawals. Plan your retirement or emergency fund duration.',
       icon: <Hourglass className="w-8 h-8" />,
-      path: '/calculator/money-last',
+      path: '/All-calculators/Financial-Calculators/How-Long-Will-Money-Last',
       color: 'rose',
     },
     {
       title: 'Simple Interest Calculator',
       description: 'Calculate simple interest on your principal amount. Understand returns on fixed deposits and simple interest-based investments.',
       icon: <DollarSign className="w-8 h-8" />,
-      path: '/calculator/simple-interest',
+      path: '/All-calculators/Financial-Calculators/Simple-Interest-Calculator',
       color: 'amber',
     },
     {
       title: 'Compound Interest Calculator',
       description: 'Calculate compound interest to see how your money grows exponentially. The most powerful force in finance.',
       icon: <Coins className="w-8 h-8" />,
-      path: '/calculator/compound-interest',
+      path: '/All-calculators/Financial-Calculators/Compound-Interest-Calculator',
       color: 'lime',
     },
     {
       title: 'Loan Payoff Calculator',
       description: 'Calculate how quickly you can pay off your loan with extra payments. Save on interest and become debt-free faster.',
       icon: <CreditCard className="w-8 h-8" />,
-      path: '/calculator/loan-payoff',
+      path: '/All-calculators/Financial-Calculators/Loan-Payoff-Calculator',
       color: 'cyan',
     },
   ];
@@ -130,7 +130,7 @@ interface CalculatorCard {
         <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4 dark:text-back">
           Financial Calculators
         </h1>
-        <p className="text-lg text-slate-600 max-w-3xl mx-auto dark:text-white">
+        <p className="text-lg text-slate-600 max-w-4xl mx-auto dark:text-white">
           Choose from our comprehensive suite of financial calculators to make informed decisions
           about your investments, loans, and savings goals.
         </p>
