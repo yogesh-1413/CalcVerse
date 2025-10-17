@@ -233,7 +233,7 @@ export const SIPCalculator: React.FC = () => {
               <Area
                 type="monotone"
                 dataKey="invested"
-                stroke="#64748b"
+                stroke="#d1d8e3ff"
                 fillOpacity={1}
                 fill="url(#colorInvested)"
                 name="Total Invested"

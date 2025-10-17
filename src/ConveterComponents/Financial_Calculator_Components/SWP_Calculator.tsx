@@ -312,7 +312,7 @@ export const SWPCalculator: React.FC = () => {
                 <Area
                   type="monotone"
                   dataKey="remaining"
-                  stroke="#3b82f6"
+                  stroke="#92bafaff"
                   fillOpacity={1}
                   fill="url(#colorRemaining)"
                   name="Remaining Value"
