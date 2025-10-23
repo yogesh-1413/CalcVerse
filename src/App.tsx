@@ -16,6 +16,13 @@ import Our_Mission from './Footer_Pages/Our_Mission';
 import SIPCalculator from "./ConveterComponents/Financial_Calculator_Components/SIP_Calculator";
 import SWPCalulator from './ConveterComponents/Financial_Calculator_Components/SWP_Calculator';
 import CAGR_Calculator from './ConveterComponents/Financial_Calculator_Components/CAGR_Calculator';
+import SimpleInterestCalculator from './ConveterComponents/Financial_Calculator_Components/Simple-Interest-Calculator';
+import EMICalculator from './ConveterComponents/Financial_Calculator_Components/EMI_Calculator';
+import HowLongToSave from './ConveterComponents/Financial_Calculator_Components/How-Long-To-Save';
+import MoneyLastCalculator from './ConveterComponents/Financial_Calculator_Components/Money-Last-Calculator';
+import LoanPayoffCalculator from './ConveterComponents/Financial_Calculator_Components/Loan-Pay-Off-Calculator';
+import CompoundInterestCalculator from './ConveterComponents/Financial_Calculator_Components/Compound-Interest-Calculator';
+
 
 
 
@@ -43,7 +50,14 @@ function App() {
         <Route path='/All-calculators/Financial-Calculators/SIP-Calculator' element={<SIPCalculator />} />
         <Route path='/All-calculators/Financial-Calculators/SWP-Calculator' element={<SWPCalulator />} />
         <Route path='/All-calculators/Financial-Calculators/CAGR-Calculator' element={<CAGR_Calculator />} />
-
+        <Route path='/All-calculators/Financial-Calculators/Simple-Interest-Calculator' element={<SimpleInterestCalculator />} />
+        <Route path='/All-calculators/Financial-Calculators/EMI-Calculator' element={<EMICalculator />} />
+        <Route path='/All-calculators/Financial-Calculators/How-Long-To-Save' element={<HowLongToSave />} />
+        <Route path='/All-calculators/Financial-Calculators/Money-Last-Calculator' element={<MoneyLastCalculator />} />
+        <Route path='/All-calculators/Financial-Calculators/Loan-Pay-Off-Calculator' element={<LoanPayoffCalculator />} />
+        <Route path='/All-calculators/Financial-Calculators/Compound-Interest-Calculator' element={<CompoundInterestCalculator />} />
+      
+      
       </Routes>
     </Router>
   </>
