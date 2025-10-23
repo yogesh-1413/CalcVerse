@@ -154,7 +154,8 @@ export default function CurrencyConverter() {
                         </div>
                         <div>
                             <h1 className="text-3xl font-bold text-slate-800 dark:text-white">Currency Converter</h1>
-                            <p className="text-slate-600 dark:text-slate-400 mt-1">Real-time currency exchange rates</p>
+                            <p className="text-slate-600 dark:text-slate-400 mt-1">Accurate currency exchange rates <span className='text-xs'>(Updates Every 2 Hours)</span></p>
+
                         </div>
                     </div>
                     <button
@@ -174,7 +175,7 @@ export default function CurrencyConverter() {
                             <p className="font-semibold mb-1">Exchange Rate Information</p>
                             <p>
                                 All rates are based on USD as the base currency. Convert between 30+ currencies
-                                with real-time exchange rates for accurate financial planning.
+                                with Accurate exchange rates for accurate financial planning.
                             </p>
                         </div>
                     </div>
