@@ -47,10 +47,10 @@ export default function EMICalculator() {
       icon={<Home className="w-8 h-8" />}
       color="orange"
     >
-      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded">
+      <div className="bg-orange-50 border-l-4 border-orange-500 p-4 mb-6 rounded dark:bg-orange-800/30 transition-colors">
         <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-          <div className="text-sm text-blue-800">
+          <Info className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5 dark:text-white" />
+          <div className="text-sm text-orange-800 dark:text-white">
             <p className="font-semibold mb-1">What is EMI?</p>
             <p>
               Equated Monthly Installment (EMI) is a fixed payment amount made by a borrower to a lender
@@ -62,41 +62,41 @@ export default function EMICalculator() {
 
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Loan Amount
           </label>
           <input
             type="number"
             value={loanAmount}
             onChange={(e) => setLoanAmount(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 dark:border-white dark:bg-slate-900/20 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             placeholder="Enter loan amount"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Annual Interest Rate (%)
           </label>
           <input
             type="number"
             value={interestRate}
             onChange={(e) => setInterestRate(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 dark:border-white dark:bg-slate-900/20 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             placeholder="e.g., 8.5"
             step="0.1"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Loan Tenure (Years)
           </label>
           <input
             type="number"
             value={loanTenure}
             onChange={(e) => setLoanTenure(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 dark:border-white dark:bg-slate-900/20 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             placeholder="e.g., 20"
           />
         </div>

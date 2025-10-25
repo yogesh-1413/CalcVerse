@@ -45,10 +45,10 @@ export default function SimpleInterestCalculator() {
       icon={<DollarSign className="w-8 h-8" />}
       color="amber"
     >
-      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded">
+      <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mb-6 rounded dark:bg-amber-800/30 transition-colors">
         <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-          <div className="text-sm text-blue-800">
+          <Info className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <div className="text-sm text-amber-800 dark:text-white">
             <p className="font-semibold mb-1">What is Simple Interest?</p>
             <p>
               Simple interest is calculated only on the principal amount. It's commonly used in fixed deposits,
@@ -60,41 +60,41 @@ export default function SimpleInterestCalculator() {
 
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Principal Amount
           </label>
           <input
             type="number"
             value={principal}
             onChange={(e) => setPrincipal(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="Enter principal amount"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Annual Interest Rate (%)
           </label>
           <input
             type="number"
             value={interestRate}
             onChange={(e) => setInterestRate(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="e.g., 6"
             step="0.1"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Time Period (Years)
           </label>
           <input
             type="number"
             value={timePeriod}
             onChange={(e) => setTimePeriod(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="e.g., 5"
           />
         </div>

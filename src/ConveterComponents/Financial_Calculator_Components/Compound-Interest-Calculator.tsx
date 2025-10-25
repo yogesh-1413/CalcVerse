@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Coins, Info } from 'lucide-react';
 import CalculatorLayout from './Calculator-layout';
-import Navbar from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
 
 export default function CompoundInterestCalculator() {
   const [principal, setPrincipal] = useState('100000');
@@ -46,10 +44,10 @@ export default function CompoundInterestCalculator() {
       icon={<Coins className="w-8 h-8" />}
       color="lime"
     >
-      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded">
+      <div className="bg-lime-50 border-l-4 border-lime-500 p-4 mb-6 rounded dark:bg-lime-800/30 transition-colors">
         <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-          <div className="text-sm text-blue-800">
+          <Info className="w-5 h-5 text-lime-600 flex-shrink-0 mt-0.5 dark:text-lime-100" />
+          <div className="text-sm text-lime-800 dark:text-lime-100">
             <p className="font-semibold mb-1">The Power of Compound Interest</p>
             <p>
               Compound interest is calculated on the initial principal and accumulated interest from previous periods.
@@ -61,60 +59,71 @@ export default function CompoundInterestCalculator() {
 
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Principal Amount
           </label>
           <input
             type="number"
             value={principal}
             onChange={(e) => setPrincipal(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent  dark:border-white dark:bg-slate-900/20"
             placeholder="Enter principal amount"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Annual Interest Rate (%)
           </label>
           <input
             type="number"
             value={interestRate}
             onChange={(e) => setInterestRate(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="e.g., 8"
             step="0.1"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Time Period (Years)
           </label>
           <input
             type="number"
             value={timePeriod}
             onChange={(e) => setTimePeriod(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="e.g., 10"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Compounding Frequency
           </label>
           <select
             value={frequency}
             onChange={(e) => setFrequency(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent bg-white text-slate-800 dark:border-white dark:bg-slate-900/20 dark:text-slate-100 appearance-none"
           >
-            <option value="1">Annually</option>
-            <option value="2">Semi-annually</option>
-            <option value="4">Quarterly</option>
-            <option value="12">Monthly</option>
-            <option value="365">Daily</option>
+            <option value="1" className="bg-white text-slate-800 dark:bg-slate-800/80 dark:text-slate-100">
+              Annually
+            </option>
+            <option value="2" className="bg-white text-slate-800 dark:bg-slate-800/80 dark:text-slate-100">
+              Semi-annually
+            </option>
+            <option value="4" className="bg-white text-slate-800 dark:bg-slate-800/80 dark:text-slate-100">
+              Quarterly
+            </option>
+            <option value="12" className="bg-white text-slate-800 dark:bg-slate-800/80 dark:text-slate-100">
+              Monthly
+            </option>
+            <option value="365" className="bg-white text-slate-800 dark:bg-slate-800 dark:text-slate-100">
+              Daily
+            </option>
           </select>
+
         </div>
 
         <button

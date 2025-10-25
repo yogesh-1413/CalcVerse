@@ -68,7 +68,7 @@ interface CalculatorCard {
       title: 'How Long Will Money Last',
       description: 'Calculate how long your savings will last with regular withdrawals. Plan your retirement or emergency fund duration.',
       icon: <Hourglass className="w-8 h-8" />,
-      path: '/All-calculators/Financial-Calculators/How-Long-Will-Money-Last',
+      path: '/All-calculators/Financial-Calculators/Money-Last-Calculator',
       color: 'rose',
     },
     {
@@ -89,7 +89,7 @@ interface CalculatorCard {
       title: 'Loan Payoff Calculator',
       description: 'Calculate how quickly you can pay off your loan with extra payments. Save on interest and become debt-free faster.',
       icon: <CreditCard className="w-8 h-8" />,
-      path: '/All-calculators/Financial-Calculators/Loan-Payoff-Calculator',
+      path: '/All-calculators/Financial-Calculators/Loan-Pay-Off-Calculator',
       color: 'cyan',
     },
   ];

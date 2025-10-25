@@ -63,10 +63,10 @@ export default function MoneyLastCalculator() {
       icon={<Hourglass className="w-8 h-8" />}
       color="rose"
     >
-      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded">
+      <div className="bg-rose-50 border-l-4 border-rose-500 p-4 mb-6 rounded dark:bg-rose-800/30 transition-colors">
         <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-          <div className="text-sm text-blue-800">
+          <Info className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5 dark:text-rose-100" />
+          <div className="text-sm text-rose-800 dark:text-rose-100">
             <p className="font-semibold mb-1">Plan Your Retirement or Emergency Fund</p>
             <p>
               This calculator helps you understand how long your savings will last with regular withdrawals,
@@ -78,40 +78,40 @@ export default function MoneyLastCalculator() {
 
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Current Savings
           </label>
           <input
             type="number"
             value={currentSavings}
             onChange={(e) => setCurrentSavings(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="Enter your current savings"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Monthly Withdrawal
           </label>
           <input
             type="number"
             value={monthlyWithdrawal}
             onChange={(e) => setMonthlyWithdrawal(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="How much do you need monthly?"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Expected Annual Return (%)
           </label>
           <input
             type="number"
             value={expectedReturn}
             onChange={(e) => setExpectedReturn(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent"
+          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="e.g., 8"
             step="0.1"
           />

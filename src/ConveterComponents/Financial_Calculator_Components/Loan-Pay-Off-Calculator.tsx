@@ -70,10 +70,10 @@ export default function LoanPayoffCalculator() {
       icon={<CreditCard className="w-8 h-8" />}
       color="cyan"
     >
-      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded">
+      <div className="bg-cyan-50 border-l-4 border-cyan-500 p-4 mb-6 rounded dark:bg-cyan-800/30 transition-colors">
         <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-          <div className="text-sm text-blue-800">
+          <Info className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5 dark:text-cyan-100" />
+          <div className="text-sm text-cyan-800 dark:text-cyan-100">
             <p className="font-semibold mb-1">Accelerate Your Loan Payoff</p>
             <p>
               Making extra monthly payments can significantly reduce your loan tenure and save you thousands in interest.
@@ -85,54 +85,54 @@ export default function LoanPayoffCalculator() {
 
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Loan Amount
           </label>
           <input
             type="number"
             value={loanAmount}
             onChange={(e) => setLoanAmount(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="Enter loan amount"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Annual Interest Rate (%)
           </label>
           <input
             type="number"
             value={interestRate}
             onChange={(e) => setInterestRate(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="e.g., 9"
             step="0.1"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Loan Tenure (Years)
           </label>
           <input
             type="number"
             value={loanTenure}
             onChange={(e) => setLoanTenure(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="e.g., 10"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <label className="block text-sm font-semibold text-slate-700 mb-2 dark:text-slate-200">
             Extra Monthly Payment
           </label>
           <input
             type="number"
             value={extraPayment}
             onChange={(e) => setExtraPayment(e.target.value)}
-            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent dark:border-white dark:bg-slate-900/20"
             placeholder="Additional amount per month"
           />
         </div>
@@ -165,7 +165,7 @@ export default function LoanPayoffCalculator() {
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-slate-600">Duration</span>
-                    <span className="font-semibold">
+                  <span className="font-semibold text-black">
                       {Math.floor(result.normalMonths / 12)}y {result.normalMonths % 12}m
                     </span>
                   </div>

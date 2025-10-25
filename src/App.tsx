@@ -36,17 +36,23 @@ function App() {
       <AutoScroll />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='*' element={<NotFound />} />
+        <Route path='/About Us' element={<About_Us />} />
+        <Route path='/Our Mission' element={<Our_Mission />} />
+        <Route path='/All-Calculators' element={<All_Conversions />} />
+
+        //Calculator Home Pages Routes
         <Route path="/All-calculators/Currency-Calculators" element={<Currency />} />
         <Route path='/All-calculators/Health-Calculators' element={<Health_Calculators />} />
         <Route path='/All-calculators/Unit-Conversions' element={<UnitConversions />} />
         <Route path='/All-calculators/Financial-Calculators' element={<Financial />} />
-        <Route path='/All-Calculators' element={<All_Conversions />} />
         <Route path='/All-calculators/Regular-Calculator' element={<Regular_Calculator />} />
-        <Route path='*' element={<NotFound />} />
+
+        // Unit Conversion Routes
         <Route path='/All-calculators/Unit-Conversions/Time-Converter' element={<TimeConverter />} />
         <Route path='/All-calculators/Unit-Conversions/Length-Distance-Converter' element={<Length_And_Distance_Converter />} />
-        <Route path='/About Us' element={<About_Us />} />
-        <Route path='/Our Mission' element={<Our_Mission />} />
+
+        // Financial Calculators Routes
         <Route path='/All-calculators/Financial-Calculators/SIP-Calculator' element={<SIPCalculator />} />
         <Route path='/All-calculators/Financial-Calculators/SWP-Calculator' element={<SWPCalulator />} />
         <Route path='/All-calculators/Financial-Calculators/CAGR-Calculator' element={<CAGR_Calculator />} />
@@ -56,8 +62,10 @@ function App() {
         <Route path='/All-calculators/Financial-Calculators/Money-Last-Calculator' element={<MoneyLastCalculator />} />
         <Route path='/All-calculators/Financial-Calculators/Loan-Pay-Off-Calculator' element={<LoanPayoffCalculator />} />
         <Route path='/All-calculators/Financial-Calculators/Compound-Interest-Calculator' element={<CompoundInterestCalculator />} />
-      
-      
+
+
+        //Health Calculators Routes
+
       </Routes>
     </Router>
   </>
