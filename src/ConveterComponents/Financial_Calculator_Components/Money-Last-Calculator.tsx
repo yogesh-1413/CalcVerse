@@ -62,6 +62,7 @@ export default function MoneyLastCalculator() {
       description="Calculate how long your savings will sustain you"
       icon={<Hourglass className="w-8 h-8" />}
       color="rose"
+      route='Money-Last-Calculator'
     >
       <div className="bg-rose-50 border-l-4 border-rose-500 p-4 mb-6 rounded dark:bg-rose-800/30 transition-colors">
         <div className="flex items-start gap-3">

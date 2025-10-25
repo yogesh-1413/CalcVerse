@@ -10,6 +10,7 @@ interface CalculatorLayoutProps {
     icon: ReactNode;
     color: string;
     children: ReactNode;
+    route?: string;
 }
 
 export default function CalculatorLayout({
@@ -18,6 +19,7 @@ export default function CalculatorLayout({
     icon,
     color,
     children,
+    route,
 }: CalculatorLayoutProps) {
     const getColorClasses = () => {
         const colors: Record<string, { bg: string; text: string; border: string; darkBorder: string; darkDiv: string; }> = {
@@ -40,16 +42,27 @@ export default function CalculatorLayout({
     return (
         <div className='bg-gradient-to-r from-slate-50/80 via-blue-50/60 to-teal-50/80 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transform-all duration-300 transition:ease-in-out'>
             <Navbar />
+            <div className="ml-10  mt-3">
+                <p className="text-xs dark:text-white ">
+                    <span className='hover:underline'>
+                        <Link to='/'>Home </Link>
+                    </span>
+                    &gt;
+                    <span className='hover:underline'>
+                        <Link to="/All-Calculators"> All Calculators </Link>
+                    </span>
+                    &gt;
+                    <Link to='/All-calculators/Financial-Calculators'>
+                        <span className='hover:underline'> Financial Calculators </span>
+                    </Link>
+                    &gt;
+                    <Link to={`/All-calculators/Financial-Calculators/${route}`}>
+                        <span className='hover:underline'> {route} </span>
+                    </Link>
+                </p>
+            </div>
+
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 transition-colors duration-300">
-
-
-                {/* <Link
-                    to="/All-calculators/Financial-Calculators"
-                    className="inline-flex items-center gap-2 text-slate-600 hover:text-emerald-600 dark:text-slate-300 dark:hover:text-emerald-400 transition-colors mb-6 font-medium"
-                >
-                    <ArrowLeft className="w-4 h-4" />
-                    Back to Calculators
-                </Link> */}
 
                 <div className=" bg-white/80 dark:bg-gray-700 backdrop-blur-md rounded-3xl shadow-2xl border-slate-200 dark:border-gray-700 p-8 relative overflow-hidden  p-8 md:p-10 transition-colors duration-300">
 

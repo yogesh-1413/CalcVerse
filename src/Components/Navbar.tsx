@@ -6,7 +6,7 @@ import logo from '../assets/logo.png';
 
 const navLinks = [
   { name: "Home", href: "/", title: "Home" },
-  { name: "Currency", href: "/All-Calculators/Currency-Calculators", title: "Currency Conversions" },
+  { name: "Currency", href: "/All-Calculators/Currency-Converter", title: "Currency Conversions" },
   { name: "Unit", href: "/All-Calculators/Unit-Conversions", title: "Unit Calculators" },
   { name: "Financial", href: "/All-Calculators/Financial-Calculators", title: "Financial Calculators" },
   { name: "Health", href: "/All-Calculators/Health-Calculators", title: "Health Calculators" },

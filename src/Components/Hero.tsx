@@ -54,7 +54,7 @@ function Hero() {
 
                   <div className="grid grid-cols-2 gap-4">
 
-                    <Link to="/All-calculators/Currency-Calculators" >
+                    <Link to="/All-calculators/Currency-Converter" >
                       <div className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-900/30 dark:to-blue-900/30 p-6 rounded-2xl border border-teal-100 dark:border-teal-800 hover:shadow-lg transition-all duration-200 cursor-pointer group">
                         <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
                           <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

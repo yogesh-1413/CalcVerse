@@ -44,6 +44,7 @@ export default function SimpleInterestCalculator() {
       description="Calculate simple interest on your investments"
       icon={<DollarSign className="w-8 h-8" />}
       color="amber"
+    route='Simple-Interest-Calculator'
     >
       <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mb-6 rounded dark:bg-amber-800/30 transition-colors">
         <div className="flex items-start gap-3">

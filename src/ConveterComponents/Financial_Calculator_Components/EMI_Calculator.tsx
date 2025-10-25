@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Home, Info } from 'lucide-react';
 import CalculatorLayout from './Calculator-layout';
-import Navbar from '../../Components/Navbar';
-import Footer from '../../Components/Footer';
 
 export default function EMICalculator() {
   const [loanAmount, setLoanAmount] = useState('1000000');
@@ -46,6 +44,7 @@ export default function EMICalculator() {
       description="Calculate your Equated Monthly Installment"
       icon={<Home className="w-8 h-8" />}
       color="orange"
+      route="EMI-Calculator"
     >
       <div className="bg-orange-50 border-l-4 border-orange-500 p-4 mb-6 rounded dark:bg-orange-800/30 transition-colors">
         <div className="flex items-start gap-3">

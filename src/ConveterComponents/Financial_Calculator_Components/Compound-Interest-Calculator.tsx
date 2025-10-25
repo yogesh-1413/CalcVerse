@@ -43,6 +43,7 @@ export default function CompoundInterestCalculator() {
       description="Calculate the power of compound interest"
       icon={<Coins className="w-8 h-8" />}
       color="lime"
+      route='Compound-Interest-Calculator'
     >
       <div className="bg-lime-50 border-l-4 border-lime-500 p-4 mb-6 rounded dark:bg-lime-800/30 transition-colors">
         <div className="flex items-start gap-3">

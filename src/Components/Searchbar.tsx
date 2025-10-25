@@ -4,16 +4,16 @@ import { useNavigate } from "react-router-dom";
 // Updated list based on the screenshot
 const calculators = [
   // Currency Converters
-  { name: "USD to INR", path: "/All-calculators/Currency-Calculators" },
-  { name: "USD to EUR", path: "/All-calculators/Currency-Calculators" },
-  { name: "USD to GBP", path: "/All-calculators/Currency-Calculators" },
-  { name: "USD to JPY", path: "/All-calculators/Currency-Calculators" },
-  { name: "USD to CHF", path: "/All-calculators/Currency-Calculators" },
-  { name: "USD to CAD", path: "/All-calculators/Currency-Calculators" },
-  { name: "USD to NZD", path: "/All-calculators/Currency-Calculators" },
-  { name: "EUR to GBP", path: "/All-calculators/Currency-Calculators" },
-  { name: "EUR to JPY", path: "/All-calculators/Currency-Calculators" },
-  { name: "AUD to CHF", path: "/All-calculators/Currency-Calculators" },
+  { name: "USD to INR", path: "/All-calculators/Currency-Converter" },
+  { name: "USD to EUR", path: "/All-calculators/Currency-Converter" },
+  { name: "USD to GBP", path: "/All-calculators/Currency-Converter" },
+  { name: "USD to JPY", path: "/All-calculators/Currency-Converter" },
+  { name: "USD to CHF", path: "/All-calculators/Currency-Converter" },
+  { name: "USD to CAD", path: "/All-calculators/Currency-Converter" },
+  { name: "USD to NZD", path: "/All-calculators/Currency-Converter" },
+  { name: "EUR to GBP", path: "/All-calculators/Currency-Converter" },
+  { name: "EUR to JPY", path: "/All-calculators/Currency-Converter" },
+  { name: "AUD to CHF", path: "/All-calculators/Currency-Converter" },
 
   // Financial Calculators
   { name: "SIP Calculator", path: "/All-calculators/Financial-Calculators/SIP-Calculator" },

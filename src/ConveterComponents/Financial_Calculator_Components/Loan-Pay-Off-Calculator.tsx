@@ -69,6 +69,7 @@ export default function LoanPayoffCalculator() {
       description="Calculate early loan payoff with extra payments"
       icon={<CreditCard className="w-8 h-8" />}
       color="cyan"
+      route='Loan-Pay-Off-Calculator'
     >
       <div className="bg-cyan-50 border-l-4 border-cyan-500 p-4 mb-6 rounded dark:bg-cyan-800/30 transition-colors">
         <div className="flex items-start gap-3">

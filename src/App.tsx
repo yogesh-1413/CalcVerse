@@ -22,6 +22,7 @@ import HowLongToSave from './ConveterComponents/Financial_Calculator_Components/
 import MoneyLastCalculator from './ConveterComponents/Financial_Calculator_Components/Money-Last-Calculator';
 import LoanPayoffCalculator from './ConveterComponents/Financial_Calculator_Components/Loan-Pay-Off-Calculator';
 import CompoundInterestCalculator from './ConveterComponents/Financial_Calculator_Components/Compound-Interest-Calculator';
+import XIRRCalculator from './ConveterComponents/Financial_Calculator_Components/XIRR-Calculator';
 
 
 
@@ -42,7 +43,7 @@ function App() {
         <Route path='/All-Calculators' element={<All_Conversions />} />
 
         //Calculator Home Pages Routes
-        <Route path="/All-calculators/Currency-Calculators" element={<Currency />} />
+        <Route path="/All-calculators/Currency-Converter" element={<Currency />} />
         <Route path='/All-calculators/Health-Calculators' element={<Health_Calculators />} />
         <Route path='/All-calculators/Unit-Conversions' element={<UnitConversions />} />
         <Route path='/All-calculators/Financial-Calculators' element={<Financial />} />
@@ -62,6 +63,7 @@ function App() {
         <Route path='/All-calculators/Financial-Calculators/Money-Last-Calculator' element={<MoneyLastCalculator />} />
         <Route path='/All-calculators/Financial-Calculators/Loan-Pay-Off-Calculator' element={<LoanPayoffCalculator />} />
         <Route path='/All-calculators/Financial-Calculators/Compound-Interest-Calculator' element={<CompoundInterestCalculator />} />
+        <Route path='/All-calculators/Financial-Calculators/XIRR-Calculator' element={<XIRRCalculator />} />
 
 
         //Health Calculators Routes

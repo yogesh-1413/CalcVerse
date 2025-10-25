@@ -59,6 +59,7 @@ export default function HowLongToSave() {
       description="Calculate time needed to reach your savings goal"
       icon={<Clock className="w-8 h-8" />}
       color="sky"
+      route='How-Long-To-Save'
     >
       <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded dark:bg-blue-800/30 transition-colors">
         <div className="flex items-start gap-3">

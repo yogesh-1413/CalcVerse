@@ -11,7 +11,7 @@ function Footer() {
            <Link to = '/All-Calculators' className="hover:underline"> <h4 className="font-semibold text-white mb-6 text-lg break-words hover:text-teal-300">All Calculators</h4></Link>
             <ul className="space-y-3 text-gray-300 dark:text-gray-400">
               <li>
-                <Link to="/All-calculators/Currency-Calculators" className="hover:text-teal-400 dark:hover:text-teal-300 hover:underline transition-colors duration-200 flex items-center break-words">
+                <Link to="/All-calculators/Currency-Converter" className="hover:text-teal-400 dark:hover:text-teal-300 hover:underline transition-colors duration-200 flex items-center break-words">
                   <span className="w-2 h-2 bg-teal-500 rounded-full mr-3 flex-shrink-0"></span>
                   Currency Converter
                 </Link>

@@ -32,7 +32,7 @@ export const SWPCalculator: React.FC = () => {
             <span className='hover:underline'> Financial Calculators </span>
           </Link>
           &gt;
-          <Link to='/SWP-Calculator'>
+          <Link to='/All-calculators/Financial-Calculators/SWP-Calculator'>
             <span className='hover:underline'>  SWP Calculator </span>
           </Link>
         </p>

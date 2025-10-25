@@ -29,7 +29,7 @@ export const SIPCalculator: React.FC = () => {
           <span className='hover:underline'> Financial Calculators </span>
         </Link>
         &gt;
-        <Link to='/SIP-Calculator'>
+        <Link to='/All-calculators/Financial-Calculators/SIP-Calculator'>
           <span className='hover:underline'>  SIP Calculator </span>
         </Link>
       </p>

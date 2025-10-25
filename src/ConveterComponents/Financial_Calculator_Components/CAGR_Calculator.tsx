@@ -30,7 +30,7 @@ export const CAGR_Calculator: React.FC = () => {
             <span className='hover:underline'> Financial Calculators </span>
           </Link>
           &gt;
-          <Link to='/CAGR-Calculator'>
+          <Link to='/All-calculators/Financial-Calculators/CAGR-Calculator'>
             <span className='hover:underline'>  CAGR Calculator </span>
           </Link>
         </p>
