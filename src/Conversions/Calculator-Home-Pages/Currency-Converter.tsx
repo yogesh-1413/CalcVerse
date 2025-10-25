@@ -168,10 +168,10 @@ export default function CurrencyConverter() {
                     </button>
                 </div>
 
-                <div className="bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 dark:border-blue-400 p-4 mb-6 rounded">
+                <div className="bg-emerald-50 dark:bg-emerald-900/50 border-l-4 border-emerald-500 dark:border-emerald-400 p-4 mb-6 rounded">
                     <div className="flex items-start gap-3">
-                        <Info className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
-                        <div className="text-sm text-blue-800 dark:text-blue-300">
+                        <Info className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5 dark:text-emerald-100" />
+                        <div className="text-sm text-emerald-800 dark:text-emerald-100">
                             <p className="font-semibold mb-1">Exchange Rate Information</p>
                             <p>
                                 All rates are based on USD as the base currency. Convert between 30+ currencies
@@ -203,7 +203,6 @@ export default function CurrencyConverter() {
                         </div>
 
                         <div className="grid md:grid-cols-[1fr_auto_1fr] gap-6 items-end">
-                            {/* From Currency */}
                             <div>
                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                                     From
@@ -215,10 +214,7 @@ export default function CurrencyConverter() {
                                             setFromCurrency(e.target.value);
                                             setResult(null);
                                         }}
-                                        className="w-full px-4 py-3 border border-slate-300 dark:border-slate-700 rounded-lg 
-                   focus:ring-2 focus:ring-emerald-500 focus:border-transparent 
-                   appearance-none text-lg bg-white dark:bg-slate-800 
-                   text-slate-900 dark:text-slate-100"
+                                        className="w-full px-4 py-3 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent appearance-none text-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100"
                                     >
                                         {allCurrencies.map((currency) => (
                                             <option key={currency} value={currency}>
@@ -229,19 +225,16 @@ export default function CurrencyConverter() {
                                 </div>
                             </div>
 
-                            {/* Swap Button */}
                             <div className="flex flex-col items-center justify-center">
                                 <button
                                     onClick={swapCurrencies}
-                                    className="p-3 border-2 border-emerald-600 text-emerald-600 rounded-lg font-semibold 
-                 hover:bg-emerald-50 dark:hover:bg-emerald-900 transition-colors"
+                                    className="p-3 border-2 border-emerald-600 text-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-900 transition-colors"
                                     title="Swap currencies"
                                 >
                                     <ArrowLeftRight className="w-5 h-5" />
                                 </button>
                             </div>
 
-                            {/* To Currency */}
                             <div>
                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                                     To

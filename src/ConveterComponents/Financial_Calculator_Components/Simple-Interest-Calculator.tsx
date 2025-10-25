@@ -48,8 +48,8 @@ export default function SimpleInterestCalculator() {
     >
       <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mb-6 rounded dark:bg-amber-800/30 transition-colors">
         <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-          <div className="text-sm text-amber-800 dark:text-white">
+          <Info className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5 dark:text-amber-100" />
+          <div className="text-sm text-amber-800 dark:text-amber-100">
             <p className="font-semibold mb-1">What is Simple Interest?</p>
             <p>
               Simple interest is calculated only on the principal amount. It's commonly used in fixed deposits,

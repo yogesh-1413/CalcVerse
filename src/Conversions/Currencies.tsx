@@ -20,7 +20,7 @@ const Currency = () => {
                     </span>
                     &gt;
                     <Link to='/All-calculators/Currency-Calculators'>
-                        <span className='hover:underline'> Currency Calculators</span>
+                        <span className='hover:underline'> Currency Converter</span>
                     </Link>
                 </p>
             </div>

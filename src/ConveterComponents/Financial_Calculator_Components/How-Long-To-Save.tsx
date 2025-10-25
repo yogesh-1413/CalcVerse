@@ -63,8 +63,8 @@ export default function HowLongToSave() {
     >
       <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded dark:bg-blue-800/30 transition-colors">
         <div className="flex items-start gap-3">
-          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5 " />
-          <div className="text-sm text-blue-800 dark:text-white">
+          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5 dark:text-blue-100" />
+          <div className="text-sm text-blue-800 dark:text-blue-100">
             <p className="font-semibold mb-1">Plan Your Savings Goal</p>
             <p>
               This calculator helps you determine how long it will take to reach your financial goal

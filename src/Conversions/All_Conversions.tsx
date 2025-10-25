@@ -86,7 +86,7 @@ const All_Conversions: React.FC = () => {
                                         <Link to="/All-calculators/Financial-Calculators/SWP-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">SWP Calculator</p></Link>
                                         <Link to="/All-calculators/Financial-Calculators/CAGR-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">CAGR Calculator</p></Link>
                                         <Link to="/All-calculators/Financial-Calculators/EMI-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">EMI calculator</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">XIRR Calculator</p></Link>
+                                        <Link to="/All-calculators/Financial-Calculators/XIRR-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">XIRR Calculator</p></Link>
                                     </div>
                                     <div className="flex flex-col gap-2  md:mt-4 ">
                                         <Link to="/All-calculators/Financial-Calculators/How-Long-To-Save"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">How Long to Save</p></Link>
