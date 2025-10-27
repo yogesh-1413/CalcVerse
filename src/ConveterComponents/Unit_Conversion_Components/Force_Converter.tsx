@@ -5,51 +5,38 @@ import { Link } from "react-router-dom";
 
 
 type UnitKey =
-  | "m/s"
-  | "km/h"
-  | "mile/h"
-  | "ft/s"
-  | "inch/s"
-  | "knot"
-  | "km/min"
-  | "mile/min"
-  | "km/s"
-  | "Mach"
-  | "speed of light (c)";
+  | "N"
+  | "kN"
+  | "MN"
+  | "kgf"
+  | "lbf"
+  | "dyne"
+  | "poundal";
 
 const UNIT_FACTORS: Record<UnitKey, number> = {
-  "m/s": 1,
-  "km/h": 0.2777778,
-  "mile/h": 0.44704,
-  "ft/s": 0.3048,
-  "inch/s": 0.0254,
-  "knot": 0.514444,
-  "km/min": 16.6667,
-  "mile/min": 26.8224,
-  "km/s": 1000,
-  "Mach": 340.29, 
-  "speed of light (c)": 299792458,
+  "N": 1.0,                
+  "kN": 1000.0,            
+  "MN": 1e6,               
+  "kgf": 9.80665,         
+  "lbf": 4.4482216152605, 
+  "dyne": 1e-5,            
+  "poundal": 0.138254954376 
 };
 
 const UNIT_LABELS: Record<UnitKey, string> = {
-    "m/s": "Meters per second (m/s)",
-    "km/h": "Kilometers per hour (km/h)",
-    "mile/h": "Miles per hour (mile/h)",
-    "ft/s": "Feet per second (ft/s)",
-    "inch/s": "Inches per second (inch/s)",
-    "knot": "Knot (knot)",
-    "km/min": "Kilometers per minute (km/min)",
-    "mile/min": "Miles per minute (mile/min)",
-    "km/s": "Kilometers per second (km/s)",
-    "Mach": "Mach (Mach)",
-    "speed of light (c)": "Speed of light (c)",
-
+  "N": "Newton (N)",
+  "kN": "Kilonewton (kN)",
+  "MN": "Meganewton (MN)",
+  "kgf": "Kilogram-force (kgf)",
+  "lbf": "Pound-force (lbf)",
+  "dyne": "Dyne (dyne)",
+  "poundal": "Poundal (poundal)"
 };
 
- function SpeedConverter(): JSX.Element {
+ function ForceConverter(): JSX.Element {
   const [value, setValue] = useState<string>("1");
-  const [fromUnit, setFromUnit] = useState<UnitKey>("km/h");
-  const [toUnit, setToUnit] = useState<UnitKey>("mile/h");
+  const [fromUnit, setFromUnit] = useState<UnitKey>("N");
+  const [toUnit, setToUnit] = useState<UnitKey>("lbf");
   const [precision, setPrecision] = useState<number>(6);
 
   const conversions = useMemo(() => {
@@ -80,8 +67,8 @@ const UNIT_LABELS: Record<UnitKey, string> = {
     const pa = raw * UNIT_FACTORS[fromUnit];
     const toVal = pa / UNIT_FACTORS[toUnit];
     return [
-      `${raw} ${UNIT_LABELS[fromUnit]} × ${UNIT_FACTORS[fromUnit].toLocaleString()}  = ${pa.toLocaleString()} km/h`,
-      `${pa.toLocaleString()} km/h ÷ ${UNIT_FACTORS[toUnit].toLocaleString()}= ${toVal.toLocaleString(undefined, { maximumFractionDigits: precision })} ${toUnit}`,
+      `${raw} ${UNIT_LABELS[fromUnit]} × ${UNIT_FACTORS[fromUnit].toLocaleString()}  = ${pa.toLocaleString()} N`,
+      `${pa.toLocaleString()} N ÷ ${UNIT_FACTORS[toUnit].toLocaleString()}= ${toVal.toLocaleString(undefined, { maximumFractionDigits: precision })} ${toUnit}`,
     ];
   }, [value, fromUnit, toUnit, precision]);
 
@@ -102,17 +89,17 @@ const UNIT_LABELS: Record<UnitKey, string> = {
             <span className='hover:underline'> Unit Conversions </span>
           </Link>
           &gt;
-          <Link to='/All-calculators/Unit-Conversions/Speed-Converter'>
-            <span className='hover:underline'>  Speed Converter </span>
+          <Link to='/All-calculators/Unit-Conversions/Force-Converter'>
+            <span className='hover:underline'>  Force Converter </span>
           </Link>
         </p>
       </div>
     <div className="min-h-screen flex items-center justify-center p-4 ">
-      <div className="max-w-6xl w-full bg-violet-200/20 dark:bg-violet-800/20 rounded-2xl shadow-lg overflow-hidden border border-violet-300 dark:border-violet-700 transition-all duration-300 ease-in-out">
+      <div className="max-w-6xl w-full bg-indigo-200/20 dark:bg-indigo-800/20 rounded-2xl shadow-lg overflow-hidden border border-indigo-300 dark:border-indigo-700 transition-all duration-300 ease-in-out">
         <div className="p-4 md:p-6 grid gap-4 md:grid-cols-3">
           <div className="md:col-span-2">
             <div className="flex items-center justify-between mb-4">
-              <h1 className="text-xl md:text-2xl font-semibold text-slate-800 dark:text-slate-100">Speed Converter</h1>
+              <h1 className="text-xl md:text-2xl font-semibold text-slate-800 dark:text-slate-100">Force Converter</h1>
               <div className="flex items-center gap-3">
               </div>
             </div>
@@ -177,11 +164,11 @@ const UNIT_LABELS: Record<UnitKey, string> = {
                   <button
                     onClick={() => {
                       setValue("1");
-                      setFromUnit("km/h");
-                      setToUnit("mile/h");
+                      setFromUnit("N");
+                      setToUnit("lbf");
                       setPrecision(6);
                     }}
-                    className="w-full px-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-700 border border-violet-300 dark:border-violet-600 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                    className="w-full px-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-700 border border-indigo-300 dark:border-indigo-600 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
                   >
                     Reset
                   </button>
@@ -241,4 +228,4 @@ const UNIT_LABELS: Record<UnitKey, string> = {
   );
 }
 
-export default SpeedConverter;   
+export default ForceConverter;   

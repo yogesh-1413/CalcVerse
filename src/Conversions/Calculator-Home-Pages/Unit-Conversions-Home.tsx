@@ -68,7 +68,7 @@ function Unit_Conversions_Home() {
             title: 'Mass & Weight Converter',
             description: 'Easily convert between grams, kilograms, pounds, and ounces for any measurement.',
             icon: <Weight className="w-8 h-8" />,
-            path: '/All-calculators/Unit-Conversions/Mass-Weight-Converter',
+            path: '/All-calculators/Unit-Conversions/Mass-and-Weight-Converter',
             color: 'rose',
         },
         {
@@ -92,6 +92,13 @@ function Unit_Conversions_Home() {
             path: '/All-calculators/Unit-Conversions/Data-Storage-Converter',
             color: 'cyan',
         },
+        {
+            title: 'Force Converter',
+            description: 'Convert between newtons, pounds-force, dynes, and other force units accurately.',
+            icon: <ActivitySquare className="w-8 h-8" />,
+            path: '/All-calculators/Unit-Conversions/Force-Converter',
+            color: 'indigo',
+        }
     ];
 
 
@@ -119,6 +126,7 @@ function Unit_Conversions_Home() {
             amber: { bg: "bg-amber-100", icon: "text-amber-600", hover: "group-hover:bg-amber-600", textHover: "group-hover:text-amber-600", border: "border-amber-100", darkBorder: "dark:border-amber-200", divBg: "bg-gradient-to-br from-amber-100 to-yellow-100", darkDivBg: "dark:from-amber-900/30 dark:to-yellow-900/30", },
             lime: { bg: "bg-lime-100", icon: "text-lime-600", hover: "group-hover:bg-lime-600", textHover: "group-hover:text-lime-600", border: "border-lime-100", darkBorder: "dark:border-lime-200", divBg: "bg-gradient-to-br from-lime-100 to-green-100", darkDivBg: "dark:from-lime-900/30 dark:to-green-900/30", },
             cyan: { bg: "bg-cyan-100", icon: "text-cyan-600", hover: "group-hover:bg-cyan-600", textHover: "group-hover:text-cyan-600", border: "border-cyan-100", darkBorder: "dark:border-cyan-200", divBg: "bg-gradient-to-br from-cyan-100 to-blue-100", darkDivBg: "dark:from-cyan-900/30 dark:to-blue-900/30", },
+            indigo: { bg: "bg-indigo-100", icon: "text-indigo-600", hover: "group-hover:bg-indigo-600", textHover: "group-hover:text-indigo-600", border: "border-indigo-100", darkBorder: "dark:border-indigo-200", divBg: "bg-gradient-to-br from-indigo-100 to-purple-100", darkDivBg: "dark:from-indigo-900/30 dark:to-purple-900/30", },
         };
 
         return colors[color] || colors.emerald;

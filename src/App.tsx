@@ -9,8 +9,6 @@ import All_Conversions from './Conversions/All_Conversions';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NotFound from './Components/NotFound';
 import Regular_Calculator from './Conversions/Regular_Calculator';
-import TimeConverter from './ConveterComponents/TimeConverter';
-import Length_And_Distance_Converter from './ConveterComponents/Length&Distance';
 import About_Us from "./Footer_Pages/About_Us";
 import Our_Mission from './Footer_Pages/Our_Mission';
 
@@ -28,7 +26,7 @@ import XIRRCalculator from './ConveterComponents/Financial_Calculator_Components
 
 
 //Unit Conversion Imports
-import AccelrationConverter from './ConveterComponents/Unit_Conversion_Components/Accelration_Converter';
+import AccelerationConverter from './ConveterComponents/Unit_Conversion_Components/Accelration_Converter';
 import DataStorageConverter from './ConveterComponents/Unit_Conversion_Components/Data_Storage_Converter';
 import FuelConsumption from './ConveterComponents/Unit_Conversion_Components/Fuel_Consuption';
 import AreaConverter from './ConveterComponents/Unit_Conversion_Components/Area_Converter';
@@ -36,6 +34,9 @@ import MassAndWeight from './ConveterComponents/Unit_Conversion_Components/Mass_
 import PressureConverter from './ConveterComponents/Unit_Conversion_Components/Pressure_Converter';
 import TempratureConverter from './ConveterComponents/Unit_Conversion_Components/Temprature_Converter';
 import SpeedConverter from './ConveterComponents/Unit_Conversion_Components/Speed_Converter';
+import ForceConverter from './ConveterComponents/Unit_Conversion_Components/Force_Converter';
+import Length_And_Distance_Converter from './ConveterComponents/Unit_Conversion_Components/Length_and_Distance_Converter';
+import TimeConverter from './ConveterComponents/Unit_Conversion_Components/Time-Converter';
 
 
 function App() {
@@ -63,7 +64,7 @@ function App() {
         // Unit Conversion Routes
         <Route path='/All-calculators/Unit-Conversions/Time-Converter' element={<TimeConverter />} />
         <Route path='/All-calculators/Unit-Conversions/Length-Distance-Converter' element={<Length_And_Distance_Converter />} />
-        <Route path='/All-calculators/Unit-Conversions/Acceleration-Converter' element={<AccelrationConverter />} />
+        <Route path='/All-calculators/Unit-Conversions/Acceleration-Converter' element={<AccelerationConverter />} />
         <Route path='/All-calculators/Unit-Conversions/Mass-and-Weight-Converter' element={<MassAndWeight />} />
         <Route path='/All-calculators/Unit-Conversions/Fuel-Consumption-Converter' element={<FuelConsumption />} />
         <Route path='/All-calculators/Unit-Conversions/Area-Converter' element={<AreaConverter />} />
@@ -71,7 +72,10 @@ function App() {
         <Route path='/All-calculators/Unit-Conversions/Temperature-Converter' element={<TempratureConverter />} />
         <Route path='/All-calculators/Unit-Conversions/Speed-Converter' element={<SpeedConverter />} />
         <Route path='/All-calculators/Unit-Conversions/Data-Storage-Converter' element={<DataStorageConverter />} />
+        <Route path='/All-calculators/Unit-Conversions/Force-Converter' element={<ForceConverter />} />
         
+        
+
 
         // Financial Calculators Routes
         <Route path='/All-calculators/Financial-Calculators/SIP-Calculator' element={<SIPCalculator />} />
