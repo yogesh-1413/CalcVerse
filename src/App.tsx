@@ -13,6 +13,8 @@ import TimeConverter from './ConveterComponents/TimeConverter';
 import Length_And_Distance_Converter from './ConveterComponents/Length&Distance';
 import About_Us from "./Footer_Pages/About_Us";
 import Our_Mission from './Footer_Pages/Our_Mission';
+
+//Financial Calculators Imports
 import SIPCalculator from "./ConveterComponents/Financial_Calculator_Components/SIP_Calculator";
 import SWPCalulator from './ConveterComponents/Financial_Calculator_Components/SWP_Calculator';
 import CAGR_Calculator from './ConveterComponents/Financial_Calculator_Components/CAGR_Calculator';
@@ -25,6 +27,15 @@ import CompoundInterestCalculator from './ConveterComponents/Financial_Calculato
 import XIRRCalculator from './ConveterComponents/Financial_Calculator_Components/XIRR-Calculator';
 
 
+//Unit Conversion Imports
+import AccelrationConverter from './ConveterComponents/Unit_Conversion_Components/Accelration_Converter';
+import DataStorageConverter from './ConveterComponents/Unit_Conversion_Components/Data_Storage_Converter';
+import FuelConsumption from './ConveterComponents/Unit_Conversion_Components/Fuel_Consuption';
+import AreaConverter from './ConveterComponents/Unit_Conversion_Components/Area_Converter';
+import MassAndWeight from './ConveterComponents/Unit_Conversion_Components/Mass_and_Weight';
+import PressureConverter from './ConveterComponents/Unit_Conversion_Components/Pressure_Converter';
+import TempratureConverter from './ConveterComponents/Unit_Conversion_Components/Temprature_Converter';
+import SpeedConverter from './ConveterComponents/Unit_Conversion_Components/Speed_Converter';
 
 
 function App() {
@@ -52,6 +63,15 @@ function App() {
         // Unit Conversion Routes
         <Route path='/All-calculators/Unit-Conversions/Time-Converter' element={<TimeConverter />} />
         <Route path='/All-calculators/Unit-Conversions/Length-Distance-Converter' element={<Length_And_Distance_Converter />} />
+        <Route path='/All-calculators/Unit-Conversions/Acceleration-Converter' element={<AccelrationConverter />} />
+        <Route path='/All-calculators/Unit-Conversions/Mass-and-Weight-Converter' element={<MassAndWeight />} />
+        <Route path='/All-calculators/Unit-Conversions/Fuel-Consumption-Converter' element={<FuelConsumption />} />
+        <Route path='/All-calculators/Unit-Conversions/Area-Converter' element={<AreaConverter />} />
+        <Route path='/All-calculators/Unit-Conversions/Pressure-Converter' element={<PressureConverter />} />
+        <Route path='/All-calculators/Unit-Conversions/Temperature-Converter' element={<TempratureConverter />} />
+        <Route path='/All-calculators/Unit-Conversions/Speed-Converter' element={<SpeedConverter />} />
+        <Route path='/All-calculators/Unit-Conversions/Data-Storage-Converter' element={<DataStorageConverter />} />
+        
 
         // Financial Calculators Routes
         <Route path='/All-calculators/Financial-Calculators/SIP-Calculator' element={<SIPCalculator />} />

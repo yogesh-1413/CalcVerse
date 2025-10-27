@@ -103,17 +103,17 @@ const All_Conversions: React.FC = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
                                         <Link to="/All-calculators/Unit-Conversions/Time-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Time</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Area</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Speed</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Temperature</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Pressure</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/Area-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Area</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/Speed-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Speed</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/Temperature-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Temperature</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/Pressure-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Pressure</p></Link>
                                     </div>
                                     <div className="flex flex-col gap-2 md:mt-4">
                                         <Link to="/All-calculators/Unit-Conversions/Length-Distance-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Length & Distance</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Mass & Weight</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Fuel Consumption</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Acceleration</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Data Storage</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/Mass-and-Weight-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Mass & Weight</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/Fuel-Consumption-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Fuel Consumption</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/Acceleration-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Acceleration</p></Link>
+                                        <Link to="/All-calculators/Unit-Conversions/Data-Storage-Converter"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Data Storage</p></Link>
                                         <Link to="/All-calculators/Unit-Conversions"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More........</p></Link>
                                     </div>
                                 </div>
