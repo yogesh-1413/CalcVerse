@@ -10,7 +10,8 @@
     "skipLibCheck": true,
     "allowImportingTsExtensions": false,
     "sourceMap": false,
-    "noEmit": false
+    "noEmit": false,
+    "allowJs": true
   },
-  "include": ["./**/*.ts", "calculator.ts"]
+  "include": ["./**/*"]
 }
