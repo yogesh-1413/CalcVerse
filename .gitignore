@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 .env
 .bolt
+firebase-applyments.json
+firebase-debug.log
+firebaseConfig.ts
+firebaseServiceAccountKey.json

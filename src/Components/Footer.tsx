@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Mail, MapPin } from "lucide-react";
+import StayUpdated from "./StayUpdated";
 
 function Footer() {
   return (
@@ -41,10 +42,10 @@ function Footer() {
           <div className="min-w-0">
             <h4 className="font-semibold text-white mb-6 text-lg break-words">Company</h4>
             <ul className="space-y-3 text-gray-300 dark:text-gray-400">
-              <li><Link to="/About Us" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">About Us</Link></li>
+              <li><Link to="/About-Us" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">About Us</Link></li>
               <li><Link to="/Our Mission" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Our Mission</Link></li>
-              <li><Link to="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Press Kit</Link></li>
-              <li><Link to="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Blog</Link></li>
+              {/* <li><Link to="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Press Kit</Link></li>
+              <li><Link to="#" className="hover:underline hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 break-words">Blog</Link></li> */}
             </ul>
           </div>
 
@@ -68,19 +69,7 @@ function Footer() {
               </div>
             </div>
 
-            <div className="mt-6">
-              <h5 className="font-medium text-white mb-3 break-words">Stay Updated</h5>
-              <div className="flex flex-col sm:flex-row gap-0">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 bg-gray-800 dark:bg-gray-900 border border-gray-700 dark:border-gray-800 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 min-w-0"
-                />
-                <button className="px-6 py-2 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 rounded-lg sm:rounded-l-none sm:rounded-r-lg transition-all duration-200 font-medium whitespace-nowrap">
-                  Subscribe
-                </button>
-              </div>
-            </div>
+           <StayUpdated />
           </div>
         </div>
 
@@ -89,9 +78,10 @@ function Footer() {
             
 
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:space-x-6 text-gray-400 dark:text-gray-500">
-              <Link to="/Privacy Policy" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap hover:underline">Privacy Policy</Link>
-              <Link to="/Terms Of Service" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap hover:underline">Terms of Service</Link>
+              <Link to="/Privacy-Policy" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap hover:underline">Privacy Policy</Link>
+              <Link to="/Terms-Of-Service" className="hover:text-teal-400 dark:hover:text-teal-300 transition-colors duration-200 whitespace-nowrap hover:underline">Terms of Service</Link>
             </div>
+            <p>© CalcVerse All Right Reserved, 2025</p>
           </div>
         </div>
       </div>

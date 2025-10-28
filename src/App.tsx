@@ -9,8 +9,7 @@ import All_Conversions from './Conversions/All_Conversions';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NotFound from './Components/NotFound';
 import Regular_Calculator from './Conversions/Regular_Calculator';
-import About_Us from "./Footer_Pages/About_Us";
-import Our_Mission from './Footer_Pages/Our_Mission';
+
 
 //Financial Calculators Imports
 import SIPCalculator from "./ConveterComponents/Financial_Calculator_Components/SIP_Calculator";
@@ -50,6 +49,12 @@ import SobrietyCalculator from './ConveterComponents/Health_Calculator_Component
 import KilojoulesToCalories from './ConveterComponents/Health_Calculator_Components/Kilojoules-to-Calories';
 
 
+//Footer Pages Imports
+import PrivacyPolicy from './Footer_Pages/Privacy_Policy';  
+import Terms_and_Conditions from './Footer_Pages/Terms_and_Conditions';
+import AboutUs from "./Footer_Pages/About_Us";
+import Our_Mission from './Footer_Pages/Our_Mission';
+
 function App() {
 
 
@@ -61,8 +66,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='*' element={<NotFound />} />
-        <Route path='/About Us' element={<About_Us />} />
-        <Route path='/Our Mission' element={<Our_Mission />} />
         <Route path='/All-Calculators' element={<All_Conversions />} />
 
         //Calculator Home Pages Routes
@@ -111,6 +114,18 @@ function App() {
         <Route path='/All-calculators/Health-Calculators/Steps-to-Calories-Calculator' element={<StepsToCalories />} />
         <Route path='/All-calculators/Health-Calculators/Sobriety-Calculator' element={<SobrietyCalculator />} />
         <Route path='/All-calculators/Health-Calculators/Kilojoules-to-Calories-Calculator' element={<KilojoulesToCalories />} />
+
+
+
+        //Footer Pages Routes
+        
+        <Route path='/About-Us' element={<AboutUs />} />
+        <Route path='/Our Mission' element={<Our_Mission />} />
+        <Route path='/Privacy-Policy' element={<PrivacyPolicy />} />
+        <Route path='/Terms-Of-Service' element={<Terms_and_Conditions />} /> 
+
+
+
 
       </Routes>
     </Router>
