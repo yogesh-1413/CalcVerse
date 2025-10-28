@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import { Link } from "react-router-dom";
 
 const TemperatureConverter: React.FC = () => {
   const units = ["Celsius (°C)", "Fahrenheit (°F)", "Kelvin (K)", "Rankine (°R)"];
@@ -58,6 +59,25 @@ const TemperatureConverter: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-slate-50/80 via-blue-50/60 to-teal-50/80 dark:from-gray-900/80 dark:via-gray-800/60 dark:to-gray-900/80 transform-all duration-300 transition:ease-in-out">
         <Navbar />
+          <div className="ml-10  mt-3">
+        <p className="text-xs dark:text-white ">
+          <span className='hover:underline'>
+            <Link to='/'>Home </Link>
+          </span>
+          &gt;
+          <span className='hover:underline'>
+            <Link to="/All-Calculators"> All Calculators </Link>
+          </span>
+          &gt;
+          <Link to='/All-calculators/Unit-Conversions'>
+            <span className='hover:underline'> Unit Conversions </span>
+          </Link>
+          &gt;
+          <Link to='/All-calculators/Unit-Conversions/Temperature-Converter'>
+            <span className='hover:underline'>  Temperature Converter </span>
+          </Link>
+        </p>
+      </div>
     <div className="flex flex-col items-center justify-center min-h-screen px-4 ">
       <div className="bg-teal-200/40 dark:bg-teal-800/30 shadow-lg rounded-2xl p-6 w-full max-w-md text-center border border-teal-300 dark:border-teal-700">
         <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">

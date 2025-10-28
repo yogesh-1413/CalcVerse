@@ -3,9 +3,9 @@ import { Coins, Info } from 'lucide-react';
 import CalculatorLayout from './Calculator-layout';
 
 export default function CompoundInterestCalculator() {
-  const [principal, setPrincipal] = useState('100000');
-  const [interestRate, setInterestRate] = useState('8');
-  const [timePeriod, setTimePeriod] = useState('10');
+  const [principal, setPrincipal] = useState<number|string>('100000');
+  const [interestRate, setInterestRate] = useState<number|string>('8');
+  const [timePeriod, setTimePeriod] = useState<number|string>('10');
   const [frequency, setFrequency] = useState('12');
   const [result, setResult] = useState<{
     finalAmount: number;
@@ -13,10 +13,10 @@ export default function CompoundInterestCalculator() {
   } | null>(null);
 
   const calculateCompoundInterest = () => {
-    const P = parseFloat(principal);
-    const r = parseFloat(interestRate) / 100;
-    const t = parseFloat(timePeriod);
-    const n = parseFloat(frequency);
+    const P = parseFloat(String(principal));
+    const r = parseFloat(String(interestRate)) / 100;
+    const t = parseFloat(String(timePeriod));
+    const n = parseFloat(String(frequency));
 
     if (P > 0 && r > 0 && t > 0 && n > 0) {
       const amount = P * Math.pow(1 + r / n, n * t);
@@ -65,8 +65,28 @@ export default function CompoundInterestCalculator() {
           </label>
           <input
             type="number"
+            min={1}
+            max={100000000}
+
             value={principal}
-            onChange={(e) => setPrincipal(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '') {
+                setPrincipal('');
+                return;
+              } 
+              const mun = Number(value);
+              if (mun >= 1 && mun <= 100000000) {
+                setPrincipal(mun);
+              }
+            }}
+            onBlur={()=>{
+              if(principal === '' || Number(principal)<1){
+                setPrincipal('1');
+              } else if(Number(principal)>100000000){
+                setPrincipal('100000000');
+              }
+            }}
             className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent  dark:border-white dark:bg-slate-900/20"
             placeholder="Enter principal amount"
           />
@@ -141,7 +161,7 @@ export default function CompoundInterestCalculator() {
               <div className="flex justify-between items-center py-2 border-b border-lime-200">
                 <span className="text-slate-600">Principal Amount</span>
                 <span className="font-bold text-slate-800">
-                  {formatCurrency(parseFloat(principal))}
+                  {formatCurrency(parseFloat(String(principal)))}
                 </span>
               </div>
               <div className="flex justify-between items-center py-2 border-b border-lime-200">
