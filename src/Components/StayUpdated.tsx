@@ -12,6 +12,8 @@ const StayUpdated: React.FC = () => {
     try {
       setLoading(true);
 
+ 
+
       // ✅ save email
       await addDoc(collection(db, "subscribers"), {
         email,
