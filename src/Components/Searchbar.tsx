@@ -30,7 +30,7 @@ const calculators = [
   // Unit Conversions
   { name: "Time Converter", path: "/All-calculators/Unit-Conversions/Time-Converter" },
   { name: "Length & Distance", path: "/All-calculators/Unit-Conversions/Length-Distance-Converter" },
-  { name: "Mass & Weight", path: "/All-calculators/Unit-Conversions/Mass-Weight-Converter" },
+  { name: "Mass & Weight", path: "/All-calculators/Unit-Conversions/Mass-and-Weight-Converter" },
   { name: "Area Converter", path: "/All-calculators/Unit-Conversions/Area-Converter" },
   { name: "Speed Converter", path: "/All-calculators/Unit-Conversions/Speed-Converter" },
   { name: "Temperature Converter", path: "/All-calculators/Unit-Conversions/Temperature-Converter" },
@@ -38,17 +38,18 @@ const calculators = [
   { name: "Fuel Consumption", path: "/All-calculators/Unit-Conversions/Fuel-Consumption-Converter" },
   { name: "Acceleration", path: "/All-calculators/Unit-Conversions/Acceleration-Converter" },
   { name: "Data Storage", path: "/All-calculators/Unit-Conversions/Data-Storage-Converter" },
+  { name: "Force Converter", path: "/All-calculators/Unit-Conversions/Force-Converter" },
 
   // Health Calculators
   { name: "Body Mass Index (BMI)", path: "/All-calculators/Health-Calculators/BMI-Calculator" },
-  { name: "Basal Metabolic Rate (BMR)", path: "/All-calculators/Health-Calculators/BMI-Calculator" },
-  { name: "Kilojoules to Calories", path: "/All-calculators/Health-Calculators/BMI-Calculator" },
-  { name: "Miles to Steps", path: "/All-calculators/Health-Calculators/BMI-Calculator" },
-  { name: "Steps to Kilometers", path: "/All-calculators/Health-Calculators/BMI-Calculator" },
-  { name: "Steps to Calories", path: "/All-calculators/Health-Calculators/BMI-Calculator" },
-  { name: "Pregnancy Calculator", path: "/All-calculators/Health-Calculators/BMI-Calculator" },
-  { name: "Sobriety Calculator", path: "/All-calculators/Health-Calculators/BMI-Calculator" },
-  { name: "Age Calculator", path: "/All-calculators/Health-Calculators/BMI-Calculator" },
+  { name: "Basal Metabolic Rate (BMR)", path: "/All-calculators/Health-Calculators/BMR-Calculator" },
+  { name: "Kilojoules to Calories", path: "/All-calculators/Health-Calculators/Kilojoules-to-Calories-Calculator" },
+  { name: "Miles to Steps", path: "/All-calculators/Health-Calculators/Miles-to-Steps-Calculator" },
+  { name: "Steps to Miles", path: "/All-calculators/Health-Calculators/Steps-to-Miles-Calculator" },
+  { name: "Steps to Calories", path: "/All-calculators/Health-Calculators/Steps-to-Calories-Calculator" },
+  { name: "Pregnancy Calculator", path: "/All-calculators/Health-Calculators/Pregnancy-Calculator" },
+  { name: "Sobriety Calculator", path: "/All-calculators/Health-Calculators/Sobriety-Calculator" },
+  { name: "Age Calculator", path: "/All-calculators/Health-Calculators/Age-Calculator" },
 ];
 
 const SearchBar: React.FC = () => {

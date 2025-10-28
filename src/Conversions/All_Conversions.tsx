@@ -122,16 +122,16 @@ const All_Conversions: React.FC = () => {
                                     <div className="flex flex-col gap-2 mt-4">
                                         <Link to="/All-calculators/Health-Calculators/BMI-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Body Mass Index <span className="font-bold">(BMI)</span></p></Link>
                                         <Link to="/All-calculators/Health-Calculators/BMR-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Basal Metabolic Rate <span className="font-bold">(BMR)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Kilojoules to Calories</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Miles to Steps</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Steps to Kilometers</p></Link>
+                                        <Link to="/All-calculators/Health-Calculators/Kilojoules-to-Calories-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Kilojoules to Calories</p></Link>
+                                        <Link to="/All-calculators/Health-Calculators/Miles-to-Steps-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Miles to Steps</p></Link>
+                                        <Link to="/All-calculators/Health-Calculators/Steps-to-Miles-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Steps to Miles</p></Link>
                                     </div>
                                     <div className="flex flex-col gap-2 md:mt-4">
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Steps to Calories</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Pregnancy Calculator</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Sobriety Calculator</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Age Calculator</p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Hello2</p></Link>
+                                        <Link to="/All-calculators/Health-Calculators/Steps-to-Calories-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Steps to Calories</p></Link>
+                                        <Link to="/All-calculators/Health-Calculators/Pregnancy-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Pregnancy Calculator</p></Link>
+                                        <Link to="/All-calculators/Health-Calculators/Sobriety-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Sobriety Calculator</p></Link>
+                                        <Link to="/All-calculators/Health-Calculators/Age-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Age Calculator</p></Link>
+                                        {/* <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline"><br></br></p></Link> */}
                                         <Link to="/All-calculators/Health-Calculators"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">More.....</p></Link>
                                     </div>
                                 </div>

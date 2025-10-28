@@ -41,6 +41,13 @@ import TimeConverter from './ConveterComponents/Unit_Conversion_Components/Time-
 //Health Calculators Imports
 import BMICalculator from './ConveterComponents/Health_Calculator_Components/BMI_Calculator';
 import BMRCalculator from './ConveterComponents/Health_Calculator_Components/BMR_Calculator';
+import PregnancyCalculator from './ConveterComponents/Health_Calculator_Components/Pregnancy_Calculator';
+import AgeCalculator from './ConveterComponents/Health_Calculator_Components/Age_Calculator';
+import StepsToKilometers from './ConveterComponents/Health_Calculator_Components/Steps_to_Miles';
+import MilesToSteps from './ConveterComponents/Health_Calculator_Components/Miles_to_Steps';
+import StepsToCalories from './ConveterComponents/Health_Calculator_Components/Steps_to_Calories';
+import SobrietyCalculator from './ConveterComponents/Health_Calculator_Components/Sobriety_Calculator';
+import KilojoulesToCalories from './ConveterComponents/Health_Calculator_Components/Kilojoules-to-Calories';
 
 
 function App() {
@@ -97,6 +104,13 @@ function App() {
         //Health Calculators Routes
         <Route path='/All-calculators/Health-Calculators/BMI-Calculator' element={<BMICalculator />} />
         <Route path='/All-calculators/Health-Calculators/BMR-Calculator' element={<BMRCalculator />} />
+        <Route path='/All-calculators/Health-Calculators/Pregnancy-Calculator' element={<PregnancyCalculator />} />
+        <Route path='/All-calculators/Health-Calculators/Age-Calculator' element={<AgeCalculator />} />
+        <Route path='/All-calculators/Health-Calculators/Steps-to-Miles-Calculator' element={<StepsToKilometers />} />
+        <Route path='/All-calculators/Health-Calculators/Miles-to-Steps-Calculator' element={<MilesToSteps />} />
+        <Route path='/All-calculators/Health-Calculators/Steps-to-Calories-Calculator' element={<StepsToCalories />} />
+        <Route path='/All-calculators/Health-Calculators/Sobriety-Calculator' element={<SobrietyCalculator />} />
+        <Route path='/All-calculators/Health-Calculators/Kilojoules-to-Calories-Calculator' element={<KilojoulesToCalories />} />
 
       </Routes>
     </Router>

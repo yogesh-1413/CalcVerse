@@ -51,10 +51,10 @@ function Health_Calculators_Home() {
             color: 'orange',
         },
         {
-            title: 'Steps to Kilometers Calculator',
+            title: 'Steps to Miles Calculator',
             description: 'Easily convert your daily step count into distance covered in kilometers to track your fitness goals.',
             icon: <CircleFadingPlusIcon className="w-8 h-8" />,
-            path: '/All-calculators/Health-Calculators/Steps-to-Kilometers-Calculator',
+            path: '/All-calculators/Health-Calculators/Steps-to-Miles-Calculator',
             color: 'teal',
         },
         {
@@ -85,13 +85,13 @@ function Health_Calculators_Home() {
             path: '/All-calculators/Health-Calculators/Age-Calculator',
             color: 'lime',
         },
-        {
-            title: 'Health Overview',
-            description: 'Get a quick summary of your health stats and conversions — all your essential wellness tools in one place.',
-            icon: <MessageCircle className="w-8 h-8" />,
-            path: '/All-calculators/Health-Calculators/Health-Overview',
-            color: 'cyan',
-        },
+        // {
+        //     title: 'Health Overview',
+        //     description: 'Get a quick summary of your health stats and conversions — all your essential wellness tools in one place.',
+        //     icon: <MessageCircle className="w-8 h-8" />,
+        //     path: '/All-calculators/Health-Calculators/Health-Overview',
+        //     color: 'cyan',
+        // },
     ];
 
 
