@@ -36,15 +36,13 @@ const All_Conversions: React.FC = () => {
                         <div className="flex justify-center">
 
                             <div className="flex items-center justify-center rounded-3xl max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl ">
-                                <button
-                                    className=""
-                                    onClick={() => (window.open("/All-calculators/Regular-Calculator", "_blank"))}
+                                <Link to="/All-calculators/Regular-Calculator"
                                 >
                                     <div className="flex px-3 py-2 rounded-3xl border border-black backdrop-blur-md hover:scale-105 hover:shadow-md hover:text-blue-600 dark:hover:text-teal-400 hover:border-blue-600 dark:hover:border-teal-400 overflow-hidden transition-all duration-300 ease-in-out  ">
                                         <p className="text-md  sm:text-sm md:text-md lg:text-xl">Regular Calculator</p>
                                         <ExternalLink className="mt-1 mb-1 sm:h-4 sm:w-4 md:h-4 md:w-4 lg:h-6 lg:w-6 ml-3 " />
                                     </div>
-                                </button>
+                                </Link>
                             </div>
 
                         </div>

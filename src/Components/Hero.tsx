@@ -31,13 +31,13 @@ function Hero() {
                       Explore Calculators <ArrowRight className="inline ml-1  text-white" />
                     </div>
                   </Link>
-                  <button className="backdrop-blur-md p-4 border border-black rounded-xl hover:text-blue-700 hover:border-blue-700 dark:hover:text-teal-400 dark:hover:border-teal-400 shadow-xl hover-shadow-2xl transition-all duration-300 ease-in-out hover:scale-105"
-                    onClick={() => (window.open("/All-calculators/Regular-Calculator"))}
+                  <Link className="backdrop-blur-md p-4 border border-black rounded-xl hover:text-blue-700 hover:border-blue-700 dark:hover:text-teal-400 dark:hover:border-teal-400 shadow-xl hover-shadow-2xl transition-all duration-300 ease-in-out hover:scale-105"
+                    to="/All-calculators/Regular-Calculator"
                   >
                     <div className="flex justify-center ">
                       Regular Calculator <ExternalLink className="ml-3" />
                     </div>
-                  </button>
+                  </Link>
                 </div>
 
 
