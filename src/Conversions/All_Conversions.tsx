@@ -122,8 +122,8 @@ const All_Conversions: React.FC = () => {
                                 <Link to="/All-calculators/Health-Calculators" className="self-start"><h2 className="dark:text-white/90 font-bold flex flex-col sm:text-sm md:text-sm lg:text-lg self-start hover:underline transition-all duration-300 ease-in-out">Health Calculators </h2></Link>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
                                     <div className="flex flex-col gap-2 mt-4">
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Body Mass Index <span className="font-bold">(BMI)</span></p></Link>
-                                        <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Basal Metabolic Rate <span className="font-bold">(BMR)</span></p></Link>
+                                        <Link to="/All-calculators/Health-Calculators/BMI-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Body Mass Index <span className="font-bold">(BMI)</span></p></Link>
+                                        <Link to="/All-calculators/Health-Calculators/BMR-Calculator"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Basal Metabolic Rate <span className="font-bold">(BMR)</span></p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Kilojoules to Calories</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Miles to Steps</p></Link>
                                         <Link to="/"><p className="dark:text-white ml-3 text-sm sm:text-sm md:text-md lg:text-md hover:underline">Steps to Kilometers</p></Link>

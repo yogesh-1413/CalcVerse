@@ -38,6 +38,10 @@ import ForceConverter from './ConveterComponents/Unit_Conversion_Components/Forc
 import Length_And_Distance_Converter from './ConveterComponents/Unit_Conversion_Components/Length_and_Distance_Converter';
 import TimeConverter from './ConveterComponents/Unit_Conversion_Components/Time-Converter';
 
+//Health Calculators Imports
+import BMICalculator from './ConveterComponents/Health_Calculator_Components/BMI_Calculator';
+import BMRCalculator from './ConveterComponents/Health_Calculator_Components/BMR_Calculator';
+
 
 function App() {
 
@@ -91,6 +95,8 @@ function App() {
 
 
         //Health Calculators Routes
+        <Route path='/All-calculators/Health-Calculators/BMI-Calculator' element={<BMICalculator />} />
+        <Route path='/All-calculators/Health-Calculators/BMR-Calculator' element={<BMRCalculator />} />
 
       </Routes>
     </Router>
