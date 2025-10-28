@@ -1,7 +1,7 @@
-import dotenv from "dotenv";
-import fetch from "node-fetch";
-import fs from "fs";
-import path from "path";
+import * as dotenv from "dotenv";
+import * as fs from "fs";
+import path from "path"; // This one should now work thanks to esModuleInterop
+
 import cron from "node-cron";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -25,7 +25,7 @@ type CurrencyApiResponse = {
   data: Record<string, number>;
 };
 
-async function fetchCurrencyData() {
+export async function fetchCurrencyData() {
   try {
     const response = await fetch(API_URL!);
     const data = (await response.json()) as CurrencyApiResponse;
