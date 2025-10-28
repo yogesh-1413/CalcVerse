@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './BMI.css';
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 
