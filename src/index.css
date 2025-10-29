@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@media print {
+  /* Force browser to use screen colors */
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Keep dark backgrounds visible */
+  .dark body,
+  .dark {
+    background: #0f172a !important; /* slate-900 */
+    color: #f8fafc !important; /* slate-50 */
+  }
+
+  /* Avoid white backgrounds overriding dark sections */
+  .dark * {
+    background-color: transparent !important;
+    color: #f8fafc !important;
+  }
+
+  /* Optional: hide Navbar/Footer when printing */
+  nav, footer {
+    display: none !important;
+  }
+
+  /* Avoid button showing in print */
+  button {
+    display: none !important;
+  }
+
+  /* Adjust article padding */
+  article {
+    padding: 1rem !important;
+  }
+}
