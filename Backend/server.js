@@ -10,17 +10,21 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve the built frontend (Vite's dist folder)
+// Serve the React build folder
 app.use(express.static(path.join(__dirname, "../dist")));
 
-// API route to manually trigger data refresh
+// Currency update endpoint
 app.get("/update", async (_req, res) => {
   await fetchCurrencyData();
   res.json({ message: "✅ Currency data updated!" });
 });
+// ✅ Works with Express v5
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "../dist", "index.html"));
+});
 
-app.get("/", (_req, res) => {
-  res.send("✅ Currency updater server is running!");
+app.use((req, res) => {
+  res.status(404).send("Page doesn’t exist");
 });
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
