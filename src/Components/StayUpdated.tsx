@@ -12,7 +12,13 @@ const StayUpdated: React.FC = () => {
     try {
       setLoading(true);
 
- 
+      const q = query(collection(db, "subscribers"), where("email", "==", email));
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        alert("This email is already subscribed!");
+        setEmail("");
+        return;
+      }
 
       // ✅ save email
       await addDoc(collection(db, "subscribers"), {
