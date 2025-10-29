@@ -175,7 +175,6 @@ function DataStorageConverter(): JSX.Element {
                                             ))}
                                         </select>
                                     </div>
-cyan
                                     <div className="flex-1">
                                         <label className="text-sm mb-2 block text-slate-600 dark:text-slate-300">To</label>
                                         <select
