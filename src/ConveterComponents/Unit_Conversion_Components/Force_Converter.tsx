@@ -203,14 +203,14 @@ function ForceConverter(): JSX.Element {
                 </div>
 
                 <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-2">Steps</h3>
-                <div className="p-3 rounded-lg bg-slate-50 dark:bg-gray-700 border dark:border-slate-700 mb-4 text-sm">
+                <div className="p-3 rounded-lg bg-slate-50 dark:bg-gray-700 border dark:border-slate-700 mb-4 text-sm dark:text-gray-200">
                   {sampleSteps.map((s, i) => (
                     <div key={i} className="mb-2">{s}</div>
                   ))}
                 </div>
 
                 <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-2">Available units</h3>
-                <div className="p-3 rounded-lg bg-slate-50 dark:bg-gray-700 border dark:border-slate-700 text-xs">
+                <div className="p-3 rounded-lg bg-slate-50 dark:bg-gray-700 border dark:border-slate-700 text-xs dark:text-gray-200">
                   <ul className="list-disc pl-4">
                     {Object.keys(UNIT_LABELS).map((k) => (
                       <li key={k}>{UNIT_LABELS[k as UnitKey]}</li>
