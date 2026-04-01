@@ -17,7 +17,7 @@ const Home: React.FC = () => {
       {/* Features Section */}
       <Features />
       {/* Testimonials */}
-      <Testimonial/>
+      {/* <Testimonial/> */}
 
       
 

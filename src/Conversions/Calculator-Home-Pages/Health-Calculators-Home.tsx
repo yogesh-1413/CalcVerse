@@ -26,7 +26,7 @@ function Health_Calculators_Home() {
             title: 'Body Mass Index (BMI) Calculator',
             description: 'Find out your Body Mass Index to determine whether you are underweight, normal, overweight, or obese based on your height and weight.',
             icon: <Activity className="w-8 h-8" />,
-            path: '/All-calculators/Health-Calculators/BMI-Calculator',
+            path: '/All-calculators/Health-Calculators/BMI-Calculator`',
             color: 'emerald',
         },
         {
